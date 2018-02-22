@@ -4,7 +4,7 @@ This is the github repository for my latest portfolio. I've been meaning to docu
 
 ## Using this Repository
 
-I have no problem with others pulling this project and making it their own, with their own styles and effects/functionality. However, the main purpose of posting this to an open-platform like github was for future employers.
+I have no problem with others pulling this project and making it their own; with their own styles and effects/functionality. However, the main purpose of posting this to an open-platform like github was for future employers.
 
 ## Libraries, Frameworks, and Tools Used:
 
