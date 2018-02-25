@@ -60,84 +60,24 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1);
-__webpack_require__(2);
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(5);
 
 
 /***/ }),
-/* 1 */
+
+/***/ 5:
 /***/ (function(module, exports) {
 
-/*
-  Author: Blaze Rowland
-  Description: App.js (main javascript) for Portfolio
-  Date: February 15th, 2018
-*/
 
-// When the Window has Loaded
-$(window).on('load', function () {
-  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
-  $('#cover').slideUp(1900);
-});
-
-// When the Document is Ready
-$(document).ready(function () {
-  // FadeIn .header-text in 1.2 seconds + .5 second delay (1.7seconds)
-  $('.header-text').hide(0).delay(500).fadeIn(2200);
-});
-
-// Portfolio Zoom
-if ($('.zoom').click(function () {
-  // Get Portfolio id (e.g. portfolio-a) & Zoom
-  var portId = $(this).parents()[2].className.split('').reverse()[0];
-  var port = '.portfolio-' + portId;
-  var zoom = '.zoomed-' + portId;
-  var portZoom = port + zoom;
-
-  // Define function for when .zoom is clicked
-  function zoomed() {
-    $(portZoom).slideDown(800);
-  }
-
-  // Run zoomed function
-  zoomed();
-
-  // If the event of the esc key is pressed slideUp zoom
-  $(document).keyup(function (e) {
-    if (e.keyCode === 27) {
-      // $(zoom).css('display', 'none');
-      $(zoom).slideUp('slow');
-    }
-  });
-
-  // If the close button is pressed slideUp zoom
-  $('.close').on('click', function () {
-    // $(zoom).css('display', 'none');
-    $(zoom).slideUp('slow');
-  });
-})) ;
-
-// End Portfolio Zoom
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
-/******/ ]);
+
+/******/ });

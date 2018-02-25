@@ -1,0 +1,461 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,900);/*
+  Author: Blaze Rowland
+  Description: Admin.scss (admin css) for Portfolio
+  Date: February 22nd, 2018
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  height: 125%;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+}
+
+.admin-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
+}
+
+.admin-form form {
+  -ms-flex-item-align: center;
+      align-self: center;
+  background-color: #fefefe;
+  -webkit-box-shadow: 0 0 160px 37px rgba(47, 207, 242, 0.6);
+          box-shadow: 0 0 160px 37px rgba(47, 207, 242, 0.6);
+  border-radius: 12px;
+  grid-area: 'form';
+  height: auto;
+  margin-top: 100px;
+  padding: 105px 55px 45px 55px;
+  justify-self: center;
+  width: 330px;
+}
+
+.admin-form form h1 {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+.admin-form form a {
+  color: #0ebae0;
+  text-decoration: none;
+}
+
+.admin-form form .name,
+.admin-form form .email,
+.admin-form form .password,
+.admin-form form .btn-submit {
+  border: 1px solid #2fcff2;
+  border-radius: 3px;
+  line-height: 1.9;
+  margin: 8px 0 20px 0;
+  padding: 5px 5px;
+  width: 100%;
+}
+
+.admin-form form .email {
+  display: block;
+}
+
+.admin-form form .password {
+  display: block;
+}
+
+.admin-form form .btn-submit {
+  background: #2fcff2;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 15px 0 20px 0;
+  padding: 8px;
+}
+
+.admin-form form label {
+  display: inline;
+}
+
+.admin-form form label .check {
+  display: inline;
+}
+
+.errors .form-error {
+  grid-area: 'errors';
+  color: red;
+  padding: 25px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.errors .form-error:nth-child(n) {
+  background-color: rgba(255, 180, 180, 0.5);
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 35px auto;
+  width: 20%;
+}
+
+.errors .form-error:nth-child(2n) {
+  margin: -10px auto;
+}
+
+.nav-left {
+  background-color: #343044;
+  color: #fafafa;
+  margin-top: -25px;
+  position: fixed;
+  height: 100%;
+  width: 7em;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  .nav-left {
+    width: 4em;
+  }
+}
+
+.nav-left .links {
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.nav-left .links a {
+  color: inherit;
+}
+
+.nav-left .links a li {
+  border-bottom: 1px solid #3e3a4e;
+  padding: 30px 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.nav-left .links a li:hover {
+  opacity: 0.5;
+}
+
+#container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+#container #top-dash {
+  margin: 25px 0;
+}
+
+#container #top-dash h1 {
+  display: inline;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #container #top-dash h1 {
+    margin-left: 50px;
+  }
+}
+
+#container #top-dash pre {
+  display: inline;
+  line-height: 3;
+  color: #3e3d3d;
+}
+
+@media (max-width: 768px) {
+  #container #top-dash pre {
+    display: none;
+  }
+}
+
+#container #top-dash .quick-info {
+  display: grid;
+  grid-template-areas: 'income expense clients projects';
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  margin: 35px 0;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #container #top-dash .quick-info {
+    margin-left: 50px;
+    grid-template-areas: 'income' 'expense' 'clients' 'projects';
+    grid-template-columns: 1fr;
+  }
+}
+
+#container #top-dash .quick-info li {
+  background: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 'icon info';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+}
+
+#container #top-dash .quick-info li .aside-icon {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  color: white;
+  font-size: 1.9em;
+  grid-area: 'icon';
+  padding: 40px 25px;
+  -webkit-box-shadow: 10px 0px 10px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 0px 10px -17px rgba(0, 0, 0, 0.75);
+}
+
+#container #top-dash .quick-info li .info {
+  grid-area: 'info';
+  margin: 25px 15px 25px 5px;
+}
+
+#container #top-dash .quick-info li .info h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+#container #top-dash .quick-info li .info p {
+  color: #4a4a4a;
+  padding: 10px 0;
+}
+
+#container #top-dash .quick-info li .info .info-income {
+  color: #58BCDC;
+}
+
+#container #top-dash .quick-info li .info .info-expense {
+  color: #FE8663;
+}
+
+#container #top-dash .quick-info li .info .info-clients {
+  color: #B198DC;
+}
+
+#container #top-dash .quick-info li .info .info-projects {
+  color: #6CC7BE;
+}
+
+#container #top-dash .quick-info .income,
+#container #top-dash .quick-info .expense,
+#container #top-dash .quick-info .clients,
+#container #top-dash .quick-info .projects {
+  color: white;
+  display: inline-block;
+  font-size: 1.9em;
+  padding: 40px 25px;
+}
+
+#container #top-dash .quick-info .income {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#58BCDC), to(#56BDDC));
+  background-image: linear-gradient(to top, #58BCDC 0%, #56BDDC 100%);
+  grid-area: 'income';
+}
+
+#container #top-dash .quick-info .expense {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#FE8663), to(#FF875E));
+  background-image: linear-gradient(to top, #FE8663 0%, #FF875E 100%);
+  grid-area: 'expense';
+}
+
+#container #top-dash .quick-info .clients {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#B198DC), to(#B299DD));
+  background-image: linear-gradient(to top, #B198DC 0%, #B299DD 100%);
+  grid-area: 'clients';
+}
+
+#container #top-dash .quick-info .projects {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#6CC7BE), to(#6BC8BE));
+  background-image: linear-gradient(to top, #6CC7BE 0%, #6BC8BE 100%);
+  grid-area: 'projects';
+}
+
+#container #analytics {
+  display: grid;
+  grid-gap: 15px 25px;
+  grid-template-areas: 'main side1' 'main side2';
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #container #analytics {
+    margin-left: 50px;
+  }
+}
+
+#container #analytics .main,
+#container #analytics .side-1,
+#container #analytics .side-2 {
+  background: white;
+  -webkit-box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+  padding: 15px 15px;
+}
+
+#container #analytics .main {
+  grid-area: main;
+}
+
+#container #analytics .side-1 {
+  grid-area: side1;
+}
+
+#container #analytics .side-2 {
+  grid-area: side2;
+}
+
