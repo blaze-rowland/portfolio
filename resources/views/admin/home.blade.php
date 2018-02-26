@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 
 @include('partials._adminNav')
-@include('partials._coverLoad')
 @section('content')
 <div id="container">
   <section id="top-dash">

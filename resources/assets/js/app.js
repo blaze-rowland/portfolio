@@ -9,7 +9,7 @@ require('./partials/assets.js');
 // When the Document is Ready
 $(document).ready(function() {
   // FadeIn .header-text in 1.2 seconds + .5 second delay (1.7seconds)
-  $('.header-text').hide(0).delay(500).fadeIn(2200);
+  $('.header-text').hide(0).fadeIn(1300);
 });
 
 

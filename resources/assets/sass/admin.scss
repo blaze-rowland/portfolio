@@ -8,8 +8,8 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,900");
 
 // Variables
-@import "partials/variables";
 @import 'partials/reset';
+@import "partials/variables";
 
 // Default Styling
 html, body {
@@ -32,6 +32,14 @@ h3 {
 
 .float-right {
   float: right;
+}
+
+.back-button {
+  font-size: 1.4em;
+  margin: 25px 45px;
+  a {
+    color: $primary-color;
+  }
 }
 
 #container {
@@ -155,7 +163,7 @@ h3 {
 
 // Admin Navbar
 .nav-left {
-  background-color: rgb(52, 48, 68);
+  background-color: $admin-primary;
   color: $off-white;
   margin-top: -25px;
   position: fixed;
@@ -190,7 +198,7 @@ h3 {
 
 // Dashboard
 #container {
-  margin: 0 auto;
+  margin: 25px auto 0 auto;
   width: 70%;
 
   #top-dash {
@@ -316,6 +324,8 @@ h3 {
     }
   } // ./top-dash
 
+
+// Analytics
   #analytics-1 {
     display: grid;
     grid-gap: 15px 25px;
@@ -376,3 +386,14 @@ h3 {
     }
   }
 }
+// End Analytics
+
+// Client Page
+
+#blog, #clients, #revenue {
+  h1 {
+    margin: 25px 0;
+  }
+}
+
+// End Client Page

@@ -60,20 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-__webpack_require__(1);
-__webpack_require__(2);
-module.exports = __webpack_require__(3);
-
+// When the Window has Loaded
+$(window).on('load', function () {
+  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
+  $('#cover').slideUp(1000);
+});
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(2);
+__webpack_require__(3);
+module.exports = __webpack_require__(4);
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -82,12 +92,12 @@ module.exports = __webpack_require__(3);
   Date: February 15th, 2018
 */
 
-__webpack_require__(11);
+__webpack_require__(0);
 
 // When the Document is Ready
 $(document).ready(function () {
   // FadeIn .header-text in 1.2 seconds + .5 second delay (1.7seconds)
-  $('.header-text').hide(0).delay(500).fadeIn(2200);
+  $('.header-text').hide(0).fadeIn(1300);
 });
 
 // Portfolio Zoom
@@ -124,33 +134,16 @@ if ($('.zoom').click(function () {
 // End Portfolio Zoom
 
 /***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 3 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
+/* 4 */
 /***/ (function(module, exports) {
 
-// When the Window has Loaded
-$(window).on('load', function () {
-  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
-  $('#cover').slideUp(1900);
-});
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
