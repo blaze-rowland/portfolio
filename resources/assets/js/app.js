@@ -4,12 +4,7 @@
   Date: February 15th, 2018
 */
 
-
-// When the Window has Loaded
-$(window).on('load', function() {
-  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
-  $('#cover').slideUp(1900);
-});
+require('./partials/assets.js');
 
 // When the Document is Ready
 $(document).ready(function() {
@@ -26,6 +21,7 @@ if($('.zoom').click(function(){
   var port = '.portfolio-' + portId;
   var zoom = '.zoomed-' + portId;
   var portZoom = port+zoom;
+
 
   // Define function for when .zoom is clicked
   function zoomed() {
@@ -49,5 +45,6 @@ if($('.zoom').click(function(){
     $(zoom).slideUp('slow');
   });
 }));
+
 
 // End Portfolio Zoom

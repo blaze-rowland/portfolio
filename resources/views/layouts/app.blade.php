@@ -14,7 +14,7 @@
   @yield('stylesheets')
 </head>
 <body>
-  <div id="cover"><div class="loader"></div>Loading...</div>
+    @include('partials._coverLoad')
     @yield('content')
 
   <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

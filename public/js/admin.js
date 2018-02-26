@@ -65,6 +65,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ 11:
+/***/ (function(module, exports) {
+
+// When the Window has Loaded
+$(window).on('load', function () {
+  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
+  $('#cover').slideUp(1900);
+});
+
+/***/ }),
+
 /***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -74,9 +85,9 @@ module.exports = __webpack_require__(5);
 /***/ }),
 
 /***/ 5:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+__webpack_require__(11);
 
 /***/ })
 

@@ -4,26 +4,31 @@
   <div id="container">
     <div class="admin-form">
       <form method="POST" action="{{ route('login') }}">
+        <div class="top">
+        <img class="form-img" src="{{ asset('/img/bg/nature.jpg') }}" alt="">
         <h1 class="text-center">Login</h1>
-        @csrf
-        <label for="email">E-Mail</label>
-        <input class="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
-        @if ($errors->has('email'))
-          {{ $errors->first('email') }}
-        @endif
+        </div>
+        <div class="body">
+          @csrf
+          <label for="email">E-Mail</label>
+          <input class="email" type="email" name="email" value="{{ old('email') }}" required autofocus>
+          @if ($errors->has('email'))
+            {{ $errors->first('email') }}
+          @endif
 
-        <label for="password">Password</label>
-        <input class="password" type="password" name="password" required>
-        @if($errors->has('password'))
-          {{ $errors->first('password') }}
-        @endif
+          <label for="password">Password</label>
+          <input class="password" type="password" name="password" required>
+          @if($errors->has('password'))
+            {{ $errors->first('password') }}
+          @endif
 
-        <label>
-          <input class="check" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-        </label>
+          <label>
+            <input class="check" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+          </label>
 
-        <input class="btn-submit" type="submit" value="Login">
-        <a href="{{ route('password.request') }}">Forgot Password?</a>
+          <input class="btn-submit" type="submit" value="Login">
+          <a href="{{ route('password.request') }}">Forgot Password?</a>
+        </div>
       </form>
     </div>
   </div>

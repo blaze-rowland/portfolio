@@ -74,7 +74,7 @@ module.exports = __webpack_require__(3);
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 /*
   Author: Blaze Rowland
@@ -82,11 +82,7 @@ module.exports = __webpack_require__(3);
   Date: February 15th, 2018
 */
 
-// When the Window has Loaded
-$(window).on('load', function () {
-  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
-  $('#cover').slideUp(1900);
-});
+__webpack_require__(11);
 
 // When the Document is Ready
 $(document).ready(function () {
@@ -138,6 +134,23 @@ if ($('.zoom').click(function () {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports) {
+
+// When the Window has Loaded
+$(window).on('load', function () {
+  // SlideUp the Cover Div when window has finished loading (finishes in 1.9 seconds)
+  $('#cover').slideUp(1900);
+});
 
 /***/ })
 /******/ ]);

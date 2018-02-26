@@ -11,3 +11,148 @@ $break-xs: 480px;
 $break-sm: 768px;
 $break-md: 992px;
 $break-lg: 1200px;
+
+
+// Helpers
+
+.intermit-hr {
+  border: .3px solid #e6e6e6;
+  margin: 75px auto;
+  width: 75%;
+}
+
+.pull-right {
+  float: right;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Cover
+#cover {
+  background: #fff;
+  font-size: .8em;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  z-index: 99999;
+
+  .loader {
+    animation: loader 1.3s ease infinite;
+    border: 5px solid $off-white;
+    border-radius: 50%;
+    border-top: 5px solid $primary-color;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: calc(25% - 80px);
+    width: 80px;
+  }
+
+  @keyframes loader {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+// End Cover
+
+// Badge
+.badge {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  color: #fff;
+  line-height: 3;
+  padding: 11px;
+  transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+}
+
+.badge:hover {
+  background-color: $off-white;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  cursor: pointer;
+}
+// End Badge
+
+// Standard Button
+.btn {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  transition: 0.2s ease;
+
+  &:hover {
+    background-color: #fff;
+    color: $primary-color;
+  }
+}
+// End Standard Button
+
+// Image Card
+.card {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  .img {
+    .top {
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.7);
+      height: 220px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+    span {
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 600;
+      position: relative;
+      left: 25px;
+      top: -220px;
+    }
+  }
+  .body {
+    padding-bottom: 50px;
+    margin: 0 25px;
+    .title {
+      display: inline;
+      margin: 15px 0;
+    }
+    pre {
+      color: lighten($off-black, 10%);
+      display: inline;
+      font-size: .8em;
+    }
+    .text {
+      font-size: .9em;
+      line-height: 1.5;
+      margin: 15px 0 25px 0;
+    }
+    .btn {
+      margin-left: 0;
+    }
+  }
+}
+// End Card

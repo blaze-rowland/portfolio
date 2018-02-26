@@ -25,8 +25,13 @@ h1 {
   font-size: 1.8em;
 }
 
-.text-center {
-  text-align: center;
+h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.float-right {
+  float: right;
 }
 
 #container {
@@ -36,32 +41,58 @@ h1 {
 
 // Login / Register
 .admin-form {
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: ". form form ."
                        ". form form ."
                        ". errors errors .";
 
+
   form {
     align-self: center;
     background-color: darken(#fff, .5%);
-    box-shadow: 0 0 160px 37px rgba(47, 207, 242, 0.6);
+    // box-shadow: 0 0 160px 37px rgba(47, 207, 242, 0.6);
+    box-shadow: 0 0 37px -11px rgba(0, 0, 0, 0.4);
     border-radius: 12px;
     grid-area: 'form';
     height: auto;
     margin-top: 100px;
-    padding: 105px 55px 45px 55px;
+    padding: 0 55px 45px 55px;
     justify-self: center;
     width: 330px;
 
     h1 {
-      margin-top: -50px;
-      margin-bottom: 50px;
+      // margin-top: -50px;
+      // margin-bottom: 50px;
     }
 
     a {
       color: darken($primary-color, 10%);
       text-decoration: none;
+    }
+
+    .top {
+      height: 120px;
+      margin: 0 0 45px -55px;
+      width: calc(100% + 110px);
+
+      .form-img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        box-shadow: 0 1px 10px -3px rgba(0, 0, 0, 0.7);
+        height: 100%;
+        width: 100%;
+      }
+      h1 {
+        color: white;
+        position: relative;
+        margin-top: -80px;
+        z-index: 9999;
+      }
+    }
+    .body {
+
     }
 
     .name, .email, .password, .btn-submit {
@@ -142,8 +173,6 @@ h1 {
     a {
       color: inherit;
 
-
-
       li {
         border-bottom: 1px solid rgba(62, 58, 78, 1);
         padding: 30px 0;
@@ -193,6 +222,10 @@ h1 {
       grid-gap: 25px;
       margin: 35px 0;
 
+      a {
+        text-decoration: none;
+      }
+
       @media(max-width: $break-sm), (max-width: $break-md) {
         margin-left: 50px;
         grid-template-areas: 'income'
@@ -211,6 +244,16 @@ h1 {
         grid-template-areas: 'icon info';
         grid-template-columns: auto 1fr;
         grid-template-rows: auto;
+        transition: 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 0 14px -6px rgba(0, 0, 0, 0.5);
+
+          .aside-icon {
+            box-shadow: 8px 0px 14px -14px rgba(0, 0, 0, 0.75);
+          }
+        }
+
 
         .aside-icon {
           border-top-left-radius: 2px;
@@ -222,14 +265,11 @@ h1 {
           -webkit-box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
           -moz-box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
           box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
+          transition: 0.3s ease;
         }
         .info {
           grid-area: 'info';
           margin: 25px 15px 25px 5px;
-          h3 {
-            font-size: 1.1em;
-            font-weight: 400;
-          }
           p {
             color: lighten($off-black, 15%);
             padding: 10px 0;
@@ -276,7 +316,7 @@ h1 {
     }
   } // ./top-dash
 
-  #analytics {
+  #analytics-1 {
     display: grid;
     grid-gap: 15px 25px;
     grid-template-areas: 'main side1'
@@ -284,11 +324,15 @@ h1 {
     grid-template-columns: 2fr 1fr;
 
     @media(max-width: $break-sm), (max-width: $break-md) {
+      grid-template-areas: 'main'
+                           'side1'
+                           'side2';
+      grid-template-columns: 1fr;
       margin-left: 50px;
     }
 
     .main, .side-1, .side-2 {
-      background: white;
+      background: #fff;
       box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
       padding: 15px 15px;
     }
@@ -301,6 +345,34 @@ h1 {
     }
     .side-2 {
       grid-area: side2;
+    }
+  }
+
+  #analytics-2 {
+    display: grid;
+    grid-template-areas: 'side1 side2';
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 0;
+    @media(max-width: $break-sm), (max-width: $break-md) {
+      margin-left: 50px;
+      grid-template-areas: 'side1'
+                           'side2';
+      grid-template-columns: 1fr;
+    }
+
+    .side-1, .side-2 {
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+      padding: 15px 15px;
+    }
+    .side-1 {
+      grid-area: side1;
+    }
+    .side-2 {
+      grid-area: side2;
+      padding: 0;
     }
   }
 }
