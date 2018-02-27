@@ -78,7 +78,7 @@
         <h3 class="title">Blog Post</h3>
         <pre class="float-right"><i class="fa fa-calendar-o"> </i> February 14th, 2018</pre>
         <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nisi et aliquid odio provident distinctio reiciendis doloremque, porro sed assumenda eveniet sunt natus sint repellendus, at tempora culpa dolore, ratione quasi voluptatibus! Autem quas, est dolorem aperiam culpa velit fuga aut voluptate harum iusto, sed consequuntur blanditiis, odio qui quae.</p>
-        <a href="#" class="btn pull-right block">Edit</a>
+        <a href="#" class="btn btn-admin pull-right block">Edit</a>
       </div>
     </div>
   </section>

@@ -6,7 +6,7 @@
     <a href="{{ route('revenue') }}">
       <li><i class="fa fa-credit-card-alt"></i></li>
     </a>
-    <a href="#projects">
+    <a href="{{ route('projects') }}">
       <li><i class="fa fa-briefcase"></i></li>
     </a>
     <a href="{{ route('clients') }}">
@@ -17,7 +17,7 @@
         <i><i class="fa fa-rss"></i></i>
       </li>
     </a>
-    <a href="#notes">
+    <a href="{{ route('notes') }}">
       <li><i class="fa fa-sticky-note"></i></li>
     </a>
     <a href="{{ url('/logout') }}">

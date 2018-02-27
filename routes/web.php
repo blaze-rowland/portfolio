@@ -24,6 +24,8 @@ Route::get('/test', 'HomeController@testbench')->name('test');
 //Dashboard Routes
 
 Route::get('/admin', 'AdminController@index')->name('home');
-Route::get('admin/revenue', 'RevenueController@index')->name('revenue');
+Route::get('/admin/revenue', 'RevenueController@index')->name('revenue');
+Route::get('/admin/projects', 'ProjectController@index')->name('projects');
 Route::get('/admin/clients', 'ClientController@index')->name('clients');
+Route::get('/admin/notes', 'NoteController@index')->name('notes');
 Route::get('/admin/blog', 'PostController@index')->name('blog');
