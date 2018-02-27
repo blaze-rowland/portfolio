@@ -11,7 +11,7 @@
           <th>Email</th>
           <th>Project</th>
           <th>Income</th>
-          <th>Expense <a href="#"><i class="fa fa-plus float-right"></i></a></th>
+          <th>Expense</th>
         </tr>
         @for($i = 1; $i <= 10; $i++)
           <tr>

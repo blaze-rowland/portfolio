@@ -17,15 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-
-
 Route::get('/test', 'HomeController@testbench')->name('test');
 
-//Dashboard Routes
+Route::resource('posts', 'PostController');
+Route::resource('revenue', 'RevenueController');
+Route::resource('projects', 'ProjectController');
+Route::resource('clients', 'ClientController');
+Route::resource('notes', 'NoteController');
 
+//Dashboard Routes
 Route::get('/admin', 'AdminController@index')->name('home');
+Route::get('/admin/posts', 'PostController@index')->name('posts');
 Route::get('/admin/revenue', 'RevenueController@index')->name('revenue');
 Route::get('/admin/projects', 'ProjectController@index')->name('projects');
 Route::get('/admin/clients', 'ClientController@index')->name('clients');
 Route::get('/admin/notes', 'NoteController@index')->name('notes');
-Route::get('/admin/blog', 'PostController@index')->name('blog');

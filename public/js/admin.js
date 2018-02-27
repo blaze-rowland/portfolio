@@ -90,5 +90,10 @@ module.exports = __webpack_require__(6);
 
 __webpack_require__(0);
 
+// Confirm Delete on Click
+$('.delete').on('click', function () {
+  return confirm('Do You Want to Delete This?');
+});
+
 /***/ })
 /******/ ]);

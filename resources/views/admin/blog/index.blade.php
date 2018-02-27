@@ -11,24 +11,25 @@
     <section id="blog">
       <h1>Blog</h1>
       <div class="card-grid">
-        @for ($i = 1; $i <= 25; $i++)
+        @foreach ($posts as $post)
           <div class="card alone">
             <div class="img">
-              <img class="top" src="{{ asset('/img/bg/nature.jpg') }}" alt="">
-              <span>Title {{ $i }}</span>
+              <img class="top" src="{{ $post->cover_image }}" alt="">
+              <a title="{{$post->title}}" class="title-banner" href="/posts/{{$post->id}}"><span>{{ str_limit($post->title, $limit = 40, $end = '...') }}</span></a>
             </div>
             <div class="body">
-                <div class="title"><i class="fa fa-user"></i> Blaze Rowland</div>
-                <pre class="float-right"><i class="fa fa-calendar-o"> </i> February 26th, 2018</pre>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi nesciunt odio delectus suscipit assumenda. Vero omnis ipsam fugiat, recusandae rem voluptatibus illum.</div>
+                <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
+                <pre class="float-right"><i class="fa fa-calendar-o"> </i> {{ date('F j, Y', strtotime($post->created_at)) }}</pre>
+
+                <div class="text">{{ strip_tags(str_limit($post->body, $limit = 225, $end = '...')) }}</div>
                 @if(Auth::check())
-                  <a href="#" class="btn btn-admin">Read More</a>
+                  <a href="/posts/{{$post->id}}" class="btn btn-admin">Read More</a>
                 @else
-                  <a href="#" class="btn">Read More</a>
+                  <a href="{{Route('posts.show', $post->id)}}" class="btn">Read More</a>
                 @endif
             </div>
           </div>
-        @endfor
+        @endforeach
       </div>
     </section>
   </div>

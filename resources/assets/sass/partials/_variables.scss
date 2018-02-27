@@ -20,10 +20,22 @@ $break-xl: 1650px;
 
 // Helpers
 
+strong, b {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
 .intermit-hr {
   border: .3px solid #e6e6e6;
   margin: 75px auto;
   width: 75%;
+}
+
+.m-25 {
+  margin: 25px 0 0 0;
 }
 
 .pull-right {
@@ -38,8 +50,8 @@ $break-xl: 1650px;
   display: none;
 }
 
-.block {
-  display: inline-block;
+.inline {
+  display: inline;
 }
 
 .text-center {
@@ -170,6 +182,8 @@ table {
   border: 1px solid $primary-color;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  font-size: .9em;
   padding: 8px 20px;
   text-decoration: none;
   transition: 0.2s ease;
@@ -195,6 +209,7 @@ table {
   background: #fff;
   box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
   padding: 0;
+  position: relative;
   height: 100%;
   transition: 0.4s ease;
   width: 100%;
@@ -218,6 +233,9 @@ table {
     }
   }
   .img {
+    a {
+      text-decoration: none;
+    }
     .top {
       border-top-left-radius: 2px;
       border-top-right-radius: 2px;
@@ -233,7 +251,7 @@ table {
       line-height: 1.5;
       position: relative;
       left: 25px;
-      text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
       top: -195px;
     }
   }
@@ -260,6 +278,8 @@ table {
     .btn {
       font-size: .9em;
       margin-left: 0;
+      position: absolute;
+      bottom: 25px;
     }
   }
 }
@@ -267,6 +287,27 @@ table {
 .card.alone {
     height: auto;
     width: 450px;
+}
+
+.card.full {
+  width: 100%;
+  height: auto;
+
+  .img {
+    .top {
+      height: 450px;
+    }
+    span {
+      top: -400px;
+    }
+  }
+}
+
+.title-banner {
+  span {
+    background: rgba(0, 0, 0, 0.56);
+    padding: 10px;
+  }
 }
 // End Card
 

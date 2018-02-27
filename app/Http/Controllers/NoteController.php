@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class NoteController extends Controller
 {
+
+    public function __construct()
+    {
+      // allows routes to only direct to index and show functions
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *

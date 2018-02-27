@@ -1,13 +1,26 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,900);/*
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900);/*
   Author: Blaze Rowland
   Description: App.scss (main css) for Portfolio
   Date: February 15th, 2018
 */
 
+strong,
+b {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
 .intermit-hr {
   border: .3px solid #e6e6e6;
   margin: 75px auto;
   width: 75%;
+}
+
+.m-25 {
+  margin: 25px 0 0 0;
 }
 
 .pull-right {
@@ -22,8 +35,8 @@
   display: none;
 }
 
-.block {
-  display: inline-block;
+.inline {
+  display: inline;
 }
 
 .text-center {
@@ -178,6 +191,8 @@ table tr .num {
   border: 1px solid #2fcff2;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  font-size: .9em;
   padding: 8px 20px;
   text-decoration: none;
   -webkit-transition: 0.2s ease;
@@ -203,6 +218,7 @@ table tr .num {
   -webkit-box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
           box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
   padding: 0;
+  position: relative;
   height: 100%;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -232,6 +248,10 @@ table tr .num {
   margin-left: -25px;
 }
 
+.card .img a {
+  text-decoration: none;
+}
+
 .card .img .top {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -249,7 +269,7 @@ table tr .num {
   line-height: 1.5;
   position: relative;
   left: 25px;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 5px black;
   top: -195px;
 }
 
@@ -282,11 +302,31 @@ table tr .num {
 .card .body .btn {
   font-size: .9em;
   margin-left: 0;
+  position: absolute;
+  bottom: 25px;
 }
 
 .card.alone {
   height: auto;
   width: 450px;
+}
+
+.card.full {
+  width: 100%;
+  height: auto;
+}
+
+.card.full .img .top {
+  height: 450px;
+}
+
+.card.full .img span {
+  top: -400px;
+}
+
+.title-banner span {
+  background: rgba(0, 0, 0, 0.56);
+  padding: 10px;
 }
 
 .card-grid {

@@ -10,7 +10,7 @@
           <th>Project</th>
           <th>Income</th>
           <th>Expense</th>
-          <th>Total <a href="#"><i class="fa fa-plus float-right"></i></a></th>
+          <th>Total</th>
         </tr>
         @for($i = 1; $i <= 10; $i++)
           <tr>

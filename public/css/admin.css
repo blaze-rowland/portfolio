@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,600,900);/*
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900);/*
   Author: Blaze Rowland
   Description: Admin.scss (admin css) for Portfolio
   Date: February 22nd, 2018
@@ -141,10 +141,23 @@ table {
   border-spacing: 0;
 }
 
+strong,
+b {
+  font-weight: 600;
+}
+
+i {
+  font-style: italic;
+}
+
 .intermit-hr {
   border: .3px solid #e6e6e6;
   margin: 75px auto;
   width: 75%;
+}
+
+.m-25 {
+  margin: 25px 0 0 0;
 }
 
 .pull-right {
@@ -159,8 +172,8 @@ table {
   display: none;
 }
 
-.block {
-  display: inline-block;
+.inline {
+  display: inline;
 }
 
 .text-center {
@@ -315,6 +328,8 @@ table tr .num {
   border: 1px solid #2fcff2;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
+  font-size: .9em;
   padding: 8px 20px;
   text-decoration: none;
   -webkit-transition: 0.2s ease;
@@ -340,6 +355,7 @@ table tr .num {
   -webkit-box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
           box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
   padding: 0;
+  position: relative;
   height: 100%;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -369,6 +385,10 @@ table tr .num {
   margin-left: -25px;
 }
 
+.card .img a {
+  text-decoration: none;
+}
+
 .card .img .top {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -386,7 +406,7 @@ table tr .num {
   line-height: 1.5;
   position: relative;
   left: 25px;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 5px black;
   top: -195px;
 }
 
@@ -419,11 +439,31 @@ table tr .num {
 .card .body .btn {
   font-size: .9em;
   margin-left: 0;
+  position: absolute;
+  bottom: 25px;
 }
 
 .card.alone {
   height: auto;
   width: 450px;
+}
+
+.card.full {
+  width: 100%;
+  height: auto;
+}
+
+.card.full .img .top {
+  height: 450px;
+}
+
+.card.full .img span {
+  top: -400px;
+}
+
+.title-banner span {
+  background: rgba(0, 0, 0, 0.56);
+  padding: 10px;
 }
 
 .card-grid {
@@ -478,6 +518,20 @@ h3 {
 
 .float-right {
   float: right;
+}
+
+.admin-nav-btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.ql-container.ql-snow {
+  font-size: .9em;
+  font-weight: 400;
+  height: 250px;
+  line-height: 1.5;
 }
 
 .back-button {
@@ -858,7 +912,95 @@ h3 {
 
 #blog h1,
 #clients h1,
-#revenue h1 {
+#revenue h1,
+#create-form h1 {
   margin: 25px 0;
+}
+
+#blog .header-aside,
+#clients .header-aside,
+#revenue .header-aside,
+#create-form .header-aside {
+  color: #575757;
+  display: inline;
+  font-size: .8em;
+  line-height: 3;
+  margin-left: 25px;
+}
+
+#blog .header-aside a,
+#clients .header-aside a,
+#revenue .header-aside a,
+#create-form .header-aside a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#create-form {
+  color: #343044;
+}
+
+#create-form .create-grid {
+  display: grid;
+  grid-template-areas: 'post sidebar';
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 50px;
+}
+
+#create-form .create-grid .create-form {
+  background: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+  grid-area: 'post';
+}
+
+#create-form .create-grid .create-form form {
+  padding: 25px 20px;
+}
+
+#create-form .create-grid .create-form form .form-group {
+  padding: 15px 0;
+}
+
+#create-form .create-grid .create-form form .form-group label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#create-form .create-grid .create-form form .form-group input,
+#create-form .create-grid .create-form form .form-group textarea {
+  -webkit-box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
+  background: #fafafa;
+  border: 0;
+  line-height: 1.4;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+#create-form .create-grid .create-form form .form-group input {
+  font-size: 1.2em;
+}
+
+#create-form .create-grid .create-form form .form-group textarea {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+#create-form .create-grid .sidebar {
+  background: #fff;
+  height: calc(16px + .9em) !important;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+  padding: 30px 20px;
+  grid-area: 'sidebar';
+}
+
+#create-form .create-grid .sidebar .btn {
+  width: 100%;
 }
 

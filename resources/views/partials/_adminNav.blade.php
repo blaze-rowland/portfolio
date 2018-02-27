@@ -12,7 +12,7 @@
     <a href="{{ route('clients') }}">
       <li><i class="fa fa-users"></i></li>
     </a>
-    <a href="{{ route('blog') }}">
+    <a href="{{ route('posts') }}">
       <li>
         <i><i class="fa fa-rss"></i></i>
       </li>
@@ -20,6 +20,7 @@
     <a href="{{ route('notes') }}">
       <li><i class="fa fa-sticky-note"></i></li>
     </a>
+    @include('partials._adminControls')
     <a href="{{ url('/logout') }}">
       <li>
         <i class="fa fa-sign-out"></i>

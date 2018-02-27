@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
   <link type="text/css" rel="stylesheet" href="{{ asset('css/admin.css') }}">
   @yield('stylesheets')
+  @yield('scripts_top')
 </head>
 <body>
   @yield('content')
 
   <script type="text/javascript" src="{{ asset('js/admin.js') }}"></script>
-  @yield('scripts')
+  @yield('scripts_bottom')
 </body>
 </html>
