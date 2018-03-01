@@ -28,7 +28,7 @@
           </div>
       </div>
       <div class="sidebar">
-        <input type="submit" value="Create Project" class="btn btn-admin">
+        <input type="submit" value="Add Revenue" class="btn btn-admin">
       </form>
       </div>
     </div>
