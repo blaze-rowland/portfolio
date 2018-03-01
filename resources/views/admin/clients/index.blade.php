@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-@include('partials._adminNav')
   <div id="container">
-    <section id="clients">
+    <section id="admin">
       <h1>Clients</h1>
       <table class="full-width">
         <tr class="shadow">

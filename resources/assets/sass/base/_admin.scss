@@ -42,6 +42,9 @@ h3 {
   a {
     color: $primary-color;
   }
+  @media(max-width: $break-sm) {
+    margin: 25px 5px;
+  }
 }
 
 #container {

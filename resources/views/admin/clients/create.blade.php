@@ -1,6 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-@include('partials._adminNav')
 <div id="container">
   <section id="create-form">
     <h1>Add Client</h1>

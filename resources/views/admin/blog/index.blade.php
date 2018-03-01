@@ -1,14 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-@if(Auth::check())
-  @include('partials._adminNav')
-@else
-  <div class="back-button">
-    <a href="{{ route('/') }}">  <i class="fa fa-arrow-left"></i> </a>
-  </div>
-@endif
   <div id="container">
-    <section id="blog">
+    <section id="admin">
       <h1>Blog</h1>
       <div class="card-grid">
         @foreach ($posts as $post)

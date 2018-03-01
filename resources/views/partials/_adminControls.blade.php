@@ -3,28 +3,6 @@
     <li><i class="fa fa-plus"></i></li>
   </a>
 
-<!-- Projects -->
-@elseif(Request::getPathInfo() === '/admin/projects')
-  <a href="{{ route('projects.create') }}">
-    <li><i class="fa fa-plus"></i></li>
-  </a>
-@elseif(isset($project))
-  @if(Request::getPathInfo() === '/projects/'. $project->id)
-    <a href="{{url('projects/'.$project->id.'/edit')}}">
-      <li><i class="fa fa-pencil"></i></li>
-    </a>
-    <form action="{{route('projects.destroy', $project->id)}}" method="POST">
-      @csrf
-      <input name="_method" type="hidden" value="DELETE">
-        <a class="delete negative">
-          <li>
-            <button class="admin-nav-btn"><i class="negative fa fa-trash"></i></button>
-          </li>
-        </a>
-    </form>
-  @endif
-<!-- End Projects -->
-
 <!-- Clients -->
 @elseif(Request::getPathInfo() === '/admin/clients')
   <a href="{{ route('clients.create') }}">
@@ -46,6 +24,28 @@
     </form>
   @endif
 <!-- End Clients -->
+
+<!-- Projects -->
+@elseif(Request::getPathInfo() === '/admin/projects')
+  <a href="{{ route('projects.create') }}">
+    <li><i class="fa fa-plus"></i></li>
+  </a>
+@elseif(isset($project))
+  @if(Request::getPathInfo() === '/projects/'. $project->id)
+    <a href="{{url('projects/'.$project->id.'/edit')}}">
+      <li><i class="fa fa-pencil"></i></li>
+    </a>
+    <form action="{{route('projects.destroy', $project->id)}}" method="POST">
+      @csrf
+      <input name="_method" type="hidden" value="DELETE">
+        <a class="delete negative">
+          <li>
+            <button class="admin-nav-btn"><i class="negative fa fa-trash"></i></button>
+          </li>
+        </a>
+    </form>
+  @endif
+<!-- End Projects -->
 
 
 <!-- Posts -->

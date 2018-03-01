@@ -1,10 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-@include('partials._adminNav')
   <div id="container">
-    <section id="blog">
+    <section id="admin">
       <h1 class="inline">{{ $project->title }}</h1>
-      <pre class="header-aside"><a href="{{route('clients')}}">Home</a> / {{ $project->title }}</pre>
+      <pre class="header-aside"><a href="{{url()->previous()}}">Home</a> / {{ $project->title }}</pre>
       <div class="card-grid m-25">
           <div class="card full">
             <div class="type text-center">

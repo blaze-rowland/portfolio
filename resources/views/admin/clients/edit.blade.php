@@ -1,9 +1,8 @@
 @extends('layouts.admin')
 @section('content')
-@include('partials._adminNav')
 <div id="container">
   <section id="create-form">
-    <h1>Add Client</h1>
+    <h1>Edit Client</h1>
     <div class="create-grid">
       <div class="create-form">
         <form action="{{ route('clients.update', $client->id) }}" method="POST">

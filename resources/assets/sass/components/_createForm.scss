@@ -1,12 +1,22 @@
 // Create Form
 
-#create-form {
+#create-form, #admin {
   color: $admin-primary;
+  @media(max-width: $break-sm) {
+    margin-left: 50px;
+  }
   .create-grid {
     display: grid;
     grid-template-areas: 'post sidebar';
     grid-template-columns: 3fr 1fr;
     grid-gap: 50px;
+
+    @media(max-width: $break-sm) {
+      grid-template-areas: 'post'
+                           'sidebar';
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
 
     .create-form {
       background: #fff;
@@ -29,7 +39,7 @@
             background: $off-white;
             border: 0;
             line-height: 1.4;
-            padding: 6px 8px;
+            padding: 6px 0 6px 6px;
             width: 100%;
           }
           input {

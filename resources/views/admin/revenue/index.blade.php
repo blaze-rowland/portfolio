@@ -2,7 +2,7 @@
 @include('partials._adminNav')
 @section('content')
   <div id="container">
-    <section id="revenue">
+    <section id="admin">
       <h1>Revenue</h1>
       <table class="full-width">
         <tr class="shadow">

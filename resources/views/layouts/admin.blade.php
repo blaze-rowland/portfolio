@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
+  @include('partials._meta')
   <title>{{ config('app.name', 'Portfolio | Admin') }}</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+  @include('partials._vendors')
   <link type="text/css" rel="stylesheet" href="{{ asset('css/admin.css') }}">
   @yield('stylesheets')
   @yield('scripts_top')
 </head>
 <body>
+  @if(Auth::check())
+    @include('partials._adminNav')
+  @else
+    <div class="back-button">
+      <a href="{{ url()->previous() }}">  <i class="fa fa-arrow-left"></i> </a>
+    </div>
+    <div class="not-logged">
+  @endif
+
   @yield('content')
 
   <script type="text/javascript" src="{{ asset('js/admin.js') }}"></script>

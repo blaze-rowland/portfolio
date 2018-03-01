@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 @section('content')
-@include('partials._adminNav')
   <div id="container">
-    <section id="blog">
+    <section id="admin">
       <h1>{{ $client->name }}</h1>
       <div class="card-grid">
         @foreach($projects as $project)

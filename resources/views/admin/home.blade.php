@@ -1,7 +1,5 @@
 @extends('layouts.admin')
-
 @section('content')
-@include('partials._adminNav')
 <div id="container">
   <section id="top-dash">
     <h1>Dashboard</h1>

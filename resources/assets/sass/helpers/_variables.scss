@@ -234,6 +234,10 @@ table {
   transition: 0.4s ease;
   width: 100%;
 
+  @media(max-width: $break-sm) {
+    width: 100% !important;
+  }
+
   &:hover {
     box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.7);
   }
@@ -250,6 +254,13 @@ table {
     .fa {
       padding: 50px 0;
       margin-left: -25px;
+    }
+    @media(max-width: $break-sm) {
+      .fa {
+        display: none;
+      }
+      font-size: 1.4em;
+      padding: 15px 0;
     }
   }
   .img {
@@ -281,6 +292,10 @@ table {
     .title {
       display: inline;
       margin: 15px 0;
+
+      @media(max-width: $break-sm) {
+        display: block;
+      }
       a {
         color: inherit;
         text-decoration: none;
@@ -293,6 +308,18 @@ table {
       color: lighten($off-black, 10%);
       display: inline;
       font-size: .8em;
+
+      i {
+        @media(max-width: $break-sm) {
+          display: none;
+        }
+      }
+
+      @media(max-width: $break-sm) {
+        display: block;
+        margin: 15px 0;
+        float: none;
+      }
     }
     .text {
       font-size: .9em;
@@ -334,6 +361,13 @@ table {
   span {
     background: rgba(0, 0, 0, 0.56);
     padding: 10px;
+
+    @media(max-width: $break-sm) {
+      line-height: 2.37 !important;
+      left: 13px !important;
+      top: -204px !important;
+
+    }
   }
 }
 // End Card
@@ -367,3 +401,37 @@ table {
 }
 
 // End Card Grid
+
+.not-logged {
+  @media(max-width: $break-sm){
+    #container {
+      #admin {
+        margin-left: calc(-15% - 10px);
+        .header-aside {
+          margin-left: 0;
+        }
+        .card-grid {
+          width: 115%;
+        }
+      }
+    }
+  }
+  @media(min-width: $break-md), (min-width: $break-lg) {
+    #container {
+      #admin {
+        .card-grid {
+          width: 200%;
+        }
+      }
+    }
+  }
+  @media(min-width: $break-xl) {
+    #container {
+      #admin {
+        .card-grid {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
