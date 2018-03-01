@@ -6,47 +6,47 @@
     <pre class="float-right"> {{ Auth::user()->name }} </pre>
 
     <ul class="quick-info">
-      <a href="">
+      <a href="{{ route('revenue.index') }}">
         <li>
           <div class="aside-icon income">
             <i class="fa fa-arrow-circle-up"></i>
           </div>
           <div class="info">
             <h3 class="info-income">Income</h3>
-            <p>$700</p>
+            <p>${{ $income }}</p>
           </div>
         </li>
       </a>
-      <a href="">
+      <a href="{{ route('revenue.index') }}">
         <li>
           <div class="aside-icon expense">
             <i class=" fa fa-arrow-circle-down"></i>
           </div>
           <div class="info">
             <h3 class="info-expense">Expense</h3>
-            <p>$300</p>
+            <p>${{ $expense }}</p>
           </div>
         </li>
       </a>
-      <a href="">
+      <a href="{{ route('clients.index') }}">
         <li>
           <div class="aside-icon clients">
             <i class="fa fa-users"></i>
           </div>
           <div class="info">
             <h3 class="info-clients">Clients</h3>
-            <p>10</p>
+            <p>{{ $clients }}</p>
           </div>
         </li>
       </a>
-      <a href="">
+      <a href="{{ route('projects.index') }}">
         <li>
           <div class="aside-icon projects">
             <i class="fa fa fa-briefcase"></i>
           </div>
           <div class="info">
             <h3 class="info-projects">Projects</h3>
-            <p>12</p>
+            <p>{{ $projects }}</p>
           </div>
         </li>
       </a>
