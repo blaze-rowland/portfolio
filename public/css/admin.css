@@ -160,6 +160,14 @@ i {
   margin: 25px 0 0 0;
 }
 
+.m-50 {
+  margin: 50px 0 0 0;
+}
+
+.lead {
+  font-size: 1.1em;
+}
+
 .pull-right {
   float: right;
 }
@@ -350,6 +358,15 @@ table tr .num {
   color: #343044;
 }
 
+.btn-negative {
+  background: #8c3737;
+  border-color: #8c3737;
+}
+
+.btn-negative:hover {
+  color: #8c3737;
+}
+
 .card {
   background: #fff;
   -webkit-box-shadow: 0 1px 5px -3px rgba(0, 0, 0, 0.7);
@@ -441,6 +458,10 @@ table tr .num {
   margin-left: 0;
   position: absolute;
   bottom: 25px;
+}
+
+.card .no-btn {
+  padding-bottom: 0;
 }
 
 .card.alone {
@@ -971,7 +992,8 @@ h3 {
 }
 
 #create-form .create-grid .create-form form .form-group input,
-#create-form .create-grid .create-form form .form-group textarea {
+#create-form .create-grid .create-form form .form-group textarea,
+#create-form .create-grid .create-form form .form-group select {
   -webkit-box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
           box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
   background: #fafafa;
@@ -988,6 +1010,11 @@ h3 {
 #create-form .create-grid .create-form form .form-group textarea {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
+}
+
+#create-form .create-grid .create-form form .form-group select {
+  font-size: 1em;
+  padding: 8px 8px;
 }
 
 #create-form .create-grid .sidebar {

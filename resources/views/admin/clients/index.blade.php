@@ -10,19 +10,19 @@
           <th>Name</th>
           <th>Email</th>
           <th>Project</th>
-          <th>Income</th>
-          <th>Expense</th>
+          <th>Start Date</th>
+          <th>Due Date</th>
         </tr>
-        @for($i = 1; $i <= 10; $i++)
-          <tr>
-            <td>{{$i}}</td>
-            <td>Client {{ $i }}</td>
-            <td>email{{$i}}@gmail.com</td>
-            <td><a href="#">Project {{$i}}</a></td>
-            <td>{{ 22 * $i }}</td>
-            <td>{{ 3 * $i }}</td>
-          </tr>
-        @endfor
+        @foreach($clients as $client)
+            <tr>
+              <td>{{ $client->id }}</td>
+              <td><a href="{{ route('clients.show', $client->id) }}">{{ $client->name }}</a></td>
+              <td>{{ $client->email }}</td>
+              <td><a href="{{route('projects.show', $client->projects[0]->id)}}">{{ $client->projects[0]->title }}</a></td>
+              <td>{{ date('F jS, Y', strtotime($client->projects[0]->created_at)) }}</td>
+              <td>{{ date('F jS, Y', strtotime($client->projects[0]->due_date)) }}</td>
+            </tr>
+        @endforeach
       </table>
     </section>
   </div>

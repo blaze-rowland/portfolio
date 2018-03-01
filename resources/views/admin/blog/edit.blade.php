@@ -11,15 +11,15 @@
           @csrf
           <div class="form-group">
             <label for="title">Title: </label>
-            <input type="text" name="title" value="{{$post->title}}" class="">
+            <input type="text" name="title" value="{{$post->title}}" required autofocus>
           </div>
           <div class="form-group">
             <label for="cover_image">Image: </label>
-            <input type="url" name="cover_image" value="{{$post->cover_image}}" class="">
+            <input type="url" name="cover_image" value="{{$post->cover_image}}" required>
           </div>
           <div class="form-group">
             <label for="body">Body:</label>
-            <textarea name="body" id="" cols="30" rows="10" class="">{!!$post->body!!}</textarea>
+            <textarea name="body" id="" cols="30" rows="10" class="" required>{!!$post->body!!}</textarea>
           </div>
       </div>
       <div class="sidebar">

@@ -24,7 +24,10 @@ Route::resource('revenue', 'RevenueController');
 Route::resource('projects', 'ProjectController');
 Route::resource('clients', 'ClientController');
 Route::resource('notes', 'NoteController');
-
+Route::get('/projects/{id}/notes/create', 'ProjectController@create_note')->name('projects.note.create');
+Route::get('/projects/{id}/notes/edit', 'ProjectController@edit_note')->name('projects.note.edit');
+Route::put('/projects/{id}/notes/create', 'ProjectController@update_note')->name('projects.note.update');
+Route::put('/projects/{id}/notes/delete', 'ProjectController@delete_note')->name('projects.note.delete');
 //Dashboard Routes
 Route::get('/admin', 'AdminController@index')->name('home');
 Route::get('/admin/posts', 'PostController@index')->name('posts');

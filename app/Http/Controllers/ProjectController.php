@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Project;
+use App\Client;
+use DB;
 
 class ProjectController extends Controller
 {
@@ -19,7 +23,9 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        return view('admin.projects.index');
+        $projects = Project::orderBy('created_at', 'DESC')->paginate(15);
+        $clients = Client::orderBy('created_at', 'DESC')->paginate(15);
+        return view('admin.projects.index')->withProjects($projects)->withClients($clients);
     }
 
     /**
@@ -29,7 +35,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        $clients = Client::all();
+        return view('admin.projects.create')->withClients($clients);
     }
 
     /**
@@ -40,7 +47,26 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'title'       => 'required',
+          'type'        => 'required',
+          'client'      => 'required',
+          'budget'      => 'required',
+          'description' => 'required',
+          'due_date'    => 'required'
+        ]);
+
+        $project = new Project;
+        $project->title       = $request->input('title');
+        $project->type        = $request->input('type');
+        $project->client_id   = $request->input('client');
+        $project->budget      = $request->input('budget');
+        $project->description = $request->input('description');
+        $project->due_date    = $request->input('due_date');
+
+        $project->save();
+
+        return redirect('/admin/projects');
     }
 
     /**
@@ -51,7 +77,11 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = Project::find($id);
+        $project_id = $project->id;
+        $clients = DB::table('clients')->where('project_id', $project_id)->get();
+
+        return view('admin.projects.show')->withProject($project)->withClients($clients);
     }
 
     /**
@@ -62,7 +92,8 @@ class ProjectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+        return view('admin.projects.edit')->withProject($project);
     }
 
     /**
@@ -74,7 +105,24 @@ class ProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+          'title'       => 'required',
+          'type'        => 'required',
+          'budget'      => 'required',
+          'description' => 'required',
+          'due_date'    => 'required'
+        ]);
+
+        $project = Project::find($id);
+        $project->title       = $request->input('title');
+        $project->type        = $request->input('type');
+        $project->budget      = $request->input('budget');
+        $project->description = $request->input('description');
+        $project->due_date    = $request->input('due_date');
+
+        $project->save();
+
+        return redirect('/admin/projects');
     }
 
     /**
@@ -85,6 +133,38 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+
+        $project->delete();
+
+        return redirect('/admin/projects');
+    }
+
+
+    // Project Notes
+
+
+    public function create_note($id) {
+      $project = Project::find($id);
+      return view('admin.notes.create')->withProject($project);
+    }
+
+    public function edit_note($id) {
+      $project = Project::find($id);
+      return view('admin.notes.edit')->withProject($project);
+    }
+
+    public function update_note(Request $request, $id)
+    {
+      $this->validate($request, [
+        'notes'       => 'required'
+      ]);
+
+      $note = Project::find($id);
+      $note->notes       = $request->input('notes');
+
+      $note->save();
+
+      return redirect('/admin/projects');
     }
 }

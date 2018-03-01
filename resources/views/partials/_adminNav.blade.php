@@ -17,9 +17,6 @@
         <i><i class="fa fa-rss"></i></i>
       </li>
     </a>
-    <a href="{{ route('notes') }}">
-      <li><i class="fa fa-sticky-note"></i></li>
-    </a>
     @include('partials._adminControls')
     <a href="{{ url('/logout') }}">
       <li>

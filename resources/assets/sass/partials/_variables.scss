@@ -38,6 +38,14 @@ i {
   margin: 25px 0 0 0;
 }
 
+.m-50 {
+  margin: 50px 0 0 0;
+}
+
+.lead {
+  font-size: 1.1em;
+}
+
 .pull-right {
   float: right;
 }
@@ -202,6 +210,15 @@ table {
     color: $admin-primary;
   }
 }
+
+.btn-negative {
+  background: $negative;
+  border-color: $negative;
+
+  &:hover {
+    color: $negative;
+  }
+}
 // End Standard Button
 
 // Image Card
@@ -281,6 +298,9 @@ table {
       position: absolute;
       bottom: 25px;
     }
+  }
+  .no-btn {
+    padding-bottom: 0;
   }
 }
 
