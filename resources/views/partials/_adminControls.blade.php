@@ -1,5 +1,5 @@
 @if(Request::getPathInfo() === '/admin/revenue')
-  <a href="#revenue">
+  <a href="{{ route('revenue.create') }}">
     <li><i class="fa fa-plus"></i></li>
   </a>
 

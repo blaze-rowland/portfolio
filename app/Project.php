@@ -15,4 +15,8 @@ class Project extends Model
     public function clients() {
       return $this->belongsTo('App\Client');
     }
+
+    public function revenue() {
+      return $this->hasMany('App\Revenue', 'project_id');
+    }
 }

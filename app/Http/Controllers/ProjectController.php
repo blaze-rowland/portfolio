@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Project;
 use App\Client;
+use App\Revenue;
 use DB;
 
 class ProjectController extends Controller

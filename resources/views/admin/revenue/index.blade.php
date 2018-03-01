@@ -12,21 +12,23 @@
           <th>Expense</th>
           <th>Total</th>
         </tr>
-        @for($i = 1; $i <= 10; $i++)
-          <tr>
-            <td class="num">{{$i}}</td>
-            <td><a href="#">Project {{$i}}</a></td>
-            <td class="positive">${{ 50 * $i }}</td>
-            <td class="negative">${{ 2 * $i }}</td>
-            <td>${{ (50 * $i) - 2 * $i }}</td>
-          </tr>
-        @endfor
+          @foreach($projects as $project)
+            <tr>
+              <td class="num">{{ $project->id }}</td>
+              <td><a href="{{ route('projects.show', $project->id) }}">{{ $project->title }}</a></td>
+              <td class="positive">${{ $project->revenue->sum('income') }}</td>
+              <td class="negative">${{ $project->revenue->sum('expense') }}</td>
+              <td>${{ $project->revenue->sum('income') - $project->revenue->sum('expense') }}</td>
+            </tr>
+          @endforeach
         <tr>
           <td>Revenue:</td>
           <td></td>
           <td></td>
           <td></td>
-          <td class="positive">$2,640</td>
+          <td class="positive">
+            ${{ $revenues->sum('income') - $revenues->sum('expense') }}
+          </td>
         </tr>
       </table>
     </section>

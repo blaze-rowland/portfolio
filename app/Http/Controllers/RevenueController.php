@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Project;
+use App\Revenue;
 
 class RevenueController extends Controller
 {
@@ -19,7 +21,10 @@ class RevenueController extends Controller
      */
     public function index()
     {
-        return view('admin.revenue.index');
+        $revenues  = Revenue::all();
+        $projects = Project::all();
+
+        return view('admin.revenue.index')->withRevenues($revenues)->withProjects($projects);
     }
 
     /**
@@ -29,7 +34,9 @@ class RevenueController extends Controller
      */
     public function create()
     {
-        //
+        $projects = Project::all();
+        $revenues = Revenue::all();
+        return view('admin.revenue.create')->withRevenues($revenues)->withProjects($projects);
     }
 
     /**
@@ -40,7 +47,22 @@ class RevenueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+          'project_id' => 'required|integer',
+          'revenue'    => 'required|string',
+          'amount'     => 'required|integer'
+        ]);
+
+        $revenue = new Revenue;
+        $revenue->project_id = $request->input('project_id');
+        if($request->input('revenue') === 'income') {
+          $revenue->income = $request->input('amount');
+        } else {
+          $revenue->expense = $request->input('amount');
+        }
+        $revenue->save();
+
+        return redirect('/admin/revenue');
     }
 
     /**

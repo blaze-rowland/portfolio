@@ -28,6 +28,17 @@
 
         .form-group {
           padding: 15px 0;
+
+          .radio {
+            font-size: 1em;
+            padding: 10px 0;
+            input {
+              display: inline-block !important;
+              margin: 0 7px;
+              width: auto !important;
+            }
+          }
+
           label {
             display: block;
             font-size: 1.2em;
