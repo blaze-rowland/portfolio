@@ -1,0 +1,191 @@
+// Dashboard
+#container {
+  margin: 25px auto 0 auto;
+  width: 70%;
+
+  #top-dash {
+    margin: 25px 0;
+    h1 {
+      display: inline;
+      line-height: 1.5;
+      font-weight: 500;
+
+      @media(max-width: $break-sm), (max-width: $break-md) {
+        margin-left: 50px;
+      }
+    }
+
+    pre {
+      display: inline;
+      line-height: 3;
+      color: lighten($off-black, 10%);
+
+      @media(max-width: $break-sm) {
+        display: none;
+      }
+    }
+
+    .quick-info {
+      display: grid;
+      grid-template-areas: 'income expense clients projects';
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 25px;
+      margin: 35px 0;
+
+      a {
+        text-decoration: none;
+      }
+
+      @media(max-width: $break-sm), (max-width: $break-md) {
+        margin-left: 50px;
+        grid-template-areas: 'income'
+                             'expense'
+                             'clients'
+                             'projects';
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        background: white;
+        border-radius: 2px;
+        box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: 'icon info';
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        transition: 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 0 14px -6px rgba(0, 0, 0, 0.5);
+
+          .aside-icon {
+            box-shadow: 8px 0px 14px -14px rgba(0, 0, 0, 0.75);
+          }
+        }
+
+
+        .aside-icon {
+          border-top-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+          color: white;
+          font-size: 1.9em;
+          grid-area: 'icon';
+          padding: 40px 25px;
+          -webkit-box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
+          -moz-box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
+          box-shadow: 10px 0px 10px -17px rgba(0,0,0,0.75);
+          transition: 0.3s ease;
+        }
+        .info {
+          grid-area: 'info';
+          margin: 25px 15px 25px 5px;
+          p {
+            color: lighten($off-black, 15%);
+            padding: 10px 0;
+          }
+          .info-income {
+            color: #58BCDC;
+          }
+          .info-expense {
+            color: #FE8663;
+          }
+          .info-clients {
+            color: #B198DC;
+          }
+          .info-projects {
+            color: #6CC7BE;
+          }
+        }
+      }
+
+
+      .income, .expense, .clients, .projects {
+        color: white;
+        display: inline-block;
+        font-size: 1.9em;
+        padding: 40px 25px;
+      }
+
+      .income {
+        background-image: linear-gradient(to top, #58BCDC 0%, #56BDDC 100%);
+        grid-area: 'income';
+      }
+      .expense {
+        background-image: linear-gradient(to top, #FE8663 0%, #FF875E 100%);
+        grid-area: 'expense';
+      }
+      .clients {
+        background-image: linear-gradient(to top, #B198DC 0%, #B299DD 100%);
+        grid-area: 'clients'
+      }
+      .projects {
+        background-image: linear-gradient(to top, #6CC7BE 0%, #6BC8BE 100%);
+        grid-area: 'projects'
+      }
+    }
+  } // ./top-dash
+
+
+// Analytics
+  #analytics-1 {
+    display: grid;
+    grid-gap: 15px 25px;
+    grid-template-areas: 'main side1'
+                         'main side2';
+    grid-template-columns: 2fr 1fr;
+
+    @media(max-width: $break-sm), (max-width: $break-md) {
+      grid-template-areas: 'main'
+                           'side1'
+                           'side2';
+      grid-template-columns: 1fr;
+      margin-left: 50px;
+    }
+
+    .main, .side-1, .side-2 {
+      background: #fff;
+      box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+      padding: 15px 15px;
+    }
+
+    .main {
+      grid-area: main;
+    }
+    .side-1 {
+      grid-area: side1;
+    }
+    .side-2 {
+      grid-area: side2;
+    }
+  }
+
+  #analytics-2 {
+    display: grid;
+    grid-template-areas: 'side1 side2';
+    grid-gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    margin: 40px 0;
+    @media(max-width: $break-sm), (max-width: $break-md) {
+      margin-left: 50px;
+      grid-template-areas: 'side1'
+                           'side2';
+      grid-template-columns: 1fr;
+    }
+
+    .side-1, .side-2 {
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
+      padding: 15px 15px;
+    }
+    .side-1 {
+      grid-area: side1;
+    }
+    .side-2 {
+      grid-area: side2;
+      padding: 0;
+    }
+  }
+}
+// End Analytics

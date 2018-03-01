@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
-@include('partials._adminNav')
 @section('content')
+@include('partials._adminNav')
 <div id="container">
   <section id="top-dash">
     <h1>Dashboard</h1>
@@ -71,14 +71,14 @@
     </div>
     <div class="side-2 card">
       <div class="img">
-        <img class="top" src="{{ asset('/img/portfolio/1.jpg') }}" alt="Name Of Post - Image" onerror="this.style.display='none'">
+        <img class="top" src="{{ $recent[0]->cover_image }}" alt="Name Of Post - Image" onerror="this.style.display='none'">
         <span><i class="fa fa-clock-o" title="Most Recent Post"></i></span>
       </div>
       <div class="body">
-        <h3 class="title">Blog Post</h3>
-        <pre class="float-right"><i class="fa fa-calendar-o"> </i> February 14th, 2018</pre>
-        <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nisi et aliquid odio provident distinctio reiciendis doloremque, porro sed assumenda eveniet sunt natus sint repellendus, at tempora culpa dolore, ratione quasi voluptatibus! Autem quas, est dolorem aperiam culpa velit fuga aut voluptate harum iusto, sed consequuntur blanditiis, odio qui quae.</p>
-        <a href="#" class="btn btn-admin pull-right block">Edit</a>
+        <h3 class="title"><a href="{{ route('posts.show', $recent[0]->id) }}">{{ str_limit($recent[0]->title, $limit = 40, $end = '...') }}</a></h3>
+        <pre class="float-right"><i class="fa fa-calendar-o"> </i> {{ date('F jS, Y', strtotime($recent[0]->created_at)) }}</pre>
+        <p class="text">{{ strip_tags(str_limit($recent[0]->body, $limit = 225, $end = '...')) }}</p>
+        <a href="{{ route('posts.edit', $recent[0]->id) }}" class="btn btn-admin pull-right block">Edit</a>
       </div>
     </div>
   </section>

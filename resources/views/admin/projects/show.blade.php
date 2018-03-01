@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-@include('partials._adminNav')
 @section('content')
+@include('partials._adminNav')
   <div id="container">
     <section id="blog">
       <h1 class="inline">{{ $project->title }}</h1>

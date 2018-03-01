@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class AdminController extends Controller
 {
@@ -23,7 +24,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $recent = Post::orderBy('created_at', 'DESC')->take(1)->get();
+        return view('admin.home')->withRecent($recent);
     }
 
     public function testbench()

@@ -1,0 +1,64 @@
+// Create Form
+
+#create-form {
+  color: $admin-primary;
+  .create-grid {
+    display: grid;
+    grid-template-areas: 'post sidebar';
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 50px;
+
+    .create-form {
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+      grid-area: 'post';
+      form {
+        padding: 25px 20px;
+
+        .form-group {
+          padding: 15px 0;
+          label {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 500;
+            margin-bottom: 10px;
+          }
+          input, textarea, select {
+            box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
+            background: $off-white;
+            border: 0;
+            line-height: 1.4;
+            padding: 6px 8px;
+            width: 100%;
+          }
+          input {
+            font-size: 1.2em;
+          }
+          textarea {
+            font-family: $font-family-sans-serif;
+            line-height: 1.5;
+          }
+          select {
+            font-size: 1em;
+            padding: 8px 8px;
+          }
+        }
+      }
+    }
+    .sidebar {
+      background: #fff;
+      height: calc(16px + .9em) !important;
+      border-radius: 3px;
+      box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
+      padding: 30px 20px;
+      grid-area: 'sidebar';
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// End Create Form

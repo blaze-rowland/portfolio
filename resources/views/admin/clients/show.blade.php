@@ -1,12 +1,6 @@
 @extends('layouts.admin')
-@if(Auth::check())
-  @include('partials._adminNav')
-@else
-  <div class="back-button">
-    <a href="{{ route('/') }}">  <i class="fa fa-arrow-left"></i> </a>
-  </div>
-@endif
 @section('content')
+@include('partials._adminNav')
   <div id="container">
     <section id="blog">
       <h1>{{ $client->name }}</h1>

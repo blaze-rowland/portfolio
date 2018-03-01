@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-@include('partials._adminNav')
 @section('content')
+@include('partials._adminNav')
 <div id="container">
   <section id="create-form">
     <h1>Create Post</h1>
@@ -26,6 +26,7 @@
       </form>
       </div>
     </div>
+    @include('partials._errors')
   </section>
 </div>
 @stop

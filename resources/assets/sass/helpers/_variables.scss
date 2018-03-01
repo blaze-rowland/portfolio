@@ -1,3 +1,6 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,900");
+
 // Typography
 $font-family-sans-serif: "Raleway", sans-serif;
 
@@ -278,6 +281,10 @@ table {
     .title {
       display: inline;
       margin: 15px 0;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       .fa {
         color: $admin-primary;
       }

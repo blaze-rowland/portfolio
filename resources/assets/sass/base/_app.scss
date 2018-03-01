@@ -1,0 +1,25 @@
+// Default Styling
+
+body {
+  font-family: $font-family-sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+pre {
+  color: rgb(94, 94, 94);
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}

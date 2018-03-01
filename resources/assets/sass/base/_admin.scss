@@ -1,0 +1,50 @@
+// Default Styling
+html, body {
+  // height: 125%;
+  height: 100%;
+}
+
+body {
+  background: $off-white;
+  font-family: $font-family-sans-serif;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+.float-right {
+  float: right;
+}
+
+.admin-nav-btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.ql-container.ql-snow {
+  font-size: .9em;
+  font-weight: 400;
+  height: 250px;
+  line-height: 1.5;
+}
+
+.back-button {
+  font-size: 1.4em;
+  margin: 25px 45px;
+  a {
+    color: $primary-color;
+  }
+}
+
+#container {
+  width: 100%;
+  margin-bottom:25px;
+}

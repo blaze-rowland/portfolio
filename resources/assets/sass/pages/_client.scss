@@ -1,0 +1,21 @@
+// Client Page
+
+#blog, #clients, #revenue, #create-form {
+  h1 {
+    margin: 25px 0;
+  }
+  .header-aside {
+      color: lighten($off-black, 20%);
+      display: inline;
+      font-size: .8em;
+      line-height: 3;
+      margin-left: 25px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+  }
+}
+
+// End Client Page

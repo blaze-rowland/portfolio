@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-@include('partials._adminNav')
 @section('content')
+@include('partials._adminNav')
   <div id="container">
     <section id="clients">
       <h1>Clients</h1>

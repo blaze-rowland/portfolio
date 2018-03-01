@@ -25,17 +25,6 @@
         </div>
       </form>
     </div>
-      <div class="errors">
-        @if ($errors->has('email'))
-          <div class="form-error">
-            {{ $errors->first('email') }}
-          </div>
-        @endif
-        @if ($errors->has('password'))
-          <div class="form-error">
-            {{ $errors->first('password') }}
-          </div>
-        @endif
-      </div>
+      @include('partials._errors')
   </div>
 @endsection

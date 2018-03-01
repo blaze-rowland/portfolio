@@ -48,12 +48,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-          'title'       => 'required',
-          'type'        => 'required',
-          'client'      => 'required',
-          'budget'      => 'required',
+          'title'       => 'required|string',
+          'type'        => 'required|string',
+          'client'      => 'required|integer',
+          'budget'      => 'required|integer',
           'description' => 'required',
-          'due_date'    => 'required'
+          'due_date'    => 'required|date'
         ]);
 
         $project = new Project;
@@ -106,11 +106,11 @@ class ProjectController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-          'title'       => 'required',
-          'type'        => 'required',
-          'budget'      => 'required',
+          'title'       => 'required|string',
+          'type'        => 'required|string',
+          'budget'      => 'required|integer',
           'description' => 'required',
-          'due_date'    => 'required'
+          'due_date'    => 'required|date'
         ]);
 
         $project = Project::find($id);

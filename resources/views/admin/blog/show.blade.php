@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('content')
 @if(Auth::check())
   @include('partials._adminNav')
 @else
@@ -6,7 +7,6 @@
     <a href="{{ route('posts') }}">  <i class="fa fa-arrow-left"></i> </a>
   </div>
 @endif
-@section('content')
   <div id="container">
     <section id="blog">
       <h1 class="inline">Blog</h1>

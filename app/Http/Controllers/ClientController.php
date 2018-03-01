@@ -47,19 +47,19 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-          'name'         => 'required',
-          'email'        => 'required',
-          'title'        => 'required',
-          'type'         => 'required',
-          'budget'       => 'required',
-          'due_date'     => 'required'
+          'name'         => 'required|string',
+          'email'        => 'required|email',
+          'title'        => 'required|string',
+          'type'         => 'required|string',
+          'budget'       => 'required|integer',
+          'due_date'     => 'required|date'
         ]);
 
         $client = new Client;
         $project = new Project;
 
-        $client->name       = $request->input('name');
-        $client->email      = $request->input('email');
+        $client->name         = $request->input('name');
+        $client->email        = $request->input('email');
 
         $project->title       = $request->input('title');
         $project->type        = $request->input('type');
@@ -68,7 +68,7 @@ class ClientController extends Controller
         $project->description = $request->input('description');
 
         $project->save();
-        $client->save();
+        $client ->save();
 
         $client->project_id = $project->id;
         $client->save();
@@ -87,9 +87,9 @@ class ClientController extends Controller
      */
     public function show($id)
     {
-        $client = Client::find($id);
+        $client    = Client::find($id);
         $client_id = $client->id;
-        $projects = DB::table('projects')->where('client_id', $client_id)->get();
+        $projects  = DB::table('projects')->where('client_id', $client_id)->get();
         return view('admin.clients.show')->withClient($client)->withProjects($projects);
     }
 
@@ -115,8 +115,8 @@ class ClientController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-          'name'  => 'required',
-          'email' => 'required'
+          'name'  => 'required|string',
+          'email' => 'required|email'
         ]);
 
         $client = Client::find($id);

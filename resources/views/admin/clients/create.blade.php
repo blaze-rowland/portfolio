@@ -1,6 +1,6 @@
 @extends('layouts.admin')
-@include('partials._adminNav')
 @section('content')
+@include('partials._adminNav')
 <div id="container">
   <section id="create-form">
     <h1>Add Client</h1>
@@ -35,7 +35,6 @@
           <div class="form-group">
             <label for="description">Description:</label>
             <textarea name="description" cols="30" rows="3" required>{{ old('description') }}</textarea>
-            {{-- <input type="text" name="description" value="{{old('description')}}" required> --}}
           </div>
           <div class="form-group">
             <label for="due_date">Due Date:</label>
@@ -47,6 +46,7 @@
       </form>
       </div>
     </div>
+    @include('partials._errors')
   </section>
 </div>
 @stop

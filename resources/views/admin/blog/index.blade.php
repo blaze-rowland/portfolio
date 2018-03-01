@@ -1,4 +1,5 @@
 @extends('layouts.admin')
+@section('content')
 @if(Auth::check())
   @include('partials._adminNav')
 @else
@@ -6,7 +7,6 @@
     <a href="{{ route('/') }}">  <i class="fa fa-arrow-left"></i> </a>
   </div>
 @endif
-@section('content')
   <div id="container">
     <section id="blog">
       <h1>Blog</h1>
@@ -19,7 +19,7 @@
             </div>
             <div class="body">
                 <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
-                <pre class="float-right"><i class="fa fa-calendar-o"> </i> {{ date('F j, Y', strtotime($post->created_at)) }}</pre>
+                <pre class="float-right"><i class="fa fa-calendar-o"> </i> {{ date('F jS, Y', strtotime($post->created_at)) }}</pre>
 
                 <div class="text">{{ strip_tags(str_limit($post->body, $limit = 225, $end = '...')) }}</div>
                 @if(Auth::check())
