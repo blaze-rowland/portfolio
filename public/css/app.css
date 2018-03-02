@@ -27,6 +27,10 @@ i {
   margin: 50px 0 0 0;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .lead {
   font-size: 1.1em;
 }
@@ -212,6 +216,11 @@ table tr .num {
   color: #2fcff2;
 }
 
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
+}
+
 .btn-admin {
   background: #343044;
   border-color: #343044;
@@ -228,6 +237,11 @@ table tr .num {
 
 .btn-negative:hover {
   color: #8c3737;
+}
+
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
 }
 
 .card {
@@ -729,6 +743,48 @@ table {
   }
 }
 
+#mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #mobile-nav {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #mobile-nav .mobile-hamburger {
+    cursor: pointer;
+    padding: 15px 40px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #mobile-nav .mobile-nav {
+    background: rgba(47, 207, 242, 0.8);
+    color: white;
+    position: absolute;
+    margin-top: 46px;
+    padding: 25px 0;
+    width: 100%;
+    z-index: 9999999999999999;
+  }
+}
+
+#mobile-nav .mobile-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #mobile-nav .mobile-nav li {
+    padding: 5px 0;
+  }
+}
+
 #portfolio {
   margin: 0;
   padding: 0;
@@ -756,6 +812,24 @@ table {
   width: 100%;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+}
+
+@media (max-width: 1200px) {
+  #portfolio .portfolio img {
+    height: 225px;
+  }
+}
+
+@media (max-width: 992px) {
+  #portfolio .portfolio img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  #portfolio .portfolio img {
+    height: 350px;
+  }
 }
 
 #portfolio .portfolio img:hover {
@@ -1219,26 +1293,48 @@ table {
   line-height: 4;
 }
 
-#about .download-resume {
-  background: #2fcff2;
-  border: 1px solid #2fcff2;
-  border-radius: 5px;
-  color: #fff;
-  font-size: 1.2em;
-  padding: 10px 30px;
-  text-decoration: none;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+#blog {
+  margin: 0 auto;
+  margin-bottom: 75px;
+  width: 80%;
 }
 
-#about .download-resume:hover {
-  background: #0ebee5;
-  border-color: #0da6c8;
-  cursor: pointer;
+#blog h1 {
+  grid-area: 'header';
+}
+
+#blog .card-grid {
+  display: grid;
+  grid-template-areas: 'card card card';
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1200px) {
+  #blog .card-grid {
+    grid-template-areas: 'card card';
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px), (max-width: 992px) {
+  #blog .card-grid {
+    grid-template-areas: 'card';
+    grid-template-columns: 1fr;
+  }
+}
+
+#blog .card-grid .card {
+  grid-area: 'card';
+}
+
+#blog .center a.btn {
+  margin: 0 auto;
+  width: 100%;
 }
 
 #contact {
   background: #282828;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/stardust.png");
   -webkit-box-shadow: 0px 0px 8px 0px #2fcff2;
   box-shadow: 0px 0px 8px 0px #2fcff2;
   color: white;
@@ -1432,18 +1528,23 @@ h1 {
   grid-column-end: 20;
 }
 
-#site-footer .social i {
-  cursor: pointer;
-  margin-right: .5em;
-  -webkit-transition: 0.4s ease;
-  transition: 0.4s ease;
+#site-footer .social a {
+  color: #dbdbdb;
+  margin: 0 8px;
 }
 
-#site-footer .social i:last-child {
+#site-footer .social a i {
+  cursor: pointer;
+  margin-right: .5em;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+#site-footer .social a i:last-child {
   margin-right: 0;
 }
 
-#site-footer .social i:hover {
+#site-footer .social a i:hover {
   color: #2fcff2;
 }
 

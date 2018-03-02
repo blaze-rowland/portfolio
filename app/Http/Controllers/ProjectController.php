@@ -135,7 +135,13 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         $project = Project::find($id);
+        $project_id = $project->id;
+        $revenue = DB::table('revenues')->where('project_id', $project_id)->get();
 
+        $project->revenue[0]->delete();
+        if(!empty($project->revenue[1])) {
+          $project->revenue[1]->delete();
+        }
         $project->delete();
 
         return redirect('/admin/projects');

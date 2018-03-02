@@ -116,6 +116,42 @@
   }
 }
 
+#mobile-nav {
+  display: none;
+  @media(max-width: $break-sm), (max-width: $break-md) {
+    display: block;
+    text-align: center;
+  }
+  .mobile-hamburger {
+    @media(max-width: $break-sm), (max-width: $break-md) {
+      cursor: pointer;
+      padding: 15px 40px;
+      text-align: right;
+    }
+  }
+  .mobile-nav {
+    @media(max-width: $break-sm), (max-width: $break-md) {
+      // background: $primary-color;
+      background: rgba($primary-color, .8);
+      color: white;
+      position: absolute;
+      margin-top: 46px;
+      padding: 25px 0;
+      width: 100%;
+      z-index: 9999999999999999;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    li {
+      @media(max-width: $break-sm), (max-width: $break-md) {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
 // End Nav Bar Section
 
 // Portfolio / Work Section
@@ -140,6 +176,17 @@
     height: 350px;
     width: 100%;
     transition: 0.2s ease;
+
+    @media(max-width: $break-lg) {
+      height: 225px;
+    }
+
+    @media(max-width: $break-md) {
+      height: 250px;
+    }
+    @media(max-width: $break-sm) {
+      height: 350px;
+    }
   }
 
   .portfolio img:hover {
@@ -451,29 +498,49 @@
     }
   }
 
-  .download-resume {
-    background: $primary-color;
-    border: 1px solid $primary-color;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.2em;
-    padding: 10px 30px;
-    text-decoration: none;
-    transition: 0.3s ease;
 
-    &:hover {
-      background: darken($primary-color, 9%);
-      border-color: darken($primary-color, 15%);
-      cursor: pointer;
-    }
-  }
 }
 // End About Section
 
-// Contact Section
+// Blog Section
+#blog {
+  margin: 0 auto;
+  margin-bottom: 75px;
+  width: 80%;
+  h1 {
+    grid-area: 'header';
+  }
+  .card-grid {
+    display: grid;
+    grid-template-areas: 'card card card';
+    grid-template-columns: repeat(3, 1fr);
 
+    @media (max-width: $break-lg) {
+      grid-template-areas: 'card card';
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $break-sm), (max-width: $break-md) {
+      grid-template-areas: 'card';
+      grid-template-columns: 1fr;
+    }
+    .card {
+      grid-area: 'card';
+    }
+  }
+  .center {
+    a.btn {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+// End Blog Section
+
+// Contact Section
 #contact {
   background: rgb(40, 40, 40);
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/stardust.png');
   -webkit-box-shadow: 0px 0px 8px 0px $primary-color;
   -moz-box-shadow: 0px 0px 8px 0px $primary-color;
   box-shadow: 0px 0px 8px 0px $primary-color;
@@ -634,21 +701,39 @@ h1 {
     grid-area: 'social';
     grid-column-end: 20;
 
-    i {
-      cursor: pointer;
-      margin-right: .5em;
-      transition: 0.4s ease;
+    a {
+      color: rgb(219, 219, 219);
+      margin: 0 8px;
 
-      &:last-child {
-        margin-right: 0;
-      }
+      i {
+        cursor: pointer;
+        margin-right: .5em;
+        transition: 0.2s ease;
 
-      &:hover {
-        color: $primary-color;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
       }
     }
   }
 }
+// End Footer
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Portfolio Page (show)

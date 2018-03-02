@@ -164,6 +164,10 @@ i {
   margin: 50px 0 0 0;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .lead {
   font-size: 1.1em;
 }
@@ -349,6 +353,11 @@ table tr .num {
   color: #2fcff2;
 }
 
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
+}
+
 .btn-admin {
   background: #343044;
   border-color: #343044;
@@ -365,6 +374,11 @@ table tr .num {
 
 .btn-negative:hover {
   color: #8c3737;
+}
+
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
 }
 
 .card {

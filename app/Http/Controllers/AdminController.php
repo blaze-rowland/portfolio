@@ -18,7 +18,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth', ['except' => 'welcome']);
     }
 
     /**
@@ -34,6 +34,11 @@ class AdminController extends Controller
         $clients  = Client::count();
         $projects = Project::count();
         return view('admin.home')->withRecent($recent)->withIncome($income)->withExpense($expense)->withClients($clients)->withProjects($projects);
+    }
+
+    public function welcome() {
+      $posts = Post::orderBy('created_at', 'DESC')->take(3)->get();
+      return view('welcome')->withPosts($posts);
     }
 
     public function testbench()

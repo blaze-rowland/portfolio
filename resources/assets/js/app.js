@@ -13,6 +13,14 @@ $(document).ready(function() {
 });
 
 
+// Mobile Navbar
+
+$('.mobile-hamburger').on('click', function(){
+  // $('.mobile-nav').toggleClass('hide');
+  $('.mobile-nav').slideToggle(400);
+});
+// End Mobile Navbar
+
 
 // Portfolio Zoom
 if($('.zoom').click(function(){

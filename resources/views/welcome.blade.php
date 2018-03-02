@@ -14,6 +14,17 @@
       <a href="#portfolio" class="nav-link"><li>Work</li></a>
       <a href="#about" class="nav-link"><li>About</li></a>
       <a href="#contact" class="nav-link"><li>Contact</li></a>
+      <a href="#blog" class="nav-link"><li>Blog</li></a>
+    </ul>
+  </nav>
+  <nav id="mobile-nav">
+    <div class="mobile-hamburger pull-right"><i class="fa fa-bars"></i></div>
+    <ul class="mobile-nav hide">
+      <a href="#header" class="mobile-nav-link"><li>Home</li></a>
+      <a href="#portfolio" class="mobile-nav-link"><li>Work</li></a>
+      <a href="#about" class="mobile-nav-link"><li>About</li></a>
+      <a href="#contact" class="mobile-nav-link"><li>Contact</li></a>
+      <a href="#blog" class="mobile-nav-link"><li>Blog</li></a>
     </ul>
   </nav>
 
@@ -270,9 +281,34 @@
             <span class="badge">Google Webmaster</span>
           </div>
 
-          <a href="{{ asset('files/browland_resume.pdf') }}" class="download-resume">View Resume</a>
+          <a href="{{ asset('files/browland_resume.pdf') }}" class="btn btn-cta" target="_blank">View Resume</a>
       </div>
     </section> <!-- ./ About -->
+
+    <hr class="intermit-hr">
+    <section id="blog">
+      <h1 class="text-center">My Blog</h1>
+      <div class="card-grid">
+        @foreach($posts as $post)
+          <div class="card">
+            <div class="img">
+              <img class="top" src="{{ $post->cover_image }}" alt="">
+              <a title="{{$post->title}}" class="title-banner" href="/posts/{{$post->id}}"><span>{{ str_limit($post->title, $limit = 40, $end = '...') }}</span></a>
+            </div>
+            <div class="body">
+                <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
+                <pre class="pull-right"><i class="fa fa-calendar-o"> </i> {{ date('F jS, Y', strtotime($post->created_at)) }}</pre>
+
+                <div class="text">{{ strip_tags(str_limit($post->body, $limit = 225, $end = '...')) }}</div>
+                  <a href="/posts/{{$post->id}}" class="btn">Read More</a>
+            </div>
+          </div>
+        @endforeach
+      </div>
+      <div class="text-center m-50">
+        <a href="{{ route('posts.index') }}" class="btn btn-cta">View More</a>
+      </div>
+    </section>
 
     <section id="contact">
       <div>
@@ -303,8 +339,8 @@
     <footer id="site-footer">
       <span class="copy">&copy; 2018 | Blaze Rowland</span>
       <span class="social">
-        <i class="fa fa-instagram"></i>
-        <i class="fa fa-linkedin"></i>
+        <a href="https://www.instagram.com/blaze_develops/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/blaze-rowland" target="_blank"><i class="fa fa-linkedin"></i></a>
       </span>
     </footer>
   </div>

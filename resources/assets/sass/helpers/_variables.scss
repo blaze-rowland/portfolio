@@ -45,6 +45,10 @@ i {
   margin: 50px 0 0 0;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .lead {
   font-size: 1.1em;
 }
@@ -205,6 +209,11 @@ table {
   }
 }
 
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
+}
+
 .btn-admin {
   background: $admin-primary;
   border-color: $admin-primary;
@@ -222,6 +231,14 @@ table {
     color: $negative;
   }
 }
+
+.btn-cta {
+  font-size: 1.2em;
+  padding: 10px 30px;
+}
+
+
+
 // End Standard Button
 
 // Image Card
