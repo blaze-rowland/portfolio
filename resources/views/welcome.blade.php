@@ -339,6 +339,7 @@
     <footer id="site-footer">
       <span class="copy">&copy; 2018 | Blaze Rowland</span>
       <span class="social">
+        <a href="https://www.github.com/blaze-rowland" target="_blank"><i class="fa fa-github"></i></a>
         <a href="https://www.instagram.com/blaze_develops/" target="_blank"><i class="fa fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/blaze-rowland" target="_blank"><i class="fa fa-linkedin"></i></a>
       </span>
