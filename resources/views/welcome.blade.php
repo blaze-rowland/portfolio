@@ -13,8 +13,8 @@
       <a href="#header" class="nav-link"><li>Home</li></a>
       <a href="#portfolio" class="nav-link"><li>Work</li></a>
       <a href="#about" class="nav-link"><li>About</li></a>
-      <a href="#contact" class="nav-link"><li>Contact</li></a>
       <a href="#blog" class="nav-link"><li>Blog</li></a>
+      <a href="#contact" class="nav-link"><li>Contact</li></a>
     </ul>
   </nav>
   <nav id="mobile-nav">
@@ -23,8 +23,8 @@
       <a href="#header" class="mobile-nav-link"><li>Home</li></a>
       <a href="#portfolio" class="mobile-nav-link"><li>Work</li></a>
       <a href="#about" class="mobile-nav-link"><li>About</li></a>
-      <a href="#contact" class="mobile-nav-link"><li>Contact</li></a>
       <a href="#blog" class="mobile-nav-link"><li>Blog</li></a>
+      <a href="#contact" class="mobile-nav-link"><li>Contact</li></a>
     </ul>
   </nav>
 
@@ -45,7 +45,7 @@
             </div>
             <div class="desc">
               <h3><a href="#">JBoat</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+              <p>J-Boat is a brochure-styled website that gives the public information about the services they offer. J-Boat was developed as a way to find people interested in House Boat Chartering or Ski/Wake-board/Knee-board lessons.</p>
               <h4>Built With:</h4>
               <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
             </div>
@@ -66,7 +66,7 @@
           </div>
           <div class="desc">
             <h3><a href="#">DevelopWorthy</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+            <p>DevelopWorthy is an application that helps connect Developers with projects that they'll be interested in while Users are able to find Developers with the right skill sets for their needs. </p>
             <h4>Built With:</h4>
             <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Semantic-UI</span>
           </div>
@@ -87,7 +87,7 @@
           </div>
           <div class="desc">
             <h3><a href="#">Design-Air</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+            <p>Design Air Heating and Air is a HVAC LLC located in Decatur, IL. This website is brochure-styled to give the public the information they need before they decide to choose them for their services. With some minor back-end services for administration.</p>
             <h4>Built With:</h4>
             <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Bootstrap</span>
           </div>
@@ -108,7 +108,7 @@
           </div>
           <div class="desc">
             <h3><a href="#">BDM Computers</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+            <p>Portfolio Site for BDM Computers a Web Development, Graphic Design and Computer Hardware Repair/Upgrading company</p>
             <h4>Built With:</h4>
             <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Bootstrap</span>
           </div>
@@ -130,7 +130,7 @@
             </div>
             <div class="desc">
               <h3><a href="#">CampusTowns</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+              <p>News, Current Events, and Calendar for college students in the University of Illinois Campaign Urbana.</p>
               <h4>Built With:</h4>
               <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
             </div>
@@ -151,7 +151,7 @@
           </div>
           <div class="desc">
             <h3><a href="#">Krekels West</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+            <p>Brochure styled website for a local restaurant. It's heart of many in the central Illinois area and it was an honor to be able to work with the owners while designing and developing a site for them.</p>
             <h4>Built With:</h4>
             <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
           </div>
@@ -172,7 +172,7 @@
           </div>
           <div class="desc">
             <h3><a href="#">Rowland Computer Co</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta repellat vero natus adipisci porro accusantium voluptatibus ab blanditiis facere fugit sit, dolorem dolore molestias, cupiditate illum? Quae, non, aspernatur! Minus molestias deserunt libero itaque tempora laudantium nobis non, at eaque quisquam quam fugiat sit, suscipit illum tempore provident debitis eligendi ut reprehenderit nihil voluptas maiores. Atque ipsa temporibus vero recusandae perferendis sint odio nesciunt, sed animi repellat sapiente eveniet eius necessitatibus cupiditate.</p>
+            <p>My first portfolio site designed and developed in 2017 when working alongside my brother; a computer technician.</p>
             <h4>Built With:</h4>
             <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Semantic-UI</span>
           </div>
@@ -196,7 +196,7 @@
           <hr class="section-hr">
 
           <div class="section-info">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam perferendis pariatur, repellendus vero! Iure illum maxime, sint possimus cumque. Sint illum iste, adipisci eligendi rerum doloremque rem, magni quisquam fuga ad alias eveniet omnis fugit perspiciatis delectus repellat dignissimos vel saepe deleniti laboriosam et voluptatibus. Accusamus ut delectus hic? Voluptatem.</p>
+            <p>Development and Design is constantly changing and that gives me something to work for and learn about every-single-day. There’s something special about researching what you love and Development for me, is just that.</p>
           </div>
 
           <div class="about-blocks">
@@ -317,13 +317,14 @@
       <div class="contact-content">
         <div class="contact-info">
           <ul>
-            <li><i class="fa fa-envelope"></i>browland.bdm@gmail.com</li>
-            <li><i class="fa fa-phone"></i> (217)852-7271</li>
+            <li><i class="fa fa-envelope"></i>browland.<!--@-->bdm<!--brow -->@gmail <!--@yahoo-->.com <!--/user--></li>
+            <li><i class="fa fa-phone"></i> (217<!--)211 -->)853<!--3321 -->-7271<!--1211 --></li>
             <li><i class="fa fa-clock-o"></i>Mon - Sat | 9am - 5pm</li>
           </ul>
         </div>
 
-        <form action="#" method="POST" class="contact-form">
+        <form action="{{ route('contact') }}" method="POST" class="contact-form">
+          @csrf
           <div class="form-group">
             <div class="form-inline">
               <input type="text" name="name" placeholder="Full Name" required>

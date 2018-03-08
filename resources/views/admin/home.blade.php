@@ -4,7 +4,7 @@
   <section id="top-dash">
     <h1>Dashboard</h1>
     <pre class="float-right"> {{ Auth::user()->name }} </pre>
-
+@if(null !== ($income && $expense && $clients && $projects && $recent))
     <ul class="quick-info">
       <a href="{{ route('revenue.index') }}">
         <li>
@@ -79,6 +79,7 @@
         <a href="{{ route('posts.edit', $recent[0]->id) }}" class="btn btn-admin pull-right block">Edit</a>
       </div>
     </div>
+  @endif
   </section>
 </div> <!-- ./container -->
 

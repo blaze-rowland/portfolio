@@ -7,6 +7,7 @@ use App\Post;
 use App\Revenue;
 use App\Client;
 use App\Project;
+use Mail;
 use DB;
 
 class AdminController extends Controller
@@ -18,7 +19,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 'welcome']);
+        $this->middleware('auth', ['except' => ['welcome', 'postContact']]);
     }
 
     /**
@@ -39,6 +40,29 @@ class AdminController extends Controller
     public function welcome() {
       $posts = Post::orderBy('created_at', 'DESC')->take(3)->get();
       return view('welcome')->withPosts($posts);
+    }
+
+    public function postContact(Request $request) {
+      $this->validate($request, [
+        'name'    => 'required|min:2',
+        'email'   => 'required|email',
+        'message' => 'required|min:10'
+      ]);
+
+      $data = array(
+        'name'    => $request->name,
+        'email'   => $request->email,
+        'bodyMessage' => $request->message
+      );
+
+
+      Mail::send('emails.contact', $data, function($message) use ($data) {
+        $message->from($data['email']);
+        $message->to('contact@blazerow.com');
+        $message->subject('New Client Alert! - ' . $data['name']);
+      });
+
+      return redirect('/');
     }
 
     public function testbench()
