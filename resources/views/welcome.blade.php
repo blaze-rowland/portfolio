@@ -317,7 +317,7 @@
       <div class="contact-content">
         <div class="contact-info">
           <ul>
-            <li><i class="fa fa-envelope"></i>browland.<!--@-->bdm<!--brow -->@gmail <!--@yahoo-->.com <!--/user--></li>
+            <li><i class="fa fa-envelope"></i>con<!--@-->tact<!--brow -->@blazerow <!--@yahoo-->.com <!--/user--></li>
             <li><i class="fa fa-phone"></i> (217<!--)211 -->)853<!--3321 -->-7271<!--1211 --></li>
             <li><i class="fa fa-clock-o"></i>Mon - Sat | 9am - 5pm</li>
           </ul>
