@@ -12,7 +12,7 @@
             </div>
             <div class="body">
                 <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
-                <pre class="float-right"><i class="fa fa-calendar-o"> </i>{{ date('F j, Y', strtotime($post->created_at)) }}</pre>
+                {{-- <pre class="float-right"><i class="fa fa-calendar-o"> </i>{{ date('F j, Y', strtotime($post->created_at)) }}</pre> --}}
                 <div class="text">{!! $post->body !!}</div>
             </div>
           </div>

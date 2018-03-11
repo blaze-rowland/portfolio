@@ -20,7 +20,7 @@ Route::get('/', 'AdminController@welcome')->name('/');
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-Route::get('/test', 'HomeController@testbench')->name('test');
+Route::get('/test', 'AdminController@testbench')->name('test');
 
 Route::resource('posts', 'PostController');
 Route::resource('revenue', 'RevenueController');

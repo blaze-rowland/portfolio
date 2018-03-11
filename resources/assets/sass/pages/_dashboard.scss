@@ -131,19 +131,17 @@
   #analytics-1 {
     display: grid;
     grid-gap: 15px 25px;
-    grid-template-areas: 'main side1'
-                         'main side2';
-    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'main side1';
+    grid-template-columns: 1fr 1fr;
 
     @media(max-width: $break-sm), (max-width: $break-md) {
       grid-template-areas: 'main'
-                           'side1'
-                           'side2';
+                           'side1';
       grid-template-columns: 1fr;
       margin-left: 50px;
     }
 
-    .main, .side-1, .side-2 {
+    .main, .side-1{
       background: #fff;
       box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
       padding: 15px 15px;
@@ -154,9 +152,6 @@
     }
     .side-1 {
       grid-area: side1;
-    }
-    .side-2 {
-      grid-area: side2;
     }
   }
 
@@ -181,6 +176,32 @@
     }
     .side-1 {
       grid-area: side1;
+      padding: 25px 25px;
+
+      h2 {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin: 25px 25px;
+
+        span {
+          font-size: .6em;
+          font-weight: normal;
+        }
+      }
+      .project {
+        padding: 0 25px;
+        .title {
+          h3 {
+            font-size: 1.2em;
+            font-weight: 500;
+          }
+        }
+        .body {
+          font-size: .9em;
+          line-height: 1.6;
+          margin: 15px 0;
+        }
+      }
     }
     .side-2 {
       grid-area: side2;

@@ -164,6 +164,14 @@ i {
   margin: 50px 0 0 0;
 }
 
+.ml-25 {
+  margin-left: 25px;
+}
+
+.p-25 {
+  padding: 25px;
+}
+
 .center {
   margin: 0 auto;
 }
@@ -379,6 +387,11 @@ table tr .num {
 .btn-cta {
   font-size: 1.2em;
   padding: 10px 30px;
+}
+
+.btn-sm {
+  font-size: .9em;
+  padding: 5px 8px;
 }
 
 .card {
@@ -970,21 +983,20 @@ h3 {
 #container #analytics-1 {
   display: grid;
   grid-gap: 15px 25px;
-  grid-template-areas: 'main side1' 'main side2';
-  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 'main side1';
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-1 {
-    grid-template-areas: 'main' 'side1' 'side2';
+    grid-template-areas: 'main' 'side1';
     grid-template-columns: 1fr;
     margin-left: 50px;
   }
 }
 
 #container #analytics-1 .main,
-#container #analytics-1 .side-1,
-#container #analytics-1 .side-2 {
+#container #analytics-1 .side-1 {
   background: #fff;
   -webkit-box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 11.3px -8px rgba(0, 0, 0, 0.4);
@@ -997,10 +1009,6 @@ h3 {
 
 #container #analytics-1 .side-1 {
   grid-area: side1;
-}
-
-#container #analytics-1 .side-2 {
-  grid-area: side2;
 }
 
 #container #analytics-2 {
@@ -1030,6 +1038,33 @@ h3 {
 
 #container #analytics-2 .side-1 {
   grid-area: side1;
+  padding: 25px 25px;
+}
+
+#container #analytics-2 .side-1 h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 25px 25px;
+}
+
+#container #analytics-2 .side-1 h2 span {
+  font-size: .6em;
+  font-weight: normal;
+}
+
+#container #analytics-2 .side-1 .project {
+  padding: 0 25px;
+}
+
+#container #analytics-2 .side-1 .project .title h3 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+#container #analytics-2 .side-1 .project .body {
+  font-size: .9em;
+  line-height: 1.6;
+  margin: 15px 0;
 }
 
 #container #analytics-2 .side-2 {

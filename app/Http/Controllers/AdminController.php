@@ -29,12 +29,13 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $recent   = Post::orderBy('created_at', 'DESC')->take(1)->get();
-        $income   = DB::table('revenues')->sum('income');
-        $expense  = DB::table('revenues')->sum('expense');
-        $clients  = Client::count();
-        $projects = Project::count();
-        return view('admin.home')->withRecent($recent)->withIncome($income)->withExpense($expense)->withClients($clients)->withProjects($projects);
+        $recent     = Post::orderBy('created_at', 'DESC')->take(1)->get();
+        $income     = DB::table('revenues')->sum('income');
+        $expense    = DB::table('revenues')->sum('expense');
+        $clients    = Client::count();
+        $projects   = Project::count();
+        $due = Project::orderBy('due_date', 'DESC')->where('due_date', '>=', DB::raw('curdate()'))->take(1)->get();
+        return view('admin.home')->withRecent($recent)->withIncome($income)->withExpense($expense)->withClients($clients)->withProjects($projects)->withDue($due);
     }
 
     public function welcome() {
