@@ -160,6 +160,7 @@
     grid-template-areas: 'side1 side2';
     grid-gap: 25px;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     margin: 40px 0;
     @media(max-width: $break-sm), (max-width: $break-md) {
       margin-left: 50px;
@@ -176,12 +177,13 @@
     }
     .side-1 {
       grid-area: side1;
+      grid-row-end: span 1;
       padding: 25px 25px;
 
       h2 {
         font-size: 1.4em;
         font-weight: 600;
-        margin: 25px 25px;
+        margin: 15px 25px 0 25px;
 
         span {
           font-size: .6em;
@@ -189,7 +191,7 @@
         }
       }
       .project {
-        padding: 0 25px;
+        padding: 25px 25px;
         .title {
           h3 {
             font-size: 1.2em;
@@ -199,12 +201,13 @@
         .body {
           font-size: .9em;
           line-height: 1.6;
-          margin: 15px 0;
+          margin: 10px 0 25px 0;
         }
       }
     }
     .side-2 {
       grid-area: side2;
+      grid-row-end: span 2;
       padding: 0;
     }
   }

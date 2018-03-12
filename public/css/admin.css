@@ -1016,6 +1016,7 @@ h3 {
   grid-template-areas: 'side1 side2';
   grid-gap: 25px;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
   margin: 40px 0;
 }
 
@@ -1038,13 +1039,14 @@ h3 {
 
 #container #analytics-2 .side-1 {
   grid-area: side1;
+  grid-row-end: span 1;
   padding: 25px 25px;
 }
 
 #container #analytics-2 .side-1 h2 {
   font-size: 1.4em;
   font-weight: 600;
-  margin: 25px 25px;
+  margin: 15px 25px 0 25px;
 }
 
 #container #analytics-2 .side-1 h2 span {
@@ -1053,7 +1055,7 @@ h3 {
 }
 
 #container #analytics-2 .side-1 .project {
-  padding: 0 25px;
+  padding: 25px 25px;
 }
 
 #container #analytics-2 .side-1 .project .title h3 {
@@ -1064,11 +1066,12 @@ h3 {
 #container #analytics-2 .side-1 .project .body {
   font-size: .9em;
   line-height: 1.6;
-  margin: 15px 0;
+  margin: 10px 0 25px 0;
 }
 
 #container #analytics-2 .side-2 {
   grid-area: side2;
+  grid-row-end: span 2;
   padding: 0;
 }
 
