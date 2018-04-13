@@ -56,3 +56,25 @@ if($('.zoom').click(function(){
 
 
 // End Portfolio Zoom
+
+// Fix Navbar
+
+$(document).scroll(function() {
+  var y = $(document).scrollTop(),
+  mobileNavBar = $('#mobile-nav'),
+  navBar = $('#main-nav'),
+  headerDim = $('#header').height();
+
+
+  if(y >= headerDim) {
+
+    navBar.addClass('nav-scroll');
+    mobileNavBar.addClass('mobile-nav-scroll');
+  } else {
+    navBar.removeClass('nav-scroll');
+    mobileNavBar.removeClass('mobile-nav-scroll');
+  }
+
+});
+
+// End Fix Navbar

@@ -23,3 +23,18 @@ pre {
   margin: 0;
   padding: 0;
 }
+
+.nav-scroll {
+  box-shadow: 5px 0px 16px -6px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 90%;
+  z-index: 9999999999;
+}
+
+.mobile-nav-scroll {
+  @extend .nav-scroll;
+  background: #fff;
+  width: 100%;
+}
