@@ -736,7 +736,7 @@ h3 {
 @media (max-width: 768px) {
   #create-form .create-grid,
   #admin .create-grid {
-    grid-template-areas: 'post' 'sidebar';
+    grid-template-areas: 'post' 'sidebar';
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -878,7 +878,7 @@ h3 {
 @media (max-width: 768px), (max-width: 992px) {
   #container #top-dash .quick-info {
     margin-left: 50px;
-    grid-template-areas: 'income' 'expense' 'clients' 'projects';
+    grid-template-areas: 'income' 'expense' 'clients' 'projects';
     grid-template-columns: 1fr;
   }
 }
@@ -989,7 +989,7 @@ h3 {
 
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-1 {
-    grid-template-areas: 'main' 'side1';
+    grid-template-areas: 'main' 'side1';
     grid-template-columns: 1fr;
     margin-left: 50px;
   }
@@ -1023,7 +1023,7 @@ h3 {
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-2 {
     margin-left: 50px;
-    grid-template-areas: 'side1' 'side2';
+    grid-template-areas: 'side1' 'side2';
     grid-template-columns: 1fr;
   }
 }
@@ -1099,7 +1099,7 @@ h3 {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
+  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
 }
 
 .admin-form form {

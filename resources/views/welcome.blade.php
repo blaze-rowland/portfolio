@@ -1,5 +1,12 @@
 @extends('layouts.app')
 @section('content')
+
+  @if(session('status'))
+    <div class="alert alert-success">
+      {{ session('status') }}
+    </div>
+  @endif
+  
   <section id="header">
     <div class="header-text">
         <p>i am</p>

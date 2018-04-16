@@ -1,0 +1,27 @@
+.alert {
+    background: $off-white;
+    border: 1px solid darken($off-white, 20%);
+    border-radius: 8px;
+    bottom: 0;
+    color: $admin-primary;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 15px 25px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    z-index: 99;
+}
+
+.alert-success {
+    background: lighten($positive, 25%);
+    border-color: darken($positive, 20%);
+    color: lighten($positive, 75%);
+}
+
+.alert-failure {
+    background: $negative;
+    border-color: darken($negative, 20%);
+}

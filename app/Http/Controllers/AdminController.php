@@ -63,7 +63,7 @@ class AdminController extends Controller
         $message->subject('New Client Alert! - ' . $data['name']);
       });
 
-      return redirect('/');
+      return redirect('/')->with('status', 'E-Mail Sent!');
     }
 
     public function testbench()

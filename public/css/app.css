@@ -621,6 +621,38 @@ table {
   border-spacing: 0;
 }
 
+.alert {
+  background: #fafafa;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  bottom: 0;
+  color: #343044;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 15px 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 99;
+}
+
+.alert-success {
+  background: #8eca78;
+  border-color: #25431a;
+  color: white;
+}
+
+.alert-failure {
+  background: #8c3737;
+  border-color: #431a1a;
+}
+
 #header {
   background: salmon;
   background: url("/img/bg/blaze.jpg");
@@ -1206,14 +1238,14 @@ table {
 @media (max-width: 992px) {
   #about .about-blocks {
     grid-template-columns: 1fr;
-    grid-template-areas: 'block-1' 'block-2' 'block-3';
+    grid-template-areas: 'block-1' 'block-2' 'block-3';
   }
 }
 
 @media (max-width: 768px) {
   #about .about-blocks {
     grid-template-columns: 1fr;
-    grid-template-areas: 'block-1' 'block-2' 'block-3';
+    grid-template-areas: 'block-1' 'block-2' 'block-3';
   }
 }
 
@@ -1250,7 +1282,7 @@ table {
 
 #about #services {
   display: grid;
-  grid-template-areas: 'block-1 block-2 block-3' 'block-4 block-5 block-6';
+  grid-template-areas: 'block-1 block-2 block-3' 'block-4 block-5 block-6';
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
   width: 75%;
@@ -1259,7 +1291,7 @@ table {
 @media (max-width: 768px), (max-width: 992px) {
   #about #services {
     grid-template-columns: 1fr;
-    grid-template-areas: 'block-1' 'block-2' 'block-3' 'block-4' 'block-5' 'block-6';
+    grid-template-areas: 'block-1' 'block-2' 'block-3' 'block-4' 'block-5' 'block-6';
     line-height: 1.6;
     margin-bottom: 55px;
   }
@@ -1370,7 +1402,7 @@ h1 {
 @media (max-width: 768px), (max-width: 992px), (max-width: 1200px) {
   .contact-content {
     grid-template-columns: 1fr;
-    grid-template-areas: 'form' 'info';
+    grid-template-areas: 'form' 'info';
   }
 }
 
@@ -1569,7 +1601,7 @@ h1 {
 
 #portfolio-show .section-img {
   display: grid;
-  grid-template-areas: ". showImg showImg ." ". showImg showImg .";
+  grid-template-areas: ". showImg showImg ." ". showImg showImg .";
   grid-template-columns: repeat(4, 1fr);
   padding: 80px 0;
 }

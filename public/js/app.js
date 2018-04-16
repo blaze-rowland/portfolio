@@ -162,6 +162,17 @@ $(document).scroll(function () {
 
 // End Fix Navbar
 
+
+// Hide Alert
+
+$(document).ready(function () {
+  $('.alert').fadeOut(10000, function () {
+    $(this).addClass('hide');
+  });
+});
+
+//End Hide Alert
+
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
