@@ -1,0 +1,112 @@
+.work {
+    &__box {
+        max-width: 45rem;
+
+        @include respond($pho-lg) {
+            margin-left: -2.6rem;
+        }
+    }
+
+    &__projects {
+        display: grid;
+        grid-column-gap: 4.7rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 32rem);
+        margin-top: 5rem;
+
+        @include respond($desk-md) {
+            grid-row-gap: 4.7rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 32rem);
+        }
+
+        @include respond($tab-md) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 32rem);
+        }
+
+        @include respond($pho-lg) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 8fr;
+            margin: 5rem auto 0 auto;
+            margin-left: -2.6rem;
+        }
+    }
+
+    &__img {
+        height: 26.5rem;
+        object-fit: cover;
+        position: relative;
+        transition: all .3s;
+        width: 26.5rem;
+        z-index: 1;
+
+        &:hover {
+            box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.4);
+            transform: scale(1.4);
+            z-index: 2;
+        }
+
+        @include respond($desk-md) {
+            height: 32rem;
+            width: 32rem;
+        }
+
+        @include respond($desk-sm) {
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        @include respond($tab-sm) {
+            height: 26.5rem;
+            width: 26.5rem;
+        }
+
+        @include respond($pho-lg) {
+            display: none;
+            height: 37.5rem;
+            width: 37.5rem;
+
+            &--important {
+                display: block;
+            }
+        }
+
+        @include respond($pho-md) {
+            height: 33.5rem;
+            width: 33.5rem;
+        }
+        
+        @include respond($pho-sm) {
+            height: 31.5rem;
+            width: 31.5rem;
+        }
+
+        @include respond($pho-xs) {
+            height: 27.5rem;
+            width: 27.5rem;
+        }
+    }
+
+    &__img:hover ~ &__text {
+        opacity: 1!important;
+        transform: scale(2);
+        transition-delay: .2s;
+        z-index: 3;
+    }
+
+    &__text {
+        background-color: rgba($color-green-dark-2, .8);
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        color: $color-white;
+        left: -5.3rem;
+        line-height: 2.5;
+        padding: 1rem 2rem;
+        position: relative;
+        top: -11.5rem;
+        transition: .2s;
+    }
+}

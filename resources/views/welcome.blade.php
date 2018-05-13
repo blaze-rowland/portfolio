@@ -6,351 +6,278 @@
       {{ session('status') }}
     </div>
   @endif
-  
-  <section id="header">
-    <div class="header-text">
-        <p>i am</p>
-        <p>Blaze Rowland</p>
+  <header id="header">
+    <div class="header__content">
+        <h1 class="heading-primary heading-primary--main">I am Blaze Rowland</h1>
+
+        <div class="social">
+            <ul class="social__list">
+                <li class="social__item">
+                    <a href="https://www.github.com/blaze-rowland" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-github')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a href="https://www.instagram.com/blaze_develops/" class="social__link">
+                        <svg class="icon social__icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-instagram')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a href="https://www.linkedin.com/in/blaze-rowland/" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-linkedin2')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </section>
+</header>
 
-  <nav id="main-nav">
-    <a class="brand">{{ config('app.name', 'Full-stack Developer') }}</a>
-    <ul class="pull-right">
-      <a href="#header" class="nav-link"><li>Home</li></a>
-      <a href="#portfolio" class="nav-link"><li>Work</li></a>
-      <a href="#about" class="nav-link"><li>About</li></a>
-      <a href="#blog" class="nav-link"><li>Blog</li></a>
-      <a href="#contact" class="nav-link"><li>Contact</li></a>
-    </ul>
-  </nav>
-  <nav id="mobile-nav">
-    <div class="mobile-hamburger pull-right"><i class="fa fa-bars"></i></div>
-    <ul class="mobile-nav hide">
-      <a href="#header" class="mobile-nav-link"><li>Home</li></a>
-      <a href="#portfolio" class="mobile-nav-link"><li>Work</li></a>
-      <a href="#about" class="mobile-nav-link"><li>About</li></a>
-      <a href="#blog" class="mobile-nav-link"><li>Blog</li></a>
-      <a href="#contact" class="mobile-nav-link"><li>Contact</li></a>
-    </ul>
-  </nav>
+<nav class="nav is-hidden--opac">
+    <div class="container">
+        <ul class="nav__list">
+            <a href="#header" class="nav__link">
+                <li class="nav__item">
+                    <span>Home</span>
+                </li>
+            </a>
+            <a href="#about" class="nav__link">
+                <li class="nav__item">
+                    <span>About</span>
+                </li>
+            </a>
+            <a href="#work" class="nav__link">
+                <li class="nav__item">
+                    <span>Work</span>
+                </li>
+            </a>
+            <a href="#blog" class="nav__link">
+                <li class="nav__item">
+                    <span>Blog</span>
+                </li>
+            </a>
+            <a href="#contact" class="nav__link">
+                <li class="nav__item">
+                    <span>Contact</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+</nav>
 
-  <div class="container">
-    <!-- Portfolio -->
-    <section id="portfolio">
-      <div class="portfolio portfolio-a">
-          <img src="{{ asset('img/portfolio/jBoat.jpg') }}" alt="">
-          <div class="portfolio-overlay">
-            <div class="portfolio-link">
-              <a class="zoom"><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="portfolio-a zoomed-a">
-            <div class="img">
-              <img src="{{ asset('img/portfolio/full/jBoat_full.jpg') }}" alt="">
-              <div class="close"><i class="fa fa-times-circle"></i>
-            </div>
-            <div class="desc">
-              <h3><a href="#">JBoat</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-              <p>J-Boat is a brochure-styled website that gives the public information about the services they offer. J-Boat was developed as a way to find people interested in House Boat Chartering or Ski/Wake-board/Knee-board lessons.</p>
-              <h4>Built With:</h4>
-              <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="portfolio portfolio-b">
-        <img src="{{ asset('img/portfolio/developW.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-        <div class="portfolio-b zoomed-b">
-          <div class="img">
-            <img src="{{ asset('img/portfolio/full/developW_full.jpg') }}" alt="">
-            <div class="close"><i class="fa fa-times-circle"></i>
-          </div>
-          <div class="desc">
-            <h3><a href="#">DevelopWorthy</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>DevelopWorthy is an application that helps connect Developers with projects that they'll be interested in while Users are able to find Developers with the right skill sets for their needs. </p>
-            <h4>Built With:</h4>
-            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Semantic-UI</span>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="portfolio portfolio-c">
-        <img src="{{ asset('img/portfolio/designA.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-        <div class="portfolio-c zoomed-c">
-          <div class="img">
-            <img src="{{ asset('img/portfolio/full/designA_full.jpg') }}" alt="">
-            <div class="close"><i class="fa fa-times-circle"></i>
-          </div>
-          <div class="desc">
-            <h3><a href="#">Design-Air</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Design Air Heating and Air is a HVAC LLC located in Decatur, IL. This website is brochure-styled to give the public the information they need before they decide to choose them for their services. With some minor back-end services for administration.</p>
-            <h4>Built With:</h4>
-            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Bootstrap</span>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="portfolio portfolio-d">
-        <img src="{{ asset('img/portfolio/bdm.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-        <div class="portfolio-d zoomed-d">
-          <div class="img">
-            <img src="{{ asset('img/portfolio/full/bdm_full.jpg') }}" alt="">
-            <div class="close"><i class="fa fa-times-circle"></i>
-          </div>
-          <div class="desc">
-            <h3><a href="#">BDM Computers</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Portfolio Site for BDM Computers a Web Development, Graphic Design and Computer Hardware Repair/Upgrading company</p>
-            <h4>Built With:</h4>
-            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Bootstrap</span>
-          </div>
-        </div>
-      </div>
-      </div>
+<main>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about__box">
+                <img src="{{asset('img/about-img.jpg')}}" alt="Programming image" class="about__img">
 
-      <div class="portfolio portfolio-e">
-          <img src="{{ asset('img/portfolio/campusT.jpg') }}" alt="">
-          <div class="portfolio-overlay">
-            <div class="portfolio-link">
-              <a class="zoom"><i class="fa fa-search"></i></a>
+                <div class="about__text">
+                    <h3 class="heading-tertiary heading-tertiary--about">About Me</h3>
+                    <p class="paragraph">
+                        I'm a happy-go-lucky web developer and graphic designer from Decatur, Illinois. I've been in this field for over 5 years and have a great understanding for what's going on under the hood; so you don't have to. I love what I do and that reflects on my work and and client interaction.
+                    </p>
+                </div>
             </div>
-          </div>
-          <div class="portfolio-e zoomed-e">
-            <div class="img">
-              <img src="{{ asset('img/portfolio/full/campusT_full.jpg') }}" alt="">
-              <div class="close"><i class="fa fa-times-circle"></i>
+            <div class="scroller">
+                <div class="scroller__box">
+                    <svg class="scroller__icon">
+                        <use xlink:href="{{asset('img/sprite.svg#icon-display')}}"></use>
+                    </svg>
+
+                    <h5 class="scroller__heading heading-quinary heading-quinary--about">Web Design</h5>
+
+                    <p class="scroller__text paragraph">
+                        After a discovery period where we discuss your vision, designs you like, and more; I'll begin designing and developing your website or web-application.
+                    </p>
+                </div>
+
+                <div class="scroller__box">
+                    <svg class="scroller__icon">
+                        <use xlink:href="{{asset('img/sprite.svg#icon-pen')}}"></use>
+                    </svg>
+
+                    <h5 class="scroller__heading heading-quinary heading-quinary--about">Graphic Design</h5>
+
+                    <p class="scroller__text paragraph">
+                            Graphic design is more than what you see. It's about how it makes you feel and more importantly how it makes your potential clients feel. Taking color-theory into account I'll ensure both beauty and benefits.
+                    </p>
+                </div>
+
+                <div class="scroller__box">
+                    <svg class="scroller__icon">
+                        <use xlink:href="{{asset('img/sprite.svg#icon-stats-dots')}}"></use>
+                    </svg>
+
+                    <h5 class="scroller__heading heading-quinary heading-quinary--about">Brand Identity</h5>
+
+                    <p class="scroller__text paragraph">
+                        There's nothing more important than your company's image. Tell me about your vision and I'll guarantee a design that replicates it and reflects that passion to your audience.
+                    </p>
+                </div>
             </div>
-            <div class="desc">
-              <h3><a href="#">CampusTowns</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-              <p>News, Current Events, and Calendar for college students in the University of Illinois Campaign Urbana.</p>
-              <h4>Built With:</h4>
-              <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="portfolio portfolio-f">
-        <img src="{{ asset('img/portfolio/krekelsW.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
+    </section>
+    
+    <section id="work" class="work">
+        <div class="container">
+            <div class="work__box">
+                <h3 class="heading-tertiary heading-tertiary--work">Work</h3>
+                <p class="paragraph">
+                    Take a look at some of my recent projects. I'm very proud of them.
+                </p>
+            </div>
         </div>
-        <div class="portfolio-f zoomed-f">
-          <div class="img">
-            <img src="{{ asset('img/portfolio/full/krekelsW_full.jpg') }}" alt="">
-            <div class="close"><i class="fa fa-times-circle"></i>
-          </div>
-          <div class="desc">
-            <h3><a href="#">Krekels West</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>Brochure styled website for a local restaurant. It's heart of many in the central Illinois area and it was an honor to be able to work with the owners while designing and developing a site for them.</p>
-            <h4>Built With:</h4>
-            <span class="badge">Wordpress</span> <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span>
-          </div>
+        <div class="container">
+            <div class="work__projects">
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/bdm.jpg')}}" alt="" class="work__img work__img--important">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/campusT.jpg')}}" alt="" class="work__img">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/designA.jpg')}}" alt="" class="work__img work__img--important">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/developW.jpg')}}" alt="" class="work__img work__img--important">
+                </div>
+
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/jBoat.jpg')}}" alt="" class="work__img work__img--important">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/krekelsW.jpg')}}" alt="" class="work__img">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/rowlandW.jpg')}}" alt="" class="work__img">
+                </div>
+
+                <div class="work__projects-box">
+                    <img src="{{asset('img/portfolio/placeholder.jpg')}}" alt="" class="work__img">
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
-      <div class="portfolio portfolio-g">
-        <img src="{{ asset('img/portfolio/rowlandW.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
         </div>
-        <div class="portfolio-g zoomed-g">
-          <div class="img">
-            <img src="{{ asset('img/portfolio/full/rowlandW_full.jpg') }}" alt="">
-            <div class="close"><i class="fa fa-times-circle"></i>
-          </div>
-          <div class="desc">
-            <h3><a href="#">Rowland Computer Co</a><span> - Created on: Feb 14<sup>th</sup>, 2017</span></h3>
-            <p>My first portfolio site designed and developed in 2017 when working alongside my brother; a computer technician.</p>
-            <h4>Built With:</h4>
-            <span class="badge">HTML</span> <span class="badge">CSS</span> <span class="badge">JavaScript</span> <span class="badge">PHP</span> <span class="badge">Laravel</span> <span class="badge">Semantic-UI</span>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="portfolio portfolio-h placeholder">
-        <img src="{{ asset('img/portfolio/placeholder.jpg') }}" alt="">
-        <div class="portfolio-overlay">
-          <div class="portfolio-link">
-            <a class="zoom"><i class="fa fa-search"></i></a>
-          </div>
-        </div>
-      </div>
-    </section> <!-- ./ Portfolio -->
-
-    <!-- About -->
-    <section id="about">
-      <div class="text-center">
-          <h1>About Me</h1>
-          <hr class="section-hr">
-
-          <div class="section-info">
-            <p>Development and Design is constantly changing and that gives me something to work for and learn about every-single-day. There’s something special about researching what you love and Development for me, is just that.</p>
-          </div>
-
-          <div class="about-blocks">
-            <div class="about-block block-1">
-              <i class="fa fa-calendar"></i>
-              <h2>5</h2>
-              <pre>Years Experience</pre>
-            </div>
-            <div class="about-block block-2">
-              <i class="fa fa-code"></i>
-              <h2>15</h2>
-              <pre>Completed Projects</pre>
-            </div>
-            <div class="about-block block-3">
-              <i class="fa fa-coffee"></i>
-              <h2>967</h2>
-              <pre>Coffees Consumed</pre>
-            </div>
-          </div>
-
-          <hr class="intermit-hr">
-
-          <div id="services">
-            <div class="service-block block-1">
-              <i class="fa fa-desktop"></i>
-              <h2>Responsive Web Design</h2>
-              <p>I build responsive websites capable of adapting to any device.</p>
-            </div>
-            <div class="service-block block-2">
-              <i class="fa fa-shopping-cart"></i>
-              <h2>eCommerce</h2>
-              <p>Start your eCommerce website now, and watch your sales grow.</p>
-            </div>
-            <div class="service-block block-3">
-              <i class="fa fa-wordpress"></i>
-              <h2>Wordpress</h2>
-              <p>Self-manage your website easily with the latest content management system.</p>
-            </div>
-            <div class="service-block block-4">
-              <i class="fa fa-search"></i>
-              <h2>Search Engine Optimization</h2>
-              <p>Increase visibility and drive sales through search engine optimization.</p>
-            </div>
-            <div class="service-block block-5">
-              <i class="fa fa-area-chart"></i>
-              <h2>Digital Marketing</h2>
-              <p>Employ digital marketing tools to target more specific audiences.</p>
-            </div>
-            <div class="service-block block-6">
-              <i class="fa fa-paint-brush"></i>
-              <h2>Graphic Design</h2>
-              <p>An effective brand strategy will place you above the rest.</p>
-            </div>
-          </div>
-
-          <div id="skill">
-            <span class="badge">HTML</span>
-            <span class="badge">CSS</span>
-            <span class="badge">JavaScript</span>
-            <span class="badge">jQuery</span>
-            <span class="badge">PHP</span>
-            <span class="badge">Laravel</span>
-            <span class="badge">Wordpress</span>
-            <span class="badge">Bootstrap</span>
-            <span class="badge">Semantic UI</span>
-            <span class="badge">LAMP</span>
-            <span class="badge">WAMP</span>
-            <span class="badge">XAMPP</span>
-            <span class="badge">Git</span>
-            <span class="badge">SQL</span>
-            <span class="badge">MySQL</span>
-            <span class="badge">Adobe Suite</span>
-            <span class="badge">Windows</span>
-            <span class="badge">Linux</span>
-            <span class="badge">Command Line</span>
-            <span class="badge">SSH</span>
-            <span class="badge">FTP</span>
-            <span class="badge">SASS</span>
-            <span class="badge">AJAX</span>
-            <span class="badge">API</span>
-            <span class="badge">SEO</span>
-            <span class="badge">Google Webmaster</span>
-          </div>
-
-          <a href="{{ asset('files/browland_resume.pdf') }}" class="btn btn-cta" target="_blank">View Resume</a>
-      </div>
-    </section> <!-- ./ About -->
-
-    <hr class="intermit-hr">
-    <section id="blog">
-      <h1 class="text-center">My Blog</h1>
-      <div class="card-grid">
-        @foreach($posts as $post)
-          <div class="card">
-            <div class="img">
-              <img class="top" src="{{ $post->cover_image }}" alt="">
-              <a title="{{$post->title}}" class="title-banner" href="/posts/{{$post->id}}"><span>{{ str_limit($post->title, $limit = 40, $end = '...') }}</span></a>
-            </div>
-            <div class="body">
-                <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
-                <pre class="pull-right"><i class="fa fa-calendar-o"> </i> {{ date('F jS, Y', strtotime($post->created_at)) }}</pre>
-
-                <div class="text">{{ strip_tags(str_limit($post->body, $limit = 225, $end = '...')) }}</div>
-                  <a href="/posts/{{$post->id}}" class="btn">Read More</a>
-            </div>
-          </div>
-        @endforeach
-      </div>
-      <div class="text-center m-50">
-        <a href="{{ route('posts.index') }}" class="btn btn-cta">View More</a>
-      </div>
     </section>
 
-    <section id="contact">
-      <div>
-        <h1 class="text-center">Contact Me</h1>
-      </div>
-      <div class="contact-content">
-        <div class="contact-info">
-          <ul>
-            <li><i class="fa fa-envelope"></i>con<!--@-->tact<!--brow -->@blazerow<!--@yahoo-->.com <!--/user--></li>
-            <li><i class="fa fa-phone"></i> (217<!--)211 -->)853<!--3321 -->-7271<!--1211 --></li>
-            <li><i class="fa fa-clock-o"></i>Mon - Sat | 9am - 5pm</li>
-          </ul>
+    <section id="blog" class="blog">
+        <div class="container container--blog-header">
+            <div class="blog__header">
+                <h3 class="heading-tertiary heading-tertiary--blog">Blog</h3>
+                <p class="paragraph">I'm very involved in my work; I love creating blog posts for my clientele and fellow developers.</p>
+            </div>
         </div>
 
-        <form action="{{ route('contact') }}" method="POST" class="contact-form">
-          @csrf
-          <div class="form-group">
-            <div class="form-inline">
-              <input type="text" name="name" placeholder="Full Name" required>
-              <input type="text" name="email" placeholder="E-Mail" required>
+        <div class="container container--blog">
+            @foreach($posts as $post) 
+            <div class="blog__box">
+                <a href="{{ route('posts.show', $post->id) }}">
+                    <img src="{{ $post->cover_image }}" alt="Blog 1" class="blog__img">
+
+                    <div class="blog__inner">
+                        <p class="blog__date">{{ date('F jS, Y', strtotime($post->created_at)) }}</p>
+                        <h5 class="blog__title heading-quinary">{{ str_limit($post->title, $limit = 30, $end = '...') }}</h5>
+                        <p class="blog__snip paragraph">{{ strip_tags(str_limit($post->body, $limit = 150, $end = '...')) }}</p>
+                    </div>
+                </a>
             </div>
-            <textarea name="message" cols="30" rows="5" placeholder="Message" required></textarea>
-            <input type="submit" class="contact-submit" value="Send Email">
-          </div>
-        </form>
-      </div>
+            @endforeach
+        </div>
+        </div>
     </section>
 
-    <footer id="site-footer">
-      <span class="copy">&copy; 2018 | Blaze Rowland</span>
-      <span class="social">
-        <a href="https://www.github.com/blaze-rowland" target="_blank"><i class="fa fa-github"></i></a>
-        <a href="https://www.instagram.com/blaze_develops/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/blaze-rowland" target="_blank"><i class="fa fa-linkedin"></i></a>
-      </span>
-    </footer>
-  </div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact__header">
+                <h3 class="heading-tertiary heading-tertiary--contact">Talk to Me</h3>
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        Decatur, IL
+                    </li>
+                    <li class="contact__item">
+                        62526
+                    </li>
+                    <li class="contact__item">
+                        contact<!--browlands-->@<!--@gmail-->blazerow<!--.net -->.com
+                    </li>
+                    <li class="contact__item">
+                        217<!-- 242--> 853<!--283--> 7271<!--1929-->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact__form">
+                <h4 class="contact__header--secondary heading-quaternary heading-quaternary--contact">
+                    I'll get back to you shortly
+                </h4>
+                <form action="{{ route('contact') }}" method="POST" class="container--contact">
+                    @csrf
+                    <div class="form__group">
+                        <input name="name" type="text" class="form__input form__input--half-one" placeholder="Full Name" required>
+                        <label for="name" class="form__label form__label--offset">Full Name</label>
+                    </div>
+
+                    <div class="form__group">
+                        <input name="email" type="email" class="form__input form__input--half-two" placeholder="Email" required>
+                        <label for="email" class="form__label">Email</label>
+                    </div>
+                    <hr class="form__hr">
+                    <textarea name="message" class="form__input form__input--textarea" rows="6" placeholder="What can I assist you with?" required></textarea>
+                    <label for="" class="form__label form__label--offset">Message</label>
+
+                    <input type="submit" class="btn btn--secondary btn--form" value="Send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer id="footer" class="footer">
+    <div class="container">
+        <div class="footer__social social">
+            <ul class="footer__social-list">
+                <li class="footer__social-item">
+                    <a href="https://www.github.com/blaze-rowland" class="footer__social-link">
+                        <svg class="footer__social-icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-github')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/blaze_develops/" class="footer__social-link">
+                        <svg class="icon footer__social-icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-instagram')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="footer__social-item">
+                    <a href="https://www.linkedin.com/in/blaze-rowland/" class="footer__social-link">
+                        <svg class="footer__social-icon">
+                            <use xlink:href="{{asset('img/sprite.svg#icon-linkedin2')}}"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__text">
+            Copyright &copy; 2018 Blaze Rowland, All rights Reserved.
+        </div>
+    </div>
+</footer>
 @stop

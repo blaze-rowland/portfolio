@@ -1,0 +1,65 @@
+.intermit-hr {
+    border: .3px solid #e6e6e6;
+    margin: 75px auto;
+    width: 75%;
+  }
+  
+  .m-25 {
+    margin: 25px 0 0 0;
+  }
+  
+  .m-50 {
+    margin: 50px 0 0 0;
+  }
+  
+  .ml-25 {
+    margin-left: 25px;
+  }
+  
+  .p-25 {
+    padding: 25px;
+  }
+  
+  .center {
+    margin: 0 auto;
+  }
+  
+  .lead {
+    font-size: 1.1em;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  .upper {
+    text-transform: uppercase;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .inline {
+    display: inline;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .positive {
+    color: $positive;
+  }
+  
+  .negative {
+    color: $negative;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .shadow {
+    box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.4);
+  }

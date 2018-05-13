@@ -1,22 +1,35 @@
 @extends('layouts.admin')
 @section('content')
-  <div id="container">
-    <section id="admin">
-      <h1 class="inline">Blog</h1>
-      <pre class="header-aside"><a href="{{route('posts')}}">Home</a> / {{ $post->title }}</pre>
-      <div class="card-grid m-25">
-          <div class="card full">
-            <div class="img">
-              <img class="top" src="{{ $post->cover_image }}" alt="">
-              <span>{{ $post->title }}</span>
-            </div>
-            <div class="body">
-                <div class="title"><i class="fa fa-user"></i> {{ $post->user->name }}</div>
-                {{-- <pre class="float-right"><i class="fa fa-calendar-o"> </i>{{ date('F j, Y', strtotime($post->created_at)) }}</pre> --}}
-                <div class="text">{!! $post->body !!}</div>
-            </div>
-          </div>
+  <div class="container container--blog">
+    <section id="blog" class="blog">
+      <img class="blog__image" src="{{ $post->cover_image }}" alt="{{ $post->title }}, {{ $post->cover_image }}">
+      <div class="blog__body">
+          <h3 class="blog__heading">
+              {{ $post->title }}
+          </h3>
+          <p class="blog__date">
+            {{ date('F jS, Y', strtotime($post->created_at)) }}
+          </p>
+    
+          <p class="blog__text">
+            {!! $post->body !!}
+          </p>
       </div>
+    </section>
+    
+    <section class="sidebar sidebar--blog">
+      <h4 class="sidebar__heading">
+        Recent Posts
+      </h4>
+      <ul class="sidebar__list">
+        @foreach($blogs as $blog) 
+          <li class="sidebar__item">
+            <a href="{{ route('posts.show', $blog->id) }}" class="sidebar__link">{{$blog->title}}</a>
+          </li>
+        @endforeach
+      </ul>
+
+      <a href="{{ route('posts.index') }}" class="btn btn-block m-25">See all</a>
     </section>
   </div>
 @stop

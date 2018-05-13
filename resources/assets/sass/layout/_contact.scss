@@ -1,0 +1,46 @@
+.contact {
+    &__header {
+        @include respond($tab-md) {
+            display: none;
+        }
+
+        &--secondary {
+            margin-bottom: 6rem;
+            text-align: right;
+            
+            @include respond($tab-md) {
+                margin-top: 15rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: $font-size-default;
+
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+    }
+
+    &__form {
+        float: right;
+        position: relative;
+        top: -7rem;
+        width: 50%;
+
+        @include respond($tab-md) {
+            float: none;
+            margin: 0 auto;
+        }
+
+        @include respond($pho-lg) {
+            width: 80%;
+        }
+    }
+}
+

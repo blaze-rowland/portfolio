@@ -1,0 +1,107 @@
+.scroller {
+    display: flex;
+    margin-top: 10rem;
+
+    @include respond($tab-md) {
+        flex-direction: column;
+    }
+
+
+    &__box {
+        align-content: flex-start;
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+        grid-template-columns: min-content minmax(28rem, min-content);
+        transition: all .2s;
+
+        @include respond($tab-lg) {
+            grid-template-columns: min-content minmax(22rem, min-content);
+        }
+
+        @include respond($tab-md) {
+            grid-template-columns: min-content minmax(50rem, min-content);
+            margin: 0 auto;
+        }
+        
+        @include respond($pho-lg) {
+            grid-gap: 2rem;
+            grid-template-columns: 1fr;
+            grid-template-rows: min-content;
+            justify-items: center;
+        }
+
+        &:not(:last-child) {
+            margin-right: 9rem;
+
+            @include respond($tab-lg) {
+                margin-right: 5rem;
+            }
+            
+            @include respond($tab-md) {
+                border-bottom: 1px solid $color-grey-light-2;
+                margin-right: auto;
+                margin-bottom: 2rem;
+                padding-bottom: 3rem;
+            }
+
+            @include respond($pho-lg) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-.5rem);
+        }
+    }
+
+    &__icon {
+        fill: $color-secondary;
+        grid-column: 1;
+        height: 4rem;
+        position: relative;
+        top: 1.2rem;
+        width: 4rem;
+
+        @include respond($tab-md) {
+            top: 4rem;
+            right: 2rem;
+        }
+
+        @include respond($pho-lg) {
+            grid-column: 1;
+            position: static;
+        }
+    }
+
+    &__heading {
+        align-self: end;
+        grid-column: 2 / -1;
+
+        @include respond($pho-lg) {
+            grid-column: 1;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        grid-column: 2 / -1;
+        line-height: 1.6;
+        word-wrap: break-word;
+
+        @include respond($tab-md) {
+            &:not(:last-child) {
+                padding-bottom: 2rem;
+            }
+        }
+
+        @include respond($pho-lg) {
+            grid-column: 1;
+            text-align: center;
+
+            &:not(:last-child) {
+                padding-bottom: 3rem;
+            }
+        }
+    }
+}

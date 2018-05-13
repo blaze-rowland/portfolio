@@ -1,0 +1,42 @@
+// Colors
+$color-primary: #FF6138;
+$color-secondary: #00baeb;
+
+$color-black: #262626;
+$color-white: #ffffff;
+
+$color-grey-light-1: darken($color-white, 7%);
+$color-grey-light-2: darken($color-white, 25%);
+$color-grey-dark-1: lighten($color-black, 15%);
+$color-grey-dark-2: lighten($color-black, 22%);
+$color-grey-dark-3: light($color-black, 5%);
+
+$color-green-light-1: #BEEB9F;
+$color-green-light-2: #79BD8F;
+$color-green-dark-1: #00A388;
+$color-green-dark-2: #008c74;
+
+// Font
+$font-display: 'Poppins', sans-serif;
+$font-primary: 'Muli', sans-serif;
+$font-size-default: 1.6rem;
+
+
+// Clip-Paths
+$angle-left: polygon(0 0, 100% 0, 100% 85%, 20% 100%, 0 85%);;
+$angle-right: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);;
+
+
+// Breakpoints
+$desk-lg: 1350px;
+$desk-md: 1250px;
+$desk-sm: 1150px;
+
+$tab-lg: 1024px;
+$tab-md: 768px;
+$tab-sm: 705px;
+
+$pho-lg: 414px;
+$pho-md: 375px;
+$pho-sm: 360px;
+$pho-xs: 320px;

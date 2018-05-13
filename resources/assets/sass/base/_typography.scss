@@ -1,0 +1,67 @@
+body {
+    color: $color-black;
+    font-family: $font-primary;
+    font-size: $font-size-default;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-display;
+}
+
+.heading-primary {
+    font-size: 6rem;
+
+    &--main {
+        color: $color-white;
+        font-size: 7rem;
+        text-transform: capitalize;
+    }
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+
+    &--about {
+        // color: $color-grey-dark-1;
+        color: $color-primary;
+        margin-bottom: 1.8rem;
+    }
+
+    &--work {
+        color: $color-green-light-2;
+    }
+
+    &--blog {
+        color: $color-secondary;
+    }
+
+    &--contact {
+        color: $color-primary;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.heading-quaternary {
+    font-size: 2.2rem;
+
+    &--contact {
+        color: $color-secondary;
+    }
+}
+
+.heading-quinary {
+    font-size: 1.9rem;
+    font-weight: 400;
+
+    &--about {
+        color: $color-grey-dark-1;
+    }
+}
+
+.paragraph {
+    color: $color-grey-dark-2;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}

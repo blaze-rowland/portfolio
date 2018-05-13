@@ -69,7 +69,8 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        return view('admin.blog.show')->withPost($post);
+        $blogs = Post::orderBy('created_at', 'DESC')->take(10)->get();
+        return view('admin.blog.show')->withPost($post)->withBlogs($blogs);
     }
 
     /**

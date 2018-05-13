@@ -8,8 +8,7 @@
   @yield('stylesheets')
 </head>
 <body>
-    @include('partials._coverLoad')
-    @yield('content')
+  @yield('content')
 
   <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
   @yield('scripts')

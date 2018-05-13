@@ -1,0 +1,33 @@
+// Classes
+.fromLeft {
+    animation-name: fromLeft;
+    animation-timing-function: cubic-bezier(.75, .2, .27, 1.38);
+}
+
+.fromTop {
+    animation-name: fromTop;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+
+// Keyframes
+
+@keyframes fromLeft {
+
+    0% { right: 100%; }
+
+    100% { right: 0%; }
+
+}
+
+
+@keyframes fromTop {
+
+    0% { top: -20%; }
+
+    100% { top: 0%; }
+
+}

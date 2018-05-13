@@ -1,0 +1,134 @@
+.blog {
+
+    &__header {
+        float: right;
+        text-align: right;
+        width: 35%;
+
+        @include respond($tab-md) {
+            width: 45%;
+        }
+
+        @include respond($tab-sm) {
+            margin-right: -3.5rem;
+        }
+
+        @include respond($pho-lg) {
+            align-self: start;
+            justify-self: start;
+            float: none;
+            margin: 0;
+            margin-left: -1rem;
+            text-align: left;
+            width: 100%;
+        }
+
+        @include respond($pho-xs) {
+        }
+
+    }
+
+    &__box {
+        background-color: $color-white;
+        box-shadow: 0px 11px 60px -25px rgba(0,0,0,0.4);
+        border-bottom-left-radius: .2rem;
+        border-bottom-right-radius: .2rem;
+        cursor: pointer;
+        margin-top: 5rem;
+        transition: all .2s;
+        width: 38rem;
+
+        a { color: currentColor; text-decoration:none;}
+
+        @include respond($tab-lg) {
+            width: 32rem;
+        }
+        
+        @include respond($tab-md) {
+            width: 34.5rem;
+        }
+
+        @include respond($pho-lg) {
+            width: 39rem;
+        }
+
+        @include respond($pho-md) {
+            width: 35rem;
+        }
+        
+        @include respond($pho-sm) {
+            width: 33rem;
+        }
+
+        @include respond($pho-xs) {
+            width: 28.5rem;
+        }
+
+        &:hover {
+            box-shadow: 0px 11px 60px -25px rgba(0,0,0,0.7);
+            transform: translateY(-1.2rem) scale(1.02);
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: 0px 11px 60px -25px rgba(0,0,0,0.4);
+            transform: translateY(0rem) scale(1);
+        }
+    }
+
+    &__img {
+        border-top-left-radius: .2rem;
+        border-top-right-radius: .2rem;
+        height: 20rem;
+        object-fit: cover;
+        width: 38rem;
+
+        @include respond($tab-lg) {
+            height: 14rem;
+            width: 32rem;
+        }
+        
+        @include respond($tab-md) {
+            height: 16.5rem;
+            width: 34.5rem;
+        }
+
+        @include respond($pho-lg) {
+            height: 21rem;
+            width: 39rem;
+        }
+
+        @include respond($pho-md) {
+            height: 17rem;
+            width: 35rem;
+        }
+
+        @include respond($pho-sm) {
+            height: 15rem;
+            width: 33rem;
+        }
+
+        @include respond($pho-xs) {
+            height: 13.5rem;
+            width: 28.5rem;
+        }
+    }
+
+    &__inner {
+        padding: .5rem 2rem 2rem 2rem;
+    }
+
+    &__date {
+        color: $color-grey-light-2;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__title {
+        margin-bottom: 1.25rem;
+    }
+
+    &__snip {
+        font-size: 1.7rem;
+    }
+}

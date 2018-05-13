@@ -51,3 +51,27 @@ h3 {
   width: 100%;
   margin-bottom:25px;
 }
+
+.container {
+  margin: 25px auto 0 auto;
+  width: 70%;
+
+  @media(max-width: $break-sm) {
+    margin: 25px 0 0 0;
+    width: 100%;
+  }
+
+  &--blog {
+    display: flex;
+
+    @media (max-width: $break-md) {
+      flex-direction: column;
+    }
+
+    @media (max-width: $break-sm) {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

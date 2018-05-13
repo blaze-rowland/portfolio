@@ -4,10 +4,26 @@
   Date: February 15th, 2018
 */
 
-@import 'helpers/variables';
-@import 'base/reset';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/variables';
 
-@import 'components/alert';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/animations';
+@import 'base/utilities';
 
-@import 'pages/landing';
-@import 'base/app';
+@import 'components/buttons';
+@import 'components/scroller';
+@import 'components/form';
+
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/work';
+@import 'layout/blog';
+@import 'layout/contact';
+@import 'layout/footer';
+@import 'layout/navigation';
+
+@import 'pages/home';

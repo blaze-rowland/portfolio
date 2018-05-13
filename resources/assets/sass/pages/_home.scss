@@ -1,0 +1,125 @@
+// About Section
+#about {
+    background-color: $color-grey-light-1;
+    clip-path: $angle-right;
+    display: grid;
+    margin-top: -28rem;
+    padding: 35rem 0 30rem 0;
+    position: relative;
+    z-index: 4;
+
+    @include respond($tab-lg) {
+        clip-path: none;
+        margin-top: -8rem;
+        padding: 10rem 5rem;
+    }
+
+    @include respond($pho-lg) {
+        margin-top: 0;
+        padding: 10rem 3rem;
+    }
+}
+
+.about {
+    margin-bottom: 20rem;
+    position: relative;
+
+    @include respond($tab-lg) {
+        margin-bottom: 0;
+    }
+}
+
+
+// Work Section
+#work {
+    background-color: $color-white;
+    clip-path: $angle-left;
+    margin-top: -22rem;
+    position: relative;
+    z-index: 3;
+
+    @include respond($tab-lg) {
+        clip-path: none;
+        margin-top: 5rem;
+    }
+}
+
+.work {
+    padding-bottom: 20rem;
+
+    @include respond($desk-md) {
+        padding-bottom: 32rem;
+    }
+
+    @include respond($tab-lg) {
+        padding-bottom: 10rem;
+    }
+
+    @include respond($tab-md) {
+        padding: 0 5rem 10rem 5rem;
+    }
+
+    @include respond($pho-lg) {
+        padding-bottom: 0;
+    }
+}
+
+
+// Blog Section
+#blog {
+    background-color: $color-grey-light-1;
+    clip-path: $angle-right;
+    display: grid;
+    margin-top: -22rem;
+    padding: 35rem 0 30rem 0;
+    position: relative;
+    z-index: 2;
+
+    @include respond($desk-md) {
+        margin-top: -25rem;
+    }
+
+    @include respond($tab-md) {
+        clip-path: none;
+        margin-top: 0;
+        padding: 10rem 5rem;
+    }
+}
+
+.blog {
+    padding-bottom: 20rem;
+}
+
+
+// Contact Section
+#contact {
+    background-color: $color-white;
+    position: relative;
+    z-index: 1;
+
+    @include respond($tab-md) {
+        margin-top: 6rem;
+    }
+}
+
+.contact {
+    padding-bottom: 10rem;
+
+    @include respond($tab-md) {
+        padding-bottom: 10rem;
+    }
+}
+
+
+// Footer
+#footer {
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-white;
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    margin-top: 40rem;
+    width: 100vw;
+}
+

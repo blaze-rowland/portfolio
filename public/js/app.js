@@ -173,6 +173,29 @@ $(document).ready(function () {
 
 //End Hide Alert
 
+
+//Portfolio-revamp Nav
+
+var header = document.querySelector('#header').offsetHeight - 100;
+var nav = document.querySelector('.nav');
+var about = document.querySelector('#about');
+
+window.addEventListener('scroll', function (e) {
+  if (document.documentElement.scrollTop > header || document.body.scrollTop > header) {
+    nav.classList.add('fromTop');
+    nav.classList.add('fixed--top');
+    nav.classList.remove('is-hidden--opac');
+
+    about.classList.add('p-top--big');
+  } else {
+    nav.classList.remove('fromTop');
+    nav.classList.remove('fixed--top');
+    nav.classList.add('is-hidden--opac');
+
+    about.classList.remove('p-top--big');
+  }
+});
+
 /***/ }),
 /* 3 */
 /***/ (function(module, exports) {
@@ -183,7 +206,7 @@ $(document).ready(function () {
 /* 4 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: \n        @include respond($tab-md) {\n                ^\n      No mixin named respond\n\nBacktrace:\n\tresources/assets/sass/layout/_blog.scss:8\n      in /Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/resources/assets/sass/layout/_blog.scss (line 8, column 18)\n    at runLoaders (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/sass-loader/lib/loader.js:55:13)\n    at Object.<anonymous> (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/async/dist/async.js:2257:31)\n    at Object.callback (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/async/dist/async.js:958:16)\n    at options.error (/Applications/XAMPP/xamppfiles/htdocs/Personal/portfolio-2/node_modules/node-sass/lib/index.js:294:32)");
 
 /***/ })
 /******/ ]);

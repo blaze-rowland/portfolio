@@ -3,14 +3,23 @@
   Description: Admin.scss (admin css) for Portfolio
   Date: February 22nd, 2018
 */
-
-@import 'base/reset';
-@import "helpers/variables";
+@import "abstracts/admin-variables";
 
 @import 'base/admin';
+@import 'base/reset';
 
 @import 'components/adminNav';
+@import 'components/badge';
+@import 'components/card';
+@import 'components/cover';
 @import 'components/createForm';
-@import 'pages/dashboard';
-@import 'pages/client';
+@import 'components/sidebar';
+
+@import 'helpers/utilities';
+
+@import 'layout/blog';
+
 @import 'pages/auth';
+@import 'pages/blog';
+@import 'pages/client';
+@import 'pages/dashboard';

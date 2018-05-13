@@ -1,0 +1,37 @@
+.footer {
+    text-align: center;
+
+    &__social {
+        margin-bottom: 2rem;
+        margin-left: -1rem;
+
+        &-list {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            
+            @include respond($pho-lg) {
+                width: fit-content;
+            }
+        }
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+
+        &-icon {
+            fill: rgba($color-white, 0.75);
+            height: 2rem;
+            transition: all 0.2s;
+            width: 2rem;
+
+            &:hover {
+                fill: lighten($color-secondary, 10%);
+                transform: scale(1.2) translateY(-.15rem);
+            }
+        }
+    }
+}

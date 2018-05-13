@@ -1,0 +1,30 @@
+// Cover
+#cover {
+    background: #fff;
+    font-size: .8em;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    z-index: 99999;
+  
+    .loader {
+      animation: loader 1.3s ease infinite;
+      border: 5px solid $off-white;
+      border-radius: 50%;
+      border-top: 5px solid $primary-color;
+      height: 80px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      margin-top: calc(25% - 80px);
+      width: 80px;
+    }
+  
+    @keyframes loader {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  }
+  // End Cover

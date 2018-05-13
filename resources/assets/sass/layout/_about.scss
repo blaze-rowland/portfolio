@@ -1,0 +1,55 @@
+.about {
+
+    &__box {
+        display: table;
+
+        @include respond($tab-lg) {
+            display: flex;
+            align-content: center;
+        }
+
+        @include respond($pho-lg) {
+            display: block;
+        }
+    }
+
+    &__img {
+        box-shadow: 0px 11px 60px -25px rgba(0,0,0,0.4);
+        display: table-cell;
+        height: 35rem;
+        object-fit: cover;
+        transition: all 0.2s;
+        width: 35rem;
+
+        @include respond($tab-md) {
+            height: 30rem;
+            width: 30rem;
+        }
+
+        @include respond($pho-lg) {
+            display: none;
+        }
+
+        &:hover {
+            transform: translateY(-.5rem) scale(1.1);
+        }
+    }
+
+    &__text {
+        display: table-cell;
+        vertical-align: middle;
+        width: 58.9%;
+
+        @include respond($tab-lg) {
+            margin-left: 6rem;
+            width: 45%;
+        }
+
+        @include respond($pho-lg) {
+            display: block;
+            margin-left: 0;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

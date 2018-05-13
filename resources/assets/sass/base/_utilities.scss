@@ -1,0 +1,25 @@
+.is-hidden {
+    display: none;
+
+    &--opac {
+        opacity: 0;
+    }
+}
+
+.fixed {
+
+    &--top {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.p-top {
+    &--none {
+        padding-top: 0;
+    }
+
+    &--big {
+        padding-top: 40rem !important;
+    }
+}

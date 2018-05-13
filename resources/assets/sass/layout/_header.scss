@@ -1,0 +1,71 @@
+#header {
+    background-color: $color-primary;
+    background-image: linear-gradient(145deg, rgba($color-primary, 0.75) 0%, rgba($color-secondary, 0.75) 100%), url('/img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // clip-path: $angle-left;
+    clip-path: ellipse(81% 86% at 50% 14%);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    z-index: 5;
+
+    @include respond($tab-lg) {
+        clip-path: none;
+    }
+}
+
+.header__content {
+    position: relative;
+    top: 30%;
+    left: 1%;
+    transform: translate(17%, 40%);
+
+    @include respond($tab-md) {
+        transform: translate(12%, 40%);
+    }
+    @include respond($pho-lg) {
+        text-align: center;
+        transform: translate(0, 0);
+    }
+}
+
+.social {
+    @include respond($pho-lg) {
+        position: relative;
+        left: 50%;
+        transform: translate(-13%, 45%);
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        // width: 10rem;
+        width: fit-content;
+
+        @include respond($pho-lg) {
+            margin-left: -1rem;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+
+    &__icon {
+        fill: rgba($color-white, 0.75);
+        height: 2rem;
+        transition: all 0.2s;
+        width: 2rem;
+
+        &:hover {
+            fill: lighten($color-secondary, 10%);
+            transform: scale(1.2) translateY(-.15rem);
+        }
+    }
+} 

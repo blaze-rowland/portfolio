@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;
+
+    @include respond($desk-lg) {
+        font-size: 56.25%; // 1rem = 9px
+    }
+    @include respond($desk-sm) {
+        font-size: 52%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

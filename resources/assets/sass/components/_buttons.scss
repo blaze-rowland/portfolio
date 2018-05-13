@@ -1,0 +1,57 @@
+.btn {
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    border-radius: .5rem;
+    color: $color-black;
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-family: $font-primary;
+    padding: 1rem 2.2rem;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-black;
+        color: $color-white;
+        transform: translateY(-.4rem);
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        transform: translateY(.2rem);
+    }
+
+    &--primary {
+        border-color: $color-primary;
+        color: $color-primary;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+
+    &--secondary {
+        border-color: $color-secondary;
+        color: $color-secondary;
+
+        &:hover {
+            background-color: $color-secondary;
+        }
+    }
+
+    &--form {
+        position: relative;
+        right: 3rem;
+        top: 3rem;
+
+        @include respond($tab-md) {
+            display: block;
+            width: calc(100% + 3rem);
+        }
+
+        @include respond($pho-lg) {
+            right: 1.5rem;
+            width: calc(100% + 1.5rem);
+        }
+    }
+}
