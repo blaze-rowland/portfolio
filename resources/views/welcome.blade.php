@@ -80,9 +80,10 @@
 
                 <div class="about__text">
                     <h3 class="heading-tertiary heading-tertiary--about">About Me</h3>
-                    <p class="paragraph">
+                    <p class="paragraph m-bottom--md">
                         I'm a happy-go-lucky web developer and graphic designer from Decatur, Illinois. I've been in this field for over 5 years and have a great understanding for what's going on under the hood; so you don't have to. I love what I do and that reflects on my work and and client interaction.
                     </p>
+                    <a href="{{route('about')}}" class="btn btn--primary">View More</a>
                 </div>
             </div>
             <div class="scroller">
@@ -129,9 +130,10 @@
         <div class="container">
             <div class="work__box">
                 <h3 class="heading-tertiary heading-tertiary--work">Work</h3>
-                <p class="paragraph">
+                <p class="paragraph m-bottom--md">
                     Take a look at some of my recent projects. I'm very proud of them.
                 </p>
+                <a href="{{route('portfolio.index')}}" class="btn btn--tertiary">See all</a>
             </div>
         </div>
         <div class="container">
@@ -177,7 +179,8 @@
         <div class="container container--blog-header">
             <div class="blog__header">
                 <h3 class="heading-tertiary heading-tertiary--blog">Blog</h3>
-                <p class="paragraph">I'm very involved in my work; I love creating blog posts for my clientele and fellow developers.</p>
+                <p class="paragraph m-bottom--md">I'm very involved in my work; I love creating blog posts for my clientele and fellow developers.</p>
+                <a href="{{ route('posts.index') }}" class="btn btn--secondary">See all</a>
             </div>
         </div>
 

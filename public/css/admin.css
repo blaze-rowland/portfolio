@@ -209,6 +209,10 @@ h3 {
   width: 70%;
 }
 
+.container--nav {
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   .container {
     margin: 25px 0 0 0;
@@ -1407,5 +1411,26 @@ table {
   grid-area: side2;
   grid-row-end: span 2;
   padding: 0;
+}
+
+#blog {
+  display: grid;
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1250px) {
+  #blog {
+    margin-top: -25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #blog {
+    -webkit-clip-path: none;
+            clip-path: none;
+    margin-top: 0;
+    padding: 10rem 5rem;
+  }
 }
 

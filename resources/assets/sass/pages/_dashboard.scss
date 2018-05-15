@@ -222,25 +222,17 @@
 
 // Blog Section
 #blog {
-  background-color: $color-grey-light-1;
-  clip-path: $angle-right;
   display: grid;
-  margin-top: -22rem;
-  padding: 35rem 0 30rem 0;
   position: relative;
   z-index: 2;
 
-  @include respond($desk-md) {
+  @include respond(1250px) {
       margin-top: -25rem;
   }
 
-  @include respond($tab-md) {
+  @include respond(768px) {
       clip-path: none;
       margin-top: 0;
       padding: 10rem 5rem;
   }
-}
-
-.blog {
-  padding-bottom: 20rem;
 }

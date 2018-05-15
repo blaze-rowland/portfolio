@@ -19,7 +19,7 @@ class AdminController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => ['welcome', 'postContact']]);
+        $this->middleware('auth', ['except' => ['welcome', 'postContact', 'about']]);
     }
 
     /**
@@ -64,6 +64,10 @@ class AdminController extends Controller
       });
 
       return redirect('/')->with('status', 'E-Mail Sent!');
+    }
+
+    public function about() {
+      return view('pages.about');
     }
 
     public function testbench()

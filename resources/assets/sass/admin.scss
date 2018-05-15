@@ -4,6 +4,7 @@
   Date: February 22nd, 2018
 */
 @import "abstracts/admin-variables";
+@import "abstracts/mixins";
 
 @import 'base/admin';
 @import 'base/reset';
@@ -16,8 +17,6 @@
 @import 'components/sidebar';
 
 @import 'helpers/utilities';
-
-@import 'layout/blog';
 
 @import 'pages/auth';
 @import 'pages/blog';

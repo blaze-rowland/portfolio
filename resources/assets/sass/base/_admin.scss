@@ -56,6 +56,10 @@ h3 {
   margin: 25px auto 0 auto;
   width: 70%;
 
+  &--nav {
+    margin: 0 auto;
+  }
+
   @media(max-width: $break-sm) {
     margin: 25px 0 0 0;
     width: 100%;

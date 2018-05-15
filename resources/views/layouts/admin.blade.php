@@ -12,9 +12,7 @@
   @if(Auth::check())
     @include('partials._adminNav')
   @else
-    <div class="back-button">
-      <a href="{{ url()->previous() }}">  <i class="fa fa-arrow-left"></i> </a>
-    </div>
+    @include('partials._appNavOff')
     <div class="not-logged">
   @endif
 

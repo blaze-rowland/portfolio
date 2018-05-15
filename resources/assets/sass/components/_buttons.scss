@@ -1,5 +1,5 @@
 .btn {
-    background-color: $color-white;
+    background-color: transparent;
     border: 1px solid $color-black;
     border-radius: .5rem;
     color: $color-black;
@@ -7,6 +7,7 @@
     font-size: 1.7rem;
     font-family: $font-primary;
     padding: 1rem 2.2rem;
+    text-decoration: none;
     transition: all .2s;
 
     &:hover {
@@ -36,6 +37,15 @@
 
         &:hover {
             background-color: $color-secondary;
+        }
+    }
+
+    &--tertiary {
+        border-color: $color-green-light-2;
+        color: $color-green-light-2;
+
+        &:hover {
+            background-color: $color-green-light-2;
         }
     }
 

@@ -20,8 +20,10 @@ Route::get('/', 'AdminController@welcome')->name('/');
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-Route::get('/test', 'AdminController@testbench')->name('test');
+Route::get('/about', 'AdminController@about')->name('about');
+Route::resource('portfolio', 'PortfolioController');
 
+// Admin Routes
 Route::resource('posts', 'PostController');
 Route::resource('revenue', 'RevenueController');
 Route::resource('clients', 'ClientController');
@@ -31,6 +33,8 @@ Route::get('/projects/{id}/notes/edit', 'ProjectController@edit_note')->name('pr
 Route::put('/projects/{id}/notes/create', 'ProjectController@update_note')->name('projects.note.update');
 Route::put('/projects/{id}/notes/delete', 'ProjectController@delete_note')->name('projects.note.delete');
 Route::post('contact', 'AdminController@postContact')->name('contact');
+
+Route::get('/test', 'AdminController@testbench')->name('test');
 
 //Dashboard Routes
 Route::get('/admin', 'AdminController@index')->name('home');

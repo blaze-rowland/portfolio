@@ -183,6 +183,22 @@ h6 {
   top: 0;
 }
 
+.m-top--none {
+  margin-top: 0;
+}
+
+.m-top--sm {
+  margin-top: 120px;
+}
+
+.m-bottom--none {
+  margin-bottom: 0;
+}
+
+.m-bottom--md {
+  margin-bottom: 25px;
+}
+
 .p-top--none {
   padding-top: 0;
 }
@@ -192,7 +208,7 @@ h6 {
 }
 
 .btn {
-  background-color: #ffffff;
+  background-color: transparent;
   border: 1px solid #262626;
   border-radius: .5rem;
   color: #262626;
@@ -200,6 +216,7 @@ h6 {
   font-size: 1.7rem;
   font-family: "Muli", sans-serif;
   padding: 1rem 2.2rem;
+  text-decoration: none;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -234,6 +251,15 @@ h6 {
 
 .btn--secondary:hover {
   background-color: #00baeb;
+}
+
+.btn--tertiary {
+  border-color: #79BD8F;
+  color: #79BD8F;
+}
+
+.btn--tertiary:hover {
+  background-color: #79BD8F;
 }
 
 .btn--form {
