@@ -65,17 +65,17 @@
                     <span>Home</span>
                 </li>
             </a>
-            <a href="{{ route('/', '#about') }}" class="nav__link">
+            <a href="{{ route('about') }}" class="nav__link">
                 <li class="nav__item">
                     <span>About</span>
                 </li>
             </a>
-            <a href="{{ route('/', '#work') }}" class="nav__link">
+            <a href="{{ route('portfolio.index') }}" class="nav__link">
                 <li class="nav__item">
                     <span>Work</span>
                 </li>
             </a>
-            <a href="{{ route('/', '#blog') }}" class="nav__link">
+            <a href="{{ route('posts.index') }}" class="nav__link">
                 <li class="nav__item">
                     <span>Blog</span>
                 </li>

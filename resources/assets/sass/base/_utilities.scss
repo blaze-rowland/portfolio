@@ -20,7 +20,15 @@
     }
 
     &--sm {
-        margin-top: 120px;
+        margin-top: 12rem;
+    }
+
+    &--md {
+        margin-top: 2.5rem !important;
+    }
+
+    &--lg {
+        margin-top: 7.5rem !important;
     }
 }
 
@@ -30,7 +38,7 @@
     }
 
     &--md {
-        margin-bottom: 25px;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -39,7 +47,15 @@
         padding-top: 0;
     }
 
+    &--md {
+        padding-top: 2.5rem;
+    }
+
     &--big {
         padding-top: 40rem !important;
     }
+}
+
+.w-75 {
+    width: 75%;
 }

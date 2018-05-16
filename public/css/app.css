@@ -188,7 +188,15 @@ h6 {
 }
 
 .m-top--sm {
-  margin-top: 120px;
+  margin-top: 12rem;
+}
+
+.m-top--md {
+  margin-top: 2.5rem !important;
+}
+
+.m-top--lg {
+  margin-top: 7.5rem !important;
 }
 
 .m-bottom--none {
@@ -196,15 +204,23 @@ h6 {
 }
 
 .m-bottom--md {
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 .p-top--none {
   padding-top: 0;
 }
 
+.p-top--md {
+  padding-top: 2.5rem;
+}
+
 .p-top--big {
   padding-top: 40rem !important;
+}
+
+.w-75 {
+  width: 75%;
 }
 
 .btn {
@@ -515,6 +531,42 @@ h6 {
 
 .form__input--textarea:placeholder-shown ~ .btn {
   top: 0rem;
+}
+
+.table {
+  border-collapse: collapse;
+  text-align: right;
+}
+
+.table tr,
+.table th,
+.table td {
+  padding: 1rem;
+}
+
+.table .table__head--primary {
+  color: #FF6138;
+}
+
+.table .table__head--secondary {
+  color: #00baeb;
+}
+
+.table th {
+  font-size: 2.2rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.table td {
+  font-size: 1.7rem;
+  padding-left: 2.4rem;
+  text-align: center;
+}
+
+.table td:first-of-type {
+  padding-left: 4rem;
 }
 
 .container {
@@ -1157,6 +1209,7 @@ h6 {
   -webkit-box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.1);
   max-width: 100vw;
+  position: relative;
   width: 100%;
   z-index: 999;
 }
@@ -1358,5 +1411,10 @@ h6 {
           justify-content: center;
   margin-top: 40rem;
   width: 100vw;
+}
+
+#about--page {
+  background-color: #ededed;
+  padding-bottom: 10rem;
 }
 
