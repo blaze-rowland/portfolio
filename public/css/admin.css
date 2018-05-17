@@ -158,7 +158,8 @@ body {
 }
 
 h1 {
-  font-size: 1.8em;
+  font-size: 1.8em !important;
+  font-weight: 400 !important;
 }
 
 h3 {

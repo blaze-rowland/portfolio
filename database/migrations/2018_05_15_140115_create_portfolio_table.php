@@ -15,6 +15,13 @@ class CreatePortfolioTable extends Migration
     {
         Schema::create('portfolio', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->mediumText('body');
+            $table->string('technology');
+            $table->mediumText('design_body')->nullable();
+            $table->string('cover_image');
+            $table->string('mobile_image')->nullable();
+            $table->string('desk_image')->nullable();
             $table->timestamps();
         });
     }

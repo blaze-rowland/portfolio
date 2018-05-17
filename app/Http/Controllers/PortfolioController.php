@@ -3,9 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Portfolio;
+use DB;
 
 class PortfolioController extends Controller
 {
+
+    public function __construct() {
+      // allows routes to only direct to index and show functions
+      $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +23,8 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        return view('portfolio.index');
+        $portfolios = Portfolio::orderBy('created_at', 'DESC')->paginate(15);
+        return view('portfolio.index')->withPortfolios($portfolios);
     }
 
     /**
@@ -23,7 +34,7 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        //
+        return view('portfolio.create');
     }
 
     /**
@@ -34,7 +45,24 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title'         => 'required|string',
+            'body'          => 'required',
+            'technology'    => 'required',
+            'cover_image'   => 'required|url'
+          ]);
+  
+          $portfolio = new Portfolio;
+          $portfolio->title        = $request->input('title');
+          $portfolio->body         = $request->input('body');
+          $portfolio->technology   = $request->input('technology');
+          $portfolio->design_body  = $request->input('design_body');
+          $portfolio->cover_image  = $request->input('cover_image');
+          $portfolio->mobile_image = $request->input('mobile_image');
+          $portfolio->desk_image   = $request->input('desk_image');
+          $portfolio->save();
+
+          return redirect('/portfolio');
     }
 
     /**
@@ -56,7 +84,8 @@ class PortfolioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $portfolio = Portfolio::find($id);
+        return view('portfolio.edit')->withPortfolio($portfolio);
     }
 
     /**

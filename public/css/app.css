@@ -199,6 +199,10 @@ h6 {
   margin-top: 7.5rem !important;
 }
 
+.m-top--xl {
+  margin-top: 10rem !important;
+}
+
 .m-bottom--none {
   margin-bottom: 0;
 }
@@ -1416,5 +1420,10 @@ h6 {
 #about--page {
   background-color: #ededed;
   padding-bottom: 10rem;
+}
+
+#work #work--page .work .container .work__projects .work__projects-box .work__img:hover {
+  -webkit-transform: scale(1.1) !important;
+          transform: scale(1.1) !important;
 }
 
