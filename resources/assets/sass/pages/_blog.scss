@@ -14,11 +14,23 @@
         margin: 0;
         padding: 0;
     }
+
+    @media (max-width: $break-tab-xl) {
+        margin-top: 0 !important;
+    }
+
+    @media (max-width: $break-sm) {
+        padding: 0 !important;
+    }
 }
 
 .blog {
     box-shadow: 0 0 31px -12px rgba($off-black, 0.4);
     margin-bottom: 45px;
+
+    @media (max-width: $break-sm) {
+        box-shadow: none;
+    }
 
     &__image {
         height: 425px;
@@ -38,7 +50,8 @@
     &__date {
         color: darken($off-white, 25%);
         font-size: 14px;
-        padding: 10px 0 25px 0;
+        // padding: 10px 0 25px 0;
+        padding: 10px 0 5px 0;
     }
 
     &__text {

@@ -486,6 +486,7 @@ h6 {
 
 .form__input--textarea {
   height: auto;
+  font-family: "Muli", sans-serif;
   margin-top: 3.5rem;
   position: relative;
   right: 3rem;
@@ -842,6 +843,8 @@ h6 {
 }
 
 .work__img {
+  -webkit-box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
   height: 26.5rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -853,11 +856,21 @@ h6 {
 }
 
 .work__img:hover {
-  -webkit-box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 18px -5px rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  -webkit-box-shadow: 0px 9px 52px -27px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 9px 52px -27px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transform: scale(1.07) translateY(-15px);
+          transform: scale(1.07) translateY(-15px);
   z-index: 2;
+}
+
+.work__img:active,
+.work__img:focus {
+  -webkit-box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  -webkit-transform: scale(1) translateY(5px) !important;
+          transform: scale(1) translateY(5px) !important;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -1025,8 +1038,8 @@ h6 {
 }
 
 .blog__box:hover {
-  -webkit-box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(-1.2rem) scale(1.02);
           transform: translateY(-1.2rem) scale(1.02);
 }
@@ -1281,7 +1294,7 @@ h6 {
     -webkit-clip-path: none;
             clip-path: none;
     margin-top: -8rem;
-    padding: 10rem 5rem;
+    padding: 5rem 5rem;
   }
 }
 
@@ -1354,7 +1367,7 @@ h6 {
           clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0 85%);
   display: grid;
   margin-top: -22rem;
-  padding: 35rem 0 30rem 0;
+  padding: 25rem 0;
   position: relative;
   z-index: 2;
 }
@@ -1420,10 +1433,5 @@ h6 {
 #about--page {
   background-color: #ededed;
   padding-bottom: 10rem;
-}
-
-#work #work--page .work .container .work__projects .work__projects-box .work__img:hover {
-  -webkit-transform: scale(1.1) !important;
-          transform: scale(1.1) !important;
 }
 

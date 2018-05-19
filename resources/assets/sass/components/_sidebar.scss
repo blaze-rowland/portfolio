@@ -4,25 +4,20 @@
     height: 100%;
     margin-left: 40px;
     padding: 25px 15px;
+    width: 20%;
 
-    @media (max-width: $break-lg) {
-        width: 40%;
+    @media (max-width: $break-sm) {
+        margin-top: 20px;
     }
-
-    @media (max-width: $break-tab-lg) {
-        width: 30%;
-    }
-
+    
     @media (max-width: $break-md) {
         margin-left: 0;
         text-align: center;
-        width: 95%;
+        width: calc(100% - 30px) !important;
     }
 
     &--blog {
-        @media (max-width: $break-sm) {
-            margin-left: -8px;
-        }
+        
     }
 
     &__heading {

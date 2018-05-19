@@ -16,11 +16,10 @@ $negative: rgb(140, 55, 55);
 $break-xs: 480px;
 $break-sm: 768px;
 $break-md: 992px;
-$break-lg: 1200px;
-$break-xl: 1650px;
-
-
 $break-tab-lg: 1100px;
+$break-lg: 1200px;
+$break-tab-xl: 1250px;
+$break-xl: 1650px;
 
 
 strong, b {
@@ -134,21 +133,8 @@ table {
 
 .btn-block {
   display: block;
+  margin: 0 auto;
   text-align: center;
-  width: 85%;
-
-  @media (max-width: $break-tab-lg) {
-    width: 75%;
-  }
-
-  @media (max-width: $break-md) {
-    width: 100%;
-  }
-
-  @media (max-width: $break-sm) {
-    margin-left: 5px !important;
-    width: 86%;
-  }
 }
 
 

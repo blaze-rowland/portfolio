@@ -124,27 +124,8 @@ table tr .num {
 
 .btn-block {
   display: block;
+  margin: 0 auto;
   text-align: center;
-  width: 85%;
-}
-
-@media (max-width: 1100px) {
-  .btn-block {
-    width: 75%;
-  }
-}
-
-@media (max-width: 992px) {
-  .btn-block {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .btn-block {
-    margin-left: 5px !important;
-    width: 86%;
-  }
 }
 
 html,
@@ -739,7 +720,7 @@ table {
 @media (max-width: 768px) {
   #create-form .create-grid,
   #admin .create-grid {
-    grid-template-areas: 'post' 'sidebar';
+    grid-template-areas: 'post' 'sidebar';
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -840,17 +821,12 @@ table {
   height: 100%;
   margin-left: 40px;
   padding: 25px 15px;
+  width: 20%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .sidebar {
-    width: 40%;
-  }
-}
-
-@media (max-width: 1100px) {
-  .sidebar {
-    width: 30%;
+    margin-top: 20px;
   }
 }
 
@@ -858,13 +834,7 @@ table {
   .sidebar {
     margin-left: 0;
     text-align: center;
-    width: 95%;
-  }
-}
-
-@media (max-width: 768px) {
-  .sidebar--blog {
-    margin-left: -8px;
+    width: calc(100% - 30px) !important;
   }
 }
 
@@ -984,7 +954,7 @@ table {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
+  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
 }
 
 .admin-form form {
@@ -1111,10 +1081,29 @@ table {
   }
 }
 
+@media (max-width: 1250px) {
+  #blog {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #blog {
+    padding: 0 !important;
+  }
+}
+
 .blog {
   -webkit-box-shadow: 0 0 31px -12px rgba(36, 36, 36, 0.4);
           box-shadow: 0 0 31px -12px rgba(36, 36, 36, 0.4);
   margin-bottom: 45px;
+}
+
+@media (max-width: 768px) {
+  .blog {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .blog__image {
@@ -1136,7 +1125,7 @@ table {
 .blog__date {
   color: #bababa;
   font-size: 14px;
-  padding: 10px 0 25px 0;
+  padding: 10px 0 5px 0;
 }
 
 .blog__text {
@@ -1211,7 +1200,7 @@ table {
 @media (max-width: 768px), (max-width: 992px) {
   #container #top-dash .quick-info {
     margin-left: 50px;
-    grid-template-areas: 'income' 'expense' 'clients' 'projects';
+    grid-template-areas: 'income' 'expense' 'clients' 'projects';
     grid-template-columns: 1fr;
   }
 }
@@ -1322,7 +1311,7 @@ table {
 
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-1 {
-    grid-template-areas: 'main' 'side1';
+    grid-template-areas: 'main' 'side1';
     grid-template-columns: 1fr;
     margin-left: 50px;
   }
@@ -1356,7 +1345,7 @@ table {
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-2 {
     margin-left: 50px;
-    grid-template-areas: 'side1' 'side2';
+    grid-template-areas: 'side1' 'side2';
     grid-template-columns: 1fr;
   }
 }

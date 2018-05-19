@@ -34,6 +34,7 @@
     }
 
     &__img {
+        box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
         height: 26.5rem;
         object-fit: cover;
         position: relative;
@@ -42,9 +43,17 @@
         z-index: 1;
 
         &:hover {
-            box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.4);
-            transform: scale(1.4);
+        box-shadow: 0px 9px 52px -27px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transform: scale(1.07) translateY(-15px);
             z-index: 2;
+        }
+
+        &:active, 
+        &:focus {
+            box-shadow: 0px 6px 50px -25px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transform: scale(1) translateY(5px) !important;
         }
 
         @include respond($desk-md) {
