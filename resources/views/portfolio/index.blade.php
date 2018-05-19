@@ -11,7 +11,7 @@
     <section id="work--page" class="work--page">
         <div class="container">
           <h1 class="heading-primary p-top--md">
-            Portfolio.
+              Portfolio.
           </h1>
           <div class="w-75">
               <p class="paragraph">
@@ -23,6 +23,10 @@
         <div class="container m-top--md">
           <h3 class="heading-tertiary heading-tertiary--work">
             Services
+
+            @if(Auth::check())
+                <a style="text-decoration: none; color:black;" href="{{ route('portfolio.create') }}"> - add</a>
+            @endif
           </h3>
           <p class="paragraph">
             Here are some of my favorite projects from over the years.
@@ -30,41 +34,19 @@
         </div>
     </section>
 
-    <section id="work work--page" class="work m-top--xl">
+    <section id="work work--page" class="work m-top--lg">
       <div class="container">
           <div class="work__projects">
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/bdm.jpg')}}" alt="" class="work__img work__img--important">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/campusT.jpg')}}" alt="" class="work__img">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/designA.jpg')}}" alt="" class="work__img work__img--important">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/developW.jpg')}}" alt="" class="work__img work__img--important">
-              </div>
-
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/jBoat.jpg')}}" alt="" class="work__img work__img--important">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/krekelsW.jpg')}}" alt="" class="work__img">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/rowlandW.jpg')}}" alt="" class="work__img">
-              </div>
-
-              <div class="work__projects-box">
-                  <img src="{{asset('img/portfolio/placeholder.jpg')}}" alt="" class="work__img">
-              </div>
+            @foreach ($portfolios as $portfolio)
+                @if($portfolio->cover_image)
+                    <a href="{{ route('portfolio.show', $portfolio->id) }}">
+                        <div class="work__projects-box">
+                            <img src="{{ asset('img/portfolio/' . $portfolio->cover_image)}}" alt="{{ $portfolio->title . ' cover image' }}" class="work__img work__img--important">
+                            <p class="work__text">{{ $portfolio->title }}</p>
+                        </div>
+                    </a>
+                @endif
+            @endforeach
           </div>
       </div>
       </div>

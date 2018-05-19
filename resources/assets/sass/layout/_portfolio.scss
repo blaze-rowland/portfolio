@@ -1,0 +1,27 @@
+.portfolio {
+
+    &__hero {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 75vh;
+        object-fit: cover;
+        position: relative;
+        width: 100vw;
+    }
+
+    .heading-primary {
+        color: $color-white;
+        display: block;
+        position: absolute;
+        left: 50%;
+        text-align: center;
+        top: 40%;
+        transform: translate(-50%, -40%);
+    }
+
+    &__body {
+        margin-top: 5rem;
+    }
+
+    hr { margin: 2rem 0; width: 80%; }
+}

@@ -23,7 +23,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::orderBy('created_at', 'DESC')->paginate(15);
+        $portfolios = Portfolio::orderBy('created_at', 'ASC')->paginate(15);
         return view('portfolio.index')->withPortfolios($portfolios);
     }
 
@@ -47,9 +47,9 @@ class PortfolioController extends Controller
     {
         $this->validate($request, [
             'title'         => 'required|string',
-            'body'          => 'required',
-            'technology'    => 'required',
-            'cover_image'   => 'required|url'
+            'body'          => 'required|string',
+            'technology'    => 'required|string',
+            'cover_image'   => 'required|string'
           ]);
   
           $portfolio = new Portfolio;
@@ -73,7 +73,8 @@ class PortfolioController extends Controller
      */
     public function show($id)
     {
-        return view('portfolio.show');
+        $portfolio = Portfolio::find($id);
+        return view('portfolio.show')->withPortfolio($portfolio);
     }
 
     /**

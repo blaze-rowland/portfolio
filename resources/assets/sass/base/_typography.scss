@@ -20,6 +20,12 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+.heading-secondary {
+    font-size: 4rem;
+
+    &--work { color: $color-green-light-2; }
+}
+
 .heading-tertiary {
     font-size: 3rem;
 

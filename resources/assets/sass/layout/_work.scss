@@ -45,7 +45,7 @@
         &:hover {
         box-shadow: 0px 9px 52px -27px rgba(0, 0, 0, 0.4);
             cursor: pointer;
-            transform: scale(1.07) translateY(-15px);
+            transform: scale(1.1) translateY(-15px);
             z-index: 2;
         }
 
@@ -97,12 +97,16 @@
         }
     }
 
-    &__img:hover ~ &__text {
+    &__img:hover ~ &__text,
+    &__text:hover,
+    &__text:hover &__img {
         opacity: 1!important;
-        transform: scale(2);
+        transform: scale(1.1) translateY(-15px);
         transition-delay: .2s;
         z-index: 3;
     }
+
+    a { text-decoration: none; }
 
     &__text {
         background-color: rgba($color-green-dark-2, .8);
@@ -111,8 +115,8 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         color: $color-white;
-        left: -5.3rem;
         line-height: 2.5;
+        opacity: 0 !important;
         padding: 1rem 2rem;
         position: relative;
         top: -11.5rem;

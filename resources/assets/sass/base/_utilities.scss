@@ -7,9 +7,8 @@
 }
 
 .fixed {
-
     &--top {
-        position: fixed;
+        position: fixed !important;
         top: 0;
     }
 }
@@ -39,6 +38,10 @@
 .m-bottom {
     &--none {
         margin-bottom: 0;
+    }
+
+    &--sm {
+        margin-bottom: 1.25rem;
     }
 
     &--md {

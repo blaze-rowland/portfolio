@@ -25,15 +25,15 @@
           </div>
           <div class="form-group">
             <label for="cover_image">Cover Image:</label>
-            <input type="url" name="cover_image" value="{{old('cover_image')}}" required>
+            <input type="text" name="cover_image" value="{{old('cover_image')}}" required>
           </div>
           <div class="form-group">
             <label for="mobile_image">Mobile Image:</label>
-            <input type="url" name="mobile_image" value="{{old('mobile_image')}}">
+            <input type="text" name="mobile_image" value="{{old('mobile_image')}}">
           </div>
           <div class="form-group">
             <label for="desk_image">Desktop Image:</label>
-            <input type="url" name="desk_image" value="{{old('desk_image')}}">
+            <input type="text" name="desk_image" value="{{old('desk_image')}}">
           </div>
       </div>
       <div class="sidebar">

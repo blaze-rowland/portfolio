@@ -720,7 +720,7 @@ table {
 @media (max-width: 768px) {
   #create-form .create-grid,
   #admin .create-grid {
-    grid-template-areas: 'post' 'sidebar';
+    grid-template-areas: 'post' 'sidebar';
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
@@ -761,7 +761,7 @@ table {
 #create-form .create-grid .create-form form .form-group label,
 #admin .create-grid .create-form form .form-group label {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 10px;
 }
@@ -776,25 +776,33 @@ table {
           box-shadow: inset 0 0 11px -8px rgba(0, 0, 0, 0.4);
   background: #fafafa;
   border: 0;
-  line-height: 1.4;
+  line-height: 1.6;
   padding: 6px 0 6px 6px;
   width: 100%;
 }
 
 #create-form .create-grid .create-form form .form-group input,
+#create-form .create-grid .create-form form .form-group select,
+#admin .create-grid .create-form form .form-group input,
+#admin .create-grid .create-form form .form-group select {
+  height: 1.6rem;
+}
+
+#create-form .create-grid .create-form form .form-group input,
 #admin .create-grid .create-form form .form-group input {
-  font-size: 1.2em;
+  font-size: 1rem;
 }
 
 #create-form .create-grid .create-form form .form-group textarea,
 #admin .create-grid .create-form form .form-group textarea {
   font-family: "Raleway", sans-serif !important;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 #create-form .create-grid .create-form form .form-group select,
 #admin .create-grid .create-form form .form-group select {
-  font-size: 1em;
+  font-size: 1rem;
   padding: 8px 8px;
 }
 
@@ -807,6 +815,7 @@ table {
           box-shadow: 0 0 15px -6px rgba(0, 0, 0, 0.4);
   padding: 30px 20px;
   grid-area: 'sidebar';
+  width: 80%;
 }
 
 #create-form .create-grid .sidebar .btn,
@@ -954,7 +963,7 @@ table {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
+  grid-template-areas: ". form form ." ". form form ." ". errors errors .";
 }
 
 .admin-form form {
@@ -1200,7 +1209,7 @@ table {
 @media (max-width: 768px), (max-width: 992px) {
   #container #top-dash .quick-info {
     margin-left: 50px;
-    grid-template-areas: 'income' 'expense' 'clients' 'projects';
+    grid-template-areas: 'income' 'expense' 'clients' 'projects';
     grid-template-columns: 1fr;
   }
 }
@@ -1311,7 +1320,7 @@ table {
 
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-1 {
-    grid-template-areas: 'main' 'side1';
+    grid-template-areas: 'main' 'side1';
     grid-template-columns: 1fr;
     margin-left: 50px;
   }
@@ -1345,7 +1354,7 @@ table {
 @media (max-width: 768px), (max-width: 992px) {
   #container #analytics-2 {
     margin-left: 50px;
-    grid-template-areas: 'side1' 'side2';
+    grid-template-areas: 'side1' 'side2';
     grid-template-columns: 1fr;
   }
 }
