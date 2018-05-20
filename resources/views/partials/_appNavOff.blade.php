@@ -5,9 +5,19 @@
   background-color: #ffffff;
   -webkit-box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 11px 60px -25px rgba(0, 0, 0, 0.1);
+  font-family: "Muli", sans-serif;
   max-width: 100vw;
+  position: relative;
   width: 100%;
   z-index: 999;
+}
+
+@media only screen and (max-width: 414px) {
+  .nav {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+  }
 }
 
 .nav__list {
@@ -29,14 +39,8 @@
   }
 }
 
-@media only screen and (max-width: 414px) {
-  .nav__list {
-    display: none;
-  }
-}
-
 .nav__item {
-  padding: 22px 0;
+  padding: 2rem 0;
   text-align: center;
   -webkit-transition: all .2s;
   transition: all .2s;
@@ -47,6 +51,12 @@
   background-color: #FF6138;
 }
 
+@media only screen and (max-width: 414px) {
+  .nav__item {
+    width: 7rem;
+  }
+}
+
 .nav__link:hover {
   color: #ffffff;
 }
@@ -55,6 +65,12 @@
   color: #FF6138;
   font-size: 20px;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 414px) {
+  .nav__link {
+    font-size: 12px;
+  }
 }
 </style>
 <nav class="nav">

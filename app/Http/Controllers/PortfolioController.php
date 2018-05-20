@@ -23,7 +23,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolios = Portfolio::orderBy('created_at', 'ASC')->paginate(15);
+        $portfolios = Portfolio::orderBy('id', 'ASC')->paginate(15);
         return view('portfolio.index')->withPortfolios($portfolios);
     }
 
@@ -57,6 +57,7 @@ class PortfolioController extends Controller
           $portfolio->body         = $request->input('body');
           $portfolio->technology   = $request->input('technology');
           $portfolio->design_body  = $request->input('design_body');
+          $portfolio->full_image   = $request->input('full_image');
           $portfolio->cover_image  = $request->input('cover_image');
           $portfolio->mobile_image = $request->input('mobile_image');
           $portfolio->desk_image   = $request->input('desk_image');

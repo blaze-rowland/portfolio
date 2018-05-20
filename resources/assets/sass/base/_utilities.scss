@@ -1,8 +1,20 @@
 .is-hidden {
-    display: none;
+    display: none !important;
 
     &--opac {
         opacity: 0;
+    }
+
+    &--mobile {
+        @media (max-width: $tab-sm) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        @media (min-width: $tab-sm) {
+            display: none;
+        }
     }
 }
 
@@ -47,6 +59,10 @@
     &--md {
         margin-bottom: 2.5rem;
     }
+    
+    &--xl {
+        margin-bottom: 8rem;
+    }
 }
 
 .p-top {
@@ -65,4 +81,20 @@
 
 .w-75 {
     width: 75%;
+
+    &--flexible {
+        width: 75%;
+
+        @include respond($pho-lg) {
+            width: 100%;
+        }
+    }
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.link {
+    &--plain { text-decoration: none; color: currentColor; }
 }

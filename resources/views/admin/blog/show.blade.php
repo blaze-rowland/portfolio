@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+
+<style>
+  .blog__date { font-size: 15px; }
+  .blog__text { font-size: 18px; }
+</style>
   <div class="container container--blog">
     <section id="blog" class="blog">
       <img class="blog__image" src="{{ $post->cover_image }}" alt="{{ $post->title }}, {{ $post->cover_image }}">

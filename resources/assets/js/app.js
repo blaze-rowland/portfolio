@@ -4,27 +4,40 @@
   Date: May 19th, 2018
 */
 
-
-//Portfolio-revamp Nav
-
-let header = (document.querySelector('#header').offsetHeight) - 100;
-let nav = document.querySelector('.nav');
-let about = document.querySelector('#about');
+$(function() {
 
 
-window.addEventListener('scroll', function (e) {
-    if (document.documentElement.scrollTop > header || document.body.scrollTop > header) {
-        nav.classList.add('fromTop');
-        nav.classList.add('fixed--top');
-        nav.classList.remove('is-hidden--opac');
+    window.addEventListener('scroll', function (e) {
+        const header = (document.querySelector('#header').offsetHeight) - 100;
+        const nav = document.querySelector('.nav');
+        const about = document.querySelector('#about');
+        
+        if (document.documentElement.scrollTop > header || document.body.scrollTop > header) {
+            nav.classList.add('fromTop');
+            nav.classList.add('fixed--top');
+            nav.classList.remove('is-hidden--opac');
 
-        about.classList.add('p-top--big');
-    } else {
-        nav.classList.remove('fromTop');
-        nav.classList.remove('fixed--top');
-        nav.classList.add('is-hidden--opac');
+            about.classList.add('p-top--md');
+            nav.classList.remove('is-hidden');
+        } else {
+            nav.classList.remove('fromTop');
+            nav.classList.remove('fixed--top');
+            nav.classList.add('is-hidden--opac');
 
-        about.classList.remove('p-top--big');
+            about.classList.remove('p-top--md');
+            nav.classList.add('is-hidden');
+        }
+    });
+
+
+
+    function togglePortfolioFull () {
+        var portfolioFull = document.querySelector('.portfolio__image--full');
+        portfolioFull.classList.toggle('portfolio__image--active');
     }
-});
+    
+    document.querySelector('.portfolio__image--full').addEventListener('click', function() {
+        togglePortfolioFull();
+    });
 
+});

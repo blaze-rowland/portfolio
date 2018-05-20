@@ -40,7 +40,7 @@
     </div>
 </header>
 
-<nav class="nav is-hidden--opac">
+<nav class="nav is-hidden is-hidden--opac">
     <div class="container">
         <ul class="nav__list">
             <a href="#header" class="nav__link">
@@ -138,38 +138,14 @@
         </div>
         <div class="container">
             <div class="work__projects">
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/bdm.jpg')}}" alt="" class="work__img work__img--important">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/campusT.jpg')}}" alt="" class="work__img">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/designA.jpg')}}" alt="" class="work__img work__img--important">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/developW.jpg')}}" alt="" class="work__img work__img--important">
-                </div>
-
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/jBoat.jpg')}}" alt="" class="work__img work__img--important">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/krekelsW.jpg')}}" alt="" class="work__img">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/rowlandW.jpg')}}" alt="" class="work__img">
-                </div>
-
-                <div class="work__projects-box">
-                    <img src="{{asset('img/portfolio/placeholder.jpg')}}" alt="" class="work__img">
-                </div>
+                @foreach($portfolios as $portfolio)
+                <a href="{{ route('portfolio.show', $portfolio->id) }}">
+                    <div class="work__projects-box">
+                        <img src="{{asset('img/portfolio/' . $portfolio->cover_image)}}" alt="{{ $portfolio->title }} Cover Image" class="work__img work__img--important">
+                        <div class="work__text">{{ $portfolio->title }}</div>
+                    </div>
+                </a>
+                @endforeach
             </div>
         </div>
         </div>

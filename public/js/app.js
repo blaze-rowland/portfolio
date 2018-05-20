@@ -82,26 +82,38 @@ module.exports = __webpack_require__(3);
   Date: May 19th, 2018
 */
 
-//Portfolio-revamp Nav
+$(function () {
 
-var header = document.querySelector('#header').offsetHeight - 100;
-var nav = document.querySelector('.nav');
-var about = document.querySelector('#about');
+    window.addEventListener('scroll', function (e) {
+        var header = document.querySelector('#header').offsetHeight - 100;
+        var nav = document.querySelector('.nav');
+        var about = document.querySelector('#about');
 
-window.addEventListener('scroll', function (e) {
-    if (document.documentElement.scrollTop > header || document.body.scrollTop > header) {
-        nav.classList.add('fromTop');
-        nav.classList.add('fixed--top');
-        nav.classList.remove('is-hidden--opac');
+        if (document.documentElement.scrollTop > header || document.body.scrollTop > header) {
+            nav.classList.add('fromTop');
+            nav.classList.add('fixed--top');
+            nav.classList.remove('is-hidden--opac');
 
-        about.classList.add('p-top--big');
-    } else {
-        nav.classList.remove('fromTop');
-        nav.classList.remove('fixed--top');
-        nav.classList.add('is-hidden--opac');
+            about.classList.add('p-top--md');
+            nav.classList.remove('is-hidden');
+        } else {
+            nav.classList.remove('fromTop');
+            nav.classList.remove('fixed--top');
+            nav.classList.add('is-hidden--opac');
 
-        about.classList.remove('p-top--big');
+            about.classList.remove('p-top--md');
+            nav.classList.add('is-hidden');
+        }
+    });
+
+    function togglePortfolioFull() {
+        var portfolioFull = document.querySelector('.portfolio__image--full');
+        portfolioFull.classList.toggle('portfolio__image--active');
     }
+
+    document.querySelector('.portfolio__image--full').addEventListener('click', function () {
+        togglePortfolioFull();
+    });
 });
 
 /***/ }),

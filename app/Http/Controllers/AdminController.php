@@ -7,6 +7,7 @@ use App\Post;
 use App\Revenue;
 use App\Client;
 use App\Project;
+use App\Portfolio;
 use Mail;
 use DB;
 
@@ -39,8 +40,9 @@ class AdminController extends Controller
     }
 
     public function welcome() {
+      $portfolios = Portfolio::orderBy('id', 'ASC')->take(8)->get();
       $posts = Post::orderBy('created_at', 'DESC')->take(3)->get();
-      return view('welcome')->withPosts($posts);
+      return view('welcome')->withPosts($posts)->withPortfolios($portfolios);
     }
 
     public function postContact(Request $request) {

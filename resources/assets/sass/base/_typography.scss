@@ -23,6 +23,8 @@ h1,h2,h3,h4,h5,h6 {
 .heading-secondary {
     font-size: 4rem;
 
+    &--blog { color: $color-secondary; }
+
     &--work { color: $color-green-light-2; }
 }
 
@@ -52,9 +54,10 @@ h1,h2,h3,h4,h5,h6 {
 .heading-quaternary {
     font-size: 2.2rem;
 
-    &--contact {
-        color: $color-secondary;
-    }
+    &--about { color: $color-primary; margin-bottom: 1rem; }
+    &--blog { color: $color-secondary; }
+    &--contact { color: $color-secondary; }
+    &--work { color: $color-green-light-2; }
 }
 
 .heading-quinary {

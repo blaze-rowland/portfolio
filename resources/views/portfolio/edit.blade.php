@@ -25,6 +25,10 @@
             <textarea name="design_body" id="" cols="30" rows="10" required>{{old('design_body')}}</textarea>
           </div>
           <div class="form-group">
+            <label for="full_image">Full Image:</label>
+            <input type="text" name="full_image" value="{{old('full_image')}}" required>
+          </div>
+          <div class="form-group">
             <label for="cover_image">Cover Image:</label>
             <input type="text" name="cover_image" value="{{old('cover_image')}}" required>
           </div>

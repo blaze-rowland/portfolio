@@ -17,10 +17,45 @@
         text-align: center;
         top: 40%;
         transform: translate(-50%, -40%);
+
+        @include respond($pho-lg) {
+            font-size: 4rem;
+        }
     }
 
     &__body {
         margin-top: 5rem;
+    }
+
+    &__image {
+        &--desktop {
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        &--mobile { }
+
+        &--full {
+            border-radius: 5px;
+            box-shadow: 0 0 29px -3px rgba($color-black, 0.3);
+            cursor: pointer;
+            display: block;
+            margin: 8rem auto 45px auto;
+            width: 80vw;
+
+            @include respond($tab-sm) {
+                border-radius: none;
+                box-shadow: none;
+                margin-top: 6rem;
+                width: 100vw;
+            }
+        }
+
+        &--active {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     hr { margin: 2rem 0; width: 80%; }

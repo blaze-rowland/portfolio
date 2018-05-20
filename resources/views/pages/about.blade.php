@@ -13,7 +13,7 @@
           <h1 class="heading-primary p-top--md">
             About.
           </h1>
-          <div class="w-75">
+          <div class="w-75--flexible">
               <p class="paragraph">
                 I'm a happy-go-lucky web developer and graphic designer from Decatur, Illinois. I've been in this field for over 5 years and have a great understanding for what's going on under the hood; so you don't have to. I love what I do and that reflects on my work and and client interaction.
               </p>
@@ -30,7 +30,7 @@
           <p class="paragraph">
             From developing all of this time I've learned quite a few skills.
           </p>
-          <table class="table m-top--md">
+          <table class="table m-top--md is-hidden--mobile">
             <tr>
               <th class="table__head--secondary">Front-End</th>
               <td>HTML5</td>
@@ -66,6 +66,27 @@
               <td>Yarn</td>
             </tr>
           </table>
+          <div class="pills is-hidden--desktop m-top--md">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">SASS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">PHP</span>
+            <span class="badge">NodeJS</span>
+            <span class="badge">MySQL</span>
+            <span class="badge">jQuery</span>
+            <span class="badge">Laravel</span>
+            <span class="badge">Bootstrap</span>
+            <span class="badge">Foundation</span>
+            <span class="badge">Semantic UI</span>
+            <span class="badge">Photoshop</span>
+            <span class="badge">Illustrator</span>
+            <span class="badge">Sketch</span>
+            <span class="badge">GIT</span>
+            <span class="badge">Command Line</span>
+            <span class="badge">NPM</span>
+            <span class="badge">Yarn</span>
+          </div>
         </div>
         
         <div class="container m-top--lg">
@@ -75,7 +96,7 @@
           <p class="paragraph m-bottom--md">
             Click the link below to download my up-to-date resumé.
           </p>
-          <a href="#" class="btn btn--secondary">Download</a>
+          <a href="{{ asset('files/browland_resume.pdf') }}" class="btn btn--secondary">Download</a>
         </div>
     </section>
 @stop
