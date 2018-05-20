@@ -21,7 +21,7 @@
                 </h3>
                 @endif
                 <p class="paragraph">
-                        Maecenas vehicula nibh ac viverra rhoncus. Fusce et cursus ligula, sed pharetra enim. Quisque vitae pharetra dui. Donec ac venenatis velit. Etiam vehicula felis odio, vel volutpat enim tincidunt vitae. In porttitor libero ut libero volutpat varius. Aenean pellentesque velit nec egestas ultricies. Nunc consectetur sapien sed arcu feugiat placerat.
+                    I'm very involved in my work; I love creating blog posts for my clientele and fellow developers. Here I'll share updates on personal projects, and new trends in the industry. 
                 </p>
             </div>
             </div>

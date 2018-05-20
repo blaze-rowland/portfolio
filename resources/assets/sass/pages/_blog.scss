@@ -40,6 +40,8 @@
 
     &__body {
         padding: 25px 35px;
+
+        p { line-height: 1.6; font-size: 18px; }
     }
 
     &__heading {
@@ -49,12 +51,13 @@
 
     &__date {
         color: darken($off-white, 25%);
-        font-size: 14px;
-        // padding: 10px 0 25px 0;
+        font-size: 14px !important;
         padding: 10px 0 5px 0;
     }
 
     &__text {
-        line-height: 1.5;
+        line-height: 1.6;
+
+        p { font-size: 18px; line-height: 1.6; }
     }
 }
