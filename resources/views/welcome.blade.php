@@ -141,7 +141,7 @@
                 @foreach($portfolios as $portfolio)
                 <a href="{{ route('portfolio.show', $portfolio->id) }}">
                     <div class="work__projects-box">
-                        <img src="{{asset('img/portfolio/' . $portfolio->cover_image)}}" alt="{{ $portfolio->title }} Cover Image" class="work__img work__img--important">
+                        <img src="{{ "http://res.cloudinary.com/blazerowland/image/upload/v1526829179/Portfolio/cover/" . $portfolio->cover_image }}" alt="{{ $portfolio->title }} Cover Image" class="work__img work__img--important">
                         <div class="work__text">{{ $portfolio->title }}</div>
                     </div>
                 </a>

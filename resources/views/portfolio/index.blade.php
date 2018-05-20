@@ -41,7 +41,8 @@
                 @if($portfolio->cover_image)
                     <a href="{{ route('portfolio.show', $portfolio->id) }}">
                         <div class="work__projects-box">
-                            <img src="{{ asset('img/portfolio/' . $portfolio->cover_image)}}" alt="{{ $portfolio->title . ' cover image' }}" class="work__img work__img--important">
+                            {{-- <img src="{{ asset('img/portfolio/' . $portfolio->cover_image)}}" alt="{{ $portfolio->title . ' cover image' }}" class="work__img work__img--important"> --}}
+                            <img src="{{ "http://res.cloudinary.com/blazerowland/image/upload/v1526829179/Portfolio/cover/" . $portfolio->cover_image }}" alt="{{ $portfolio->title . ' cover image' }}" class="work__img work__img--important">
                             <p class="work__text">{{ $portfolio->title }}</p>
                         </div>
                     </a>
