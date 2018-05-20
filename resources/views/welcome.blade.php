@@ -8,8 +8,10 @@
 @section('content')
 
   @if(session('status'))
-    <div class="alert alert-success">
-      {{ session('status') }}
+    <div class="alert alert--success">
+      <p class="paragraph">
+        {{ session('status') }}  
+      </p>
     </div>
   @endif
   <header id="header">

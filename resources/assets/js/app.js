@@ -6,6 +6,7 @@
 
 $(function() {
 
+    $('.alert').fadeOut(4500);
 
     window.addEventListener('scroll', function (e) {
         const header = (document.querySelector('#header').offsetHeight) - 100;
