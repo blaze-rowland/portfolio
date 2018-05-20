@@ -76,7 +76,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="about__box">
-                <img src="{{asset('img/about-img.jpg')}}" alt="Programming image" class="about__img">
+                <img src="http://res.cloudinary.com/blazerowland/image/upload/v1526829160/Portfolio/other/about-img.jpg" alt="Programming image" class="about__img">
 
                 <div class="about__text">
                     <h3 class="heading-tertiary heading-tertiary--about">About Me</h3>
