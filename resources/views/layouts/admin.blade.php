@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
   @include('partials._meta')
-  <title>{{ config('app.name', 'Portfolio | Admin') }}</title>
+  @yield('title')
   @include('partials._vendors')
   <link type="text/css" rel="stylesheet" href="{{ asset('css/admin.css') }}">
   @yield('stylesheets')

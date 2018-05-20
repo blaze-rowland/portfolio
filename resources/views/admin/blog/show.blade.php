@@ -1,4 +1,10 @@
 @extends('layouts.admin')
+@section('title')
+<title>Blog | {{ $post->title }}</title>
+@stop
+@section('meta_data')
+<meta name="description" content="Blog post titled {{ $post->title }}.">
+@stop
 @section('content')
 
 <style>

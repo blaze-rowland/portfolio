@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('title')
+<title>Blaze Rowland</title>
+@stop
+@section('meta_data')
+<meta name="description" content="Web Developer and Graphic Designer from Decatur, IL."/>
+@stop
 @section('content')
 
   @if(session('status'))

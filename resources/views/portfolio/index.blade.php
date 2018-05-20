@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('title')
+<title>Portfolio</title>
+@stop
+@section('meta_data')
+<meta name="description" content="My Up-to-Date Design and Development Portfolio.">
+@stop
 @section('content')
 
   @if(session('status'))

@@ -1,5 +1,11 @@
 
     @extends('layouts.app')
+    @section('title')
+    <title>Blog</title>
+    @stop
+    @section('meta_data')
+    <meta name="description" content="Blog Posts for Updates on Personal Projects and New Trends in the Tech Industry.">
+    @stop
     @section('content')
 
     @if(session('status'))

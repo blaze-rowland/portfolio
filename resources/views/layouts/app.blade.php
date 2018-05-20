@@ -2,7 +2,8 @@
 <html lang="{{ app()->getLocale() }}">
 <head>
   @include('partials._meta')
-  <title>{{ config('app.name', 'Portfolio') }}</title>
+  @yield('title')
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   @include('partials._vendors')
   <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}">
   @yield('stylesheets')
