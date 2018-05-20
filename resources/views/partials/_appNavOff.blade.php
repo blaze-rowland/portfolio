@@ -1,4 +1,9 @@
 <style>
+@media only screen and (max-width: 768px) {
+    .container {
+        margin-top:0;
+    }
+}
 .nav {
   -webkit-animation-duration: .4s;
           animation-duration: .4s;
@@ -16,7 +21,6 @@
   .nav {
     display: block;
     margin: 0 auto;
-    width: 60%;
   }
 }
 
@@ -39,6 +43,14 @@
   }
 }
 
+@media only screen and (max-width: 482px) {
+    .nav__list {
+        margin: 0 auto;
+        max-width: 90vw;
+        width: 100%;
+    }
+}
+
 .nav__item {
   padding: 2rem 0;
   text-align: center;
@@ -46,16 +58,28 @@
   transition: all .2s;
   width: 10rem;
 }
+@media only screen and (max-width: 768px) {
+    .nav__item {
+        padding: 1.5rem;
+        width: 4rem;
+    }
+}
+@media only screen and (max-width: 482px) {
+    .nav__item {
+        width: 2rem;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .nav__item {
+        padding: 1.2rem 0.8rem;
+    }
+}
 
 .nav__item:hover {
   background-color: #FF6138;
 }
 
-@media only screen and (max-width: 414px) {
-  .nav__item {
-    width: 7rem;
-  }
-}
+
 
 .nav__link:hover {
   color: #ffffff;
@@ -65,6 +89,12 @@
   color: #FF6138;
   font-size: 20px;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 572px) {
+    .nav__link {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 414px) {
