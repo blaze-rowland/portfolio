@@ -1,3 +1,5 @@
+## Deperecated
+
 ## About Portfolio Repository
 
 This is the GitHub repository for my latest portfolio. I've been meaning to document my work for quite some time and I'm finally getting to it. This project was created with Laravel 5.6, jQuery, FontAwesome, and ResetCSS. No other libraries / frameworks / tools were used. I wanted to create this to test my abilities on CSS Grid Layout and so far I'm very happy with the results.
